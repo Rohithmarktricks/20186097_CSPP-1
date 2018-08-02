@@ -8,9 +8,9 @@ def main():
     '''
     This main funciton will take a string to check if it has 'bob' in it.
     '''
-    test_str = input("Enter the string  :")
+    test_str = input()
     count_str = 0
-    for i, letter_str in list(enumerate(test_str)):
+    for i in list(enumerate(test_str)):
         if(test_str[i] == 'b' and test_str[i+1] == 'o' and test_str[i+2] == 'b'):
             count_str += 1
     print(count_str)
