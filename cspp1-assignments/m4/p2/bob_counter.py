@@ -10,11 +10,11 @@ def main():
     '''
     test_str = input()
     count_str = 0
-    for i, le_enum in list(enumerate(test_str)):
+    for i, __ in list(enumerate(test_str)):
         if(test_str[i] == 'b' and test_str[i+1] == 'o' and test_str[i+2] == 'b'):
             count_str += 1
     print(count_str)
-    del le_enum
+    del __
 
 if __name__ == "__main__":
     main()
