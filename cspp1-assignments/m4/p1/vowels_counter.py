@@ -13,7 +13,7 @@ def main():
     for I in STRT2:
         if(I == 'a' or I == 'e' or I == 'i' or I == 'o' or I == 'u'):
             COUNT = COUNT+1
-    print("Number of vowels :",COUNT)
+    print(COUNT)
 
 
 if __name__== "__main__":
