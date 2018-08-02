@@ -5,15 +5,15 @@ Number of times bob occurs is: 2
 @author : Rohithmarktricks
 '''
 def main():
-	'''
-	This main funciton will take a string to check if it has 'bob' in it.
-	'''
-	test_str = input("Enter the string  :")
-	count_str = 0
-	for i, letter_str in list(enumerate(test_str)):
-    	if (test_str[i] == 'b' and test_str[I+1] == 'o' and test_str[I+2] == 'b'):
-        	count_str += 1
-	print(count_str)
+    '''
+    This main funciton will take a string to check if it has 'bob' in it.
+    '''
+    test_str = input("Enter the string  :")
+    count_str = 0
+    for i, letter_str in list(enumerate(test_str)):
+        if(test_str[i] == 'b' and test_str[I+1] == 'o' and test_str[I+2] == 'b'):
+            count_str += 1
+    print(count_str)
 
 if __name__ == "__main__":
-	main()
+    main()
