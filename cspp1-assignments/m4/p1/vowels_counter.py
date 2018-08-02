@@ -5,15 +5,15 @@
 #Number of vowels: 5
 
 def main():
-    STR_INPUT = input()
+    str_input = input()
     # the input string is in s
     # remove pass and start your code here
-    STRT2_INPUT = STR_INPUT.lower()
-    COUNT_STR = 0
-    for I in STRT2_INPUT:
-        if(I == 'a' or I == 'e' or I == 'i' or I == 'o' or I == 'u'):
-            COUNT_STR = COUNT_STR+1
-    print(COUNT_STR)
+    str2_input = str_input.lower()
+    count_str = 0
+    for i in str2_input:
+        if(i == 'a' or i == 'e' or i == 'i' or i == 'o' or i == 'u'):
+            count_str = count_str+1
+    print(count_str)
 
 
 if __name__== "__main__":
