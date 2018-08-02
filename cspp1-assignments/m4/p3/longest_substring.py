@@ -11,12 +11,9 @@ def main():
     print(len(input_str))
     for i,letter in list(enumerate(input_str)):
         sub_str = input_str[i]
-        if i+1 < len(input_str):
-            while input_str[i] < input_str[i+1]:
+            while i+1 < len(input_str) and input_str[i] < input_str[i+1]:
                 i += 1
                 sub_str += input_str[i]
-        else:
-            break;
             if len(sub_str) > len(temp_str):
                 temp_str = sub_str
     print(temp_str)
