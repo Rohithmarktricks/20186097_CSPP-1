@@ -15,6 +15,6 @@ def main():
         if(test_str[i] == 'b' and test_str[i+1] == 'o' and test_str[i+2] == 'b'):
             count_str += 1
     print(count_str)
-    
+
 if __name__ == "__main__":
     main()
