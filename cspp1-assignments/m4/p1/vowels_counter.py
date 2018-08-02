@@ -12,8 +12,6 @@ def main():
     This main function looks for vowels in the string using for loop and if condition.
     '''
     str_input = input()
-    # the input string is in s
-    # remove pass and start your code here
     str2_input = str_input.lower()
     count_str = 0
     for i in str2_input:
