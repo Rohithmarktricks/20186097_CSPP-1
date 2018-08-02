@@ -11,7 +11,7 @@ def main():
     test_str = input("Enter the string  :")
     count_str = 0
     for i, letter_str in list(enumerate(test_str)):
-        if(test_str[i] == 'b' and test_str[I+1] == 'o' and test_str[I+2] == 'b'):
+        if(test_str[i] == 'b' and test_str[i+1] == 'o' and test_str[i+2] == 'b'):
             count_str += 1
     print(count_str)
 
