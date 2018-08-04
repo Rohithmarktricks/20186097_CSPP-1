@@ -21,12 +21,11 @@ def main():
     for guess_value in range(abs(input_num)):
         if guess_value**3 >= input_num:
             break
-    guess_values = guess_value
-    if guess_values**3 != input_num:
+    if guess_value**3 != input_num:
         print("{} is not a perfect cube".format(input_num))
     else:
         if input_num < 0:
-            guess_values = -guess_values
+            guess_value = -guess_value
         print("{} is a perfect cube".format(input_num))
 
 
