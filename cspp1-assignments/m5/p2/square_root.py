@@ -13,15 +13,15 @@
 '''
 
 def main():
-	s_int = int(input())
-	# epsilon and step are initialized
-	# don't change these values
-	epsilon_val = 0.01
-	step_val = 0.1
-	guess_val = 0.0
-	while abs(guess_val**2 - s_int) >= epsilon_val and guess_val <= s_int:
-		guess_val += step_val
-	print(guess_val)
+    s_int = int(input())
+    # epsilon and step are initialized
+    # don't change these values
+    epsilon_val = 0.01
+    step_val = 0.1
+    guess_val = 0.0
+    while abs(guess_val**2 - s_int) >= epsilon_val and guess_val <= s_int:
+        guess_val += step_val
+    print(guess_val)
 
-if __name__== "__main__":
-	main()
+if __name__ == "__main__":
+    main()
