@@ -11,7 +11,7 @@ def main():
     int_input = int(input())
     digi_prod = 1
     for i in range(len(str(int_input))):
-        del i 
+        del i
         k = int_input%10
         digi_prod = digi_prod * k
         int_input = int_input // 10
