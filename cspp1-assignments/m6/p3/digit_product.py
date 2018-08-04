@@ -9,6 +9,7 @@ def main():
     Read any number from the input, store it in variable int_input.
     '''
     int_input = int(input())
+    flag = 0
     if int_input < 0:
         int_input = abs(int_input)
         flag = 1
