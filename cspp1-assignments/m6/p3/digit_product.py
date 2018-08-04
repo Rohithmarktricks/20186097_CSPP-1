@@ -9,13 +9,19 @@ def main():
     Read any number from the input, store it in variable int_input.
     '''
     int_input = int(input())
+    if int_input < 0:
+        int_input = abs(int_input)
+        flag = 1
     digi_prod = 1
     for i in range(len(str(int_input))):
         del i
         k = int_input%10
         digi_prod = digi_prod * k
         int_input = int_input // 10
-    print(digi_prod)
+    if flag == 1:
+        print("-"+digi_prod)
+    else:
+        print(digi_prod)
 
 if __name__ == "__main__":
     main()
