@@ -13,7 +13,7 @@ Output: 21950 is not a perfect cube
 '''
 def main():
     '''
-    This main function takes a number to check if 
+    This main function takes a number to check if
     it is a perfect cube!
     '''
     input_num = int(input())
