@@ -11,7 +11,8 @@ def main():
     int_input = int(input())
     temp_int = abs(int_input)
     digi_prod = 1
-    while temp_int >= 1:
+    for i in range(len(str(temp_int))):
+        del i
         k = temp_int%10
         digi_prod = digi_prod * k
         temp_int = temp_int // 10
