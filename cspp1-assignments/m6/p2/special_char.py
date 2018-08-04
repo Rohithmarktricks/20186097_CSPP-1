@@ -8,6 +8,14 @@ def main():
     Read string from the input, store it in variable str_input.
     '''
     str_input = input()
+    char_input = '!@#$%^&*'
+    for i, letter1 in list(enumerate(str_input)):
+        del letter1
+        for j, letter2 in list(enumerate(char_input)):
+            del letter2
+            if str_input[i] == char_input[j]:
+                str_input[i] = " "
+    print(str_input)
 
 if __name__ == "__main__":
     main()
