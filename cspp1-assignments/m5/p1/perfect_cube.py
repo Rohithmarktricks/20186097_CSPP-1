@@ -16,6 +16,7 @@ def main():
     This main function takes a number to check if
     it is a perfect cube!
     '''
+    guess_value = 0
     input_num = int(input())
     for guess_value in range(abs(input_num)):
         if guess_value**3 >= input_num:
