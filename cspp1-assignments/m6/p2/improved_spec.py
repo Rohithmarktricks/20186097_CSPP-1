@@ -8,10 +8,9 @@ def main():
     Read string from the input, store it in variable str_input.
     '''
     str_input = input()
-    char_input = '!@#$%^&*'
     for i, letter1 in list(enumerate(str_input)):
         del letter1
-        if str_input[i] in char_input:
+        if str_input[i] in '!@#$%^&*':
             str_input = str_input[:i]+" "+str_input[i+1:]
         else:
             str_input = str_input
