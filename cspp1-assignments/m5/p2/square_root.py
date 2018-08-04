@@ -14,7 +14,7 @@
 
 def main():
     '''
-    This main function calculates the approximation of squareroot 
+    This main function calculates the approximation of squareroot
     a number
     '''
     s_int = int(input())
