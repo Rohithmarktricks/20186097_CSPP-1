@@ -14,7 +14,7 @@ def main():
         for j, letter2 in list(enumerate(char_input)):
             del letter2
             if str_input[i] == char_input[j]:
-                str_input[i] = " "
+                str_input = str_input[:i]+" "+str_input[i+1:]
     print(str_input)
 
 if __name__ == "__main__":
