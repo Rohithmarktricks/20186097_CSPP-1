@@ -1,6 +1,6 @@
 '''
 Given a  number int_input, find the product of all the digits
-example: 
+example:
     input: 123
     output: 6
 '''
@@ -11,6 +11,7 @@ def main():
     int_input = int(input())
     digi_prod = 1
     for i in range(len(str(int_input))):
+        del i 
         k = int_input%10
         digi_prod = digi_prod * k
         int_input = int_input // 10
