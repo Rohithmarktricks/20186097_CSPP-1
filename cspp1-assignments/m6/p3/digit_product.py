@@ -20,7 +20,7 @@ def main():
         digi_prod = digi_prod * k
         int_input = int_input // 10
     if flag == 1:
-        print("-"+digi_prod)
+        print("{}".format('-')digi_prod)
     else:
         print(digi_prod)
 
