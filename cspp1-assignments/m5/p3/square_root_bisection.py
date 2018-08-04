@@ -10,11 +10,10 @@ def main():
     using Bisection method.
     '''
     num_int = int(input())
-    # epsilon_value and step_value are initialized
+    # epsilon_value is initialized
     # don't change these values
     epsilon_value = 0.01
-    step_value = 0.1
-    # your code starts here
+    #Code starts here
     init_value = 0.0
     last_value = num_int
     guess_value = (init_value + last_value)/2
