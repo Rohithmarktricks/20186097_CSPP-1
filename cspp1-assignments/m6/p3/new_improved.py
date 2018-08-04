@@ -9,12 +9,12 @@ def main():
     Read any number from the input, store it in variable int_input.
     '''
     int_input = int(input())
+    temp_int = abs(int_input)
     digi_prod = 1
-    for i in range(len(str(int_input))):
-        del i
-        k = int_input%10
+    while temp_int != 0:
+        k = temp_int%10
         digi_prod = digi_prod * k
-        int_input = int_input // 10
+        temp_int = temp_int // 10
     if int_input < 0:
         print('-'+str(digi_prod))
     else:
