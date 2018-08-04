@@ -13,6 +13,10 @@
 '''
 
 def main():
+    '''
+    This main function calculates the approximation of squareroot 
+    a number
+    '''
     s_int = int(input())
     # epsilon and step are initialized
     # don't change these values
