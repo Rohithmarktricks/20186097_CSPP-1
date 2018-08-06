@@ -55,7 +55,7 @@ def main():
     data_int = input()
     data_int = data_int.split(' ')
     data_int = list(map(float, data_int))
-    print("Remaining balance: %.2f" \
+    print("Remaining balance: %s" \
         %paying_debt_off_in_a_year(data_int[0], data_int[1], data_int[2]))
 
 if __name__ == "__main__":
