@@ -6,12 +6,16 @@ You should use the square procedure that you defined in an earlier exercise
 This function takes in one number and returns one number.
 @Author : Rohithmarktricks
 '''
-
+# To use the square file that you have created in the last exercise.
+# You have to import the entire file or the function.
+# In our case we will import entire file
+import square as sq
+# 'sq' will be used as an object to call the function of the square.py file
 def square(x_int):
     '''
     x_int: int or float.
     '''
-    return x_int**2
+    return sq.square(x_int)
 
 
 def fourth_power(x_int):
