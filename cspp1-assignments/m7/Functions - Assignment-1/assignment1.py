@@ -36,7 +36,7 @@ def paying_debt_off_in_a_year(balance_int, annual_interest_rate, monthly_payment
     '''
     updated_balance_each_month = balance_int
     monthly_interest_rate = annual_interest_rate/12.0
-    for i in range(1,13,1):
+    for i in range(1, 13, 1):
         del i
         minimum_monthly_payment = monthly_payment_rate*updated_balance_each_month
         monthly_unpaid_balance = updated_balance_each_month - minimum_monthly_payment
