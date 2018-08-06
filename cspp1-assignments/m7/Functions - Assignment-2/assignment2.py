@@ -43,8 +43,9 @@ def payingDebtOffInAYear(balance, annualInterestRate):
 		balance = updated_balance_each_month
 	print(balance)
 	
-	n = balance/(minimum_fixed_monthly_payment*12)
-	print(round(n))
+	n = int(balance/(minimum_fixed_monthly_payment*12))
+	print(n)
+
 	# n = 1
 	# while(round(n*minimum_fixed_monthly_payment*12 - balance )) >= 0: 
 	# 	print(n)
