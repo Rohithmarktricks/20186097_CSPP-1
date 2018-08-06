@@ -30,37 +30,35 @@ Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x
 @Author : Rohithmarktricks
 '''
 
-def payingDebtOffInAYear(balance, annualInterestRate):
-	'''
-	This function calculates the minimum amount to be paid every month!
-	We make use of bisection method for this!
-	'''
-	if balance < 0:
-		return 0
-	mini = 10
-	while True:
-		init = 0
-		balance2 = balance
-		while init != 12:
-			remain = balance2 - mini
-			balance2 = remain+(remain*annualInterestRate/12)
-			init = init + 1
-		if balance2 <= 0.5:
-			break
-		mini += 10
-	return mini
+def paying_debt_off_in_a_year(balance, annual_interestrate):
+    '''
+    This function calculates the minimum amount to be paid every month!
+    We make use of bisection method for this!
+    '''
+    if ba_lance < 0:
+        return 0
+    mi_ni = 10
+    while True:
+        in_it = 0
+        ba_lance2 = ba_lance
+        while in_it != 12:
+            re_main = ba_lance2 - mi_ni
+            ba_lance2 = re_main+(re_main*annual_interestrate/12)
+            in_it = in_it + 1
+        if ba_lance2 <= 0.5:
+            break
+        mi_ni += 10
+    return mi_ni
 
-		
-
-
-
-	
-
+        
 def main():
-	data = input()
-	data = data.split(' ')
-	data = list(map(float, data))
-	print("Lowest Payment: "+str(payingDebtOffInAYear(data[0],data[1])))
-	
-if __name__== "__main__":
-	main()
+    '''
+    Main Function to calculate the minimum amount
+    '''
+    da_ta = input()
+    da_ta = da_ta.split(' ')
+    da_ta = list(map(float, da_ta))
+    print("Lowest Payment: "+str(payingDebtOffInAYear(da_ta[0],da_ta[1])))
+    
+if __name__ == "__main__":
+    main()
