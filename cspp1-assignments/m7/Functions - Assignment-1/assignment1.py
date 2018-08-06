@@ -40,22 +40,23 @@ def paying_debt_off_in_a_year(balance_int, annual_interest_rate, monthly_payment
         del i
         minimum_monthly_payment = monthly_payment_rate*updated_balance_each_month
         monthly_unpaid_balance = updated_balance_each_month - minimum_monthly_payment
-        updated_balance_each_month = monthly_unpaid_balance+(monthly_interest_rate*monthly_unpaid_balance)
+        updated_balance_each_month = monthly_unpaid_balance+\
+        (monthly_interest_rate*monthly_unpaid_balance)
     return updated_balance_each_month
 
 
-    
+
 
 def main():
     '''
-    This main function will take the data and prints the 
+    This main function will take the data and prints the
     remaining amount to be paid.
     '''
     data_int = input()
     data_int = data_int.split(' ')
     data_int = list(map(float, data_int))
-    print("Remaining balance: %.2f" %paying_debt_off_in_a_year(data_int[0], data_int[1], data_int[2]))
+    print("Remaining balance: %.2f" \
+        %paying_debt_off_in_a_year(data_int[0], data_int[1], data_int[2]))
 
 if __name__ == "__main__":
     main()
-
