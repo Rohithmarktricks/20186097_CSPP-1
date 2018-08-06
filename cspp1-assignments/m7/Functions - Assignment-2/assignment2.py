@@ -35,23 +35,20 @@ def payingDebtOffInAYear(balance, annualInterestRate):
 	This function calculates the minimum amount to be paid every month!
 	We make use of bisection method for this!
 	'''
-	minimum_fixed_monthly_payment = 10
-	monthly_interest_rate = annualInterestRate/12.0
-	for i in range(1,13):
-		monthly_unpaid_balance = balance - minimum_fixed_monthly_payment
-		updated_balance_each_month = monthly_unpaid_balance + (monthly_interest_rate * monthly_unpaid_balance)
-		balance = updated_balance_each_month
-	print(balance)
-	
-	n = int(balance/(minimum_fixed_monthly_payment*12))
-	print(n)
-
-	# n = 1
-	# while(round(n*minimum_fixed_monthly_payment*12 - balance )) >= 0: 
-	# 	print(n)
-	# 	n = n+1
-	# 	print(n)
-	# 	break
+	if balance < 0:
+		return 0
+	mini = 10
+	while True:
+		init = 0
+		balance2 = balance
+		while init != 12:
+			remain = balance2 - mini
+			balance2 = remain+(remain*annualInterestRate/12)
+			init = init + 1
+		if balance2 <= 0.5:
+			break
+		mini += 10
+	return mini
 
 		
 
@@ -63,7 +60,7 @@ def main():
 	data = input()
 	data = data.split(' ')
 	data = list(map(float, data))
-	print(payingDebtOffInAYear(data[0],data[1]))
+	print("Lowest Payment: "+str(payingDebtOffInAYear(data[0],data[1])))
 	
 if __name__== "__main__":
 	main()
