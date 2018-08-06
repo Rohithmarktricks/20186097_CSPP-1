@@ -1,34 +1,39 @@
-# Exercise: fourth power
+'''Exercise: fourth power
+Write a Python function, fourthPower, that takes in one number and
+returns that value raised to the fourth power.
+You should use the square procedure that you defined in an earlier exercise
+(you don't need to redefine square in this box_int;
+This function takes in one number and returns one number.
+@Author : Rohithmarktricks
+'''
 
-# Write a Python function, fourthPower, that takes in one number and returns that value raised to the fourth power.
-
-# You should use the square procedure that you defined in an earlier exercise exercise (you don't need to redefine square in this box;
-
-# This function takes in one number and returns one number.
-
-def square(x):
+def square(x_int):
     '''
-    x: int or float.
+    x_int: int or float.
     '''
-    # Your code here
-    
+    return x_int**2
 
 
-def fourthPower(x):
+def fourth_power(x_int):
     '''
-    x: int or float.
+    x_int: int or float.
     '''
-    # Your code here
-   
+    return square(square(x_int))
 
 def main():
-    data = input()
-    data = float(data)
-    temp = str(data).split('.')
-    if(temp[1] == '0'):
-        print(fourthPower(int(float(str(data)))))
+    '''
+    Main function takes in the number as a string and returns the
+    fourth power of that number.
+    '''
+    data_input = input()
+    data_input = float(data_input)
+    temp = str(data_input).split('.')
+    if temp[1] == '0':
+        print(fourth_power(int(float(str(data_input)))))
+        #print(square(int(float(str(data_input)))))
     else:
-        print(fourthPower(data))
+        print(fourth_power(data_input))
 
-if __name__== "__main__":
+
+if __name__ == "__main__":
     main()
