@@ -26,7 +26,8 @@ negative using this payment scheme, which is okay.
 A summary of the required math is found below:
 Monthly interest rate = (Annual interest rate) / 12.0
 Monthly unpaid balance = (Previous balance) - (Minimum fixed monthly payment)
-Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
+Updated balance each month =
+(Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
 @Author : Rohithmarktricks
 '''
 
@@ -50,7 +51,7 @@ def paying_debt_off_in_a_year(ba_lance, annual_interestrate):
         mi_ni += 10
     return mi_ni
 
-        
+
 def main():
     '''
     Main Function to calculate the minimum amount
@@ -58,7 +59,7 @@ def main():
     da_ta = input()
     da_ta = da_ta.split(' ')
     da_ta = list(map(float, da_ta))
-    print("Lowest Payment: "+str(paying_debt_off_in_a_year(da_ta[0],da_ta[1])))
+    print("Lowest Payment: "+str(paying_debt_off_in_a_year(da_ta[0], da_ta[1])))
 
 if __name__ == "__main__":
     main()
