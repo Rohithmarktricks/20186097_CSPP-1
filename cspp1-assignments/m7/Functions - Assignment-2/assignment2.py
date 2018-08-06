@@ -59,6 +59,6 @@ def main():
     da_ta = da_ta.split(' ')
     da_ta = list(map(float, da_ta))
     print("Lowest Payment: "+str(paying_debt_off_in_a_year(da_ta[0],da_ta[1])))
-    
+
 if __name__ == "__main__":
     main()
