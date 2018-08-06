@@ -30,7 +30,7 @@ Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x
 @Author : Rohithmarktricks
 '''
 
-def paying_debt_off_in_a_year(balance, annual_interestrate):
+def paying_debt_off_in_a_year(ba_lance, annual_interestrate):
     '''
     This function calculates the minimum amount to be paid every month!
     We make use of bisection method for this!
