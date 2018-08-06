@@ -27,11 +27,11 @@ Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x
 @Author : Rohithmarktricks
 '''
 
-def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
-	updated_balance_each_month = balance
-	monthly_interest_rate = annualInterestRate/12.0
+def paying_debt_off_in_a_year(balance_int, annual_interest_rate, monthly_payment_rate):
+	updated_balance_each_month = balance_int
+	monthly_interest_rate = annual_interest_rate/12.0
 	for i in range(1,13,1):
-		minimum_monthly_payment = monthlyPaymentRate*updated_balance_each_month
+		minimum_monthly_payment = monthly_payment_rate*updated_balance_each_month
 		monthly_unpaid_balance = updated_balance_each_month - minimum_monthly_payment
 		updated_balance_each_month = monthly_unpaid_balance+(monthly_interest_rate*monthly_unpaid_balance)
 	return updated_balance_each_month
@@ -40,10 +40,10 @@ def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
 	
 
 def main():
-	data = input()
-	data = data.split(' ')
-	data = list(map(float, data))
-	print("Remaining balance: %.2f" %payingDebtOffInAYear(data[0],data[1],data[2]))
+	data_int = input()
+	data_int = data_int.split(' ')
+	data_int = list(map(float, data_int))
+	print("Remaining balance: %.2f" %paying_debt_off_in_a_year(data_int[0],data_int[1],data_int[2]))
 
 if __name__== "__main__":
 	main()
