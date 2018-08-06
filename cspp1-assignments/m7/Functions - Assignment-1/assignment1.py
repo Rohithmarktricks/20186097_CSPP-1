@@ -28,10 +28,11 @@ Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x
 '''
 
 def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
+	updated_balance_each_month = balance
 	monthly_interest_rate = annualInterestRate/12.0
 	for i in range(1,13,1):
-		minimum_monthly_payment = monthlyPaymentRate*balance
-		monthly_unpaid_balance = balance - minimum_monthly_payment
+		minimum_monthly_payment = monthlyPaymentRate*updated_balance_each_month
+		monthly_unpaid_balance = updated_balance_each_month - minimum_monthly_payment
 		updated_balance_each_month = monthly_unpaid_balance+(monthly_interest_rate*monthly_unpaid_balance)
 	print(updated_balance_each_month)
 
