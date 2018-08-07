@@ -8,7 +8,7 @@ def paying_debt_off_in_a_year(ba_lance, annual_interest_rate):
     '''
     This function will calculate minimum amount
     '''
-    monthly_interest_rate= (annual_interest_rate) / 12.0
+    monthly_interest_rate = (annual_interest_rate) / 12.0
     monthly_payment_lower_bound = ba_lance / 12
     monthly_payment_upper_bound = (ba_lance * (1 + monthly_interest_rate)**12) / 12.0
     temp_balance = ba_lance
@@ -38,7 +38,7 @@ def main():
     # data = "4773 0.2"
     data = data.split(' ')
     data = list(map(float, data))
-    print("Lowest Payment: "+str(round(paying_debt_off_in_a_year(data[0],data[1]),2)))
-    
+    print("Lowest Payment: "+str(round(paying_debt_off_in_a_year(data[0], data[1]), 2)))
+
 if __name__ == "__main__":
     main()
