@@ -6,7 +6,7 @@ This function takes in one number and returns one number.
 @Author : Rohithmarktricks
 '''
 
-def factorial(n_int):
+def facto_rial(n_int):
     '''
     n_int is positive Integer
     returns: a positive integer, the factorial of n.
@@ -14,14 +14,14 @@ def factorial(n_int):
     if n_int <= 1:
         return 1
     else:
-        k = n_int*fact(n_int-1)
+        k = n_int*facto_rial(n_int-1)
         return(k)
     
 
 
 def main():
     a = input()
-    print(factorial(int(a)))    
+    print(facto_rial(int(a)))    
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
