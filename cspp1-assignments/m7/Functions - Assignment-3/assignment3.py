@@ -12,7 +12,7 @@ def paying_debt_off_in_a_year(ba_lance, annual_interest_rate):
     epsilon = 0.001
     guess = (monthly_payment_upper_bound + monthly_payment_lower_bound)/2
     while True:
-        durarion = 1
+        duration = 1
         while duration <= 12:
             temp_balance = temp_balance - guess
             temp_balance = temp_balance + (monthly_interest_rate * temp_balance)
