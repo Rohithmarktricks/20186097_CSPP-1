@@ -24,8 +24,7 @@ def main():
     Main function that prints sum of digits of input number
     '''
     a_int = input()
-    print(sum_of_digits(int(a_int)))  
+    print(sum_of_digits(int(a_int)))
 
 if __name__ == "__main__":
     main()
-
