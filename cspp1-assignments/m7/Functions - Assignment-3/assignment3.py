@@ -12,7 +12,7 @@ def paying_debt_off_in_a_year(ba_lance, annual_interest_rate):
     monthly_payment_lower_bound = ba_lance / 12
     monthly_payment_upper_bound = (ba_lance * (1 + monthly_interest_rate)**12) / 12.0
     temp_balance = ba_lance
-    epsilon = 0.001
+    epsilon = 0.03
     guess = (monthly_payment_upper_bound + monthly_payment_lower_bound)/2
     while True:
         duration = 1
