@@ -7,7 +7,7 @@ using Bisection search!!!
 def paying_debt_off_in_a_year(ba_lance, annual_interest_rate):
     monthly_interest_rate= (annual_interest_rate) / 12.0
     monthly_payment_lower_bound = ba_lance / 12
-    monthly_payment_upper_bound = (ba_lance x (1 + monthly_interest_rate)**12) / 12.0
+    monthly_payment_upper_bound = (ba_lance * (1 + monthly_interest_rate)**12) / 12.0
     temp_balance = ba_lance
     epsilon = 0.001
     guess = (monthly_payment_upper_bound + monthly_payment_lower_bound)/2
