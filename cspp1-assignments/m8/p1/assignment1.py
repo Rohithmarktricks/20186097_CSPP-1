@@ -13,9 +13,9 @@ def facto_rial(n_int):
     '''
     if n_int <= 1:
         return 1
-    else:
-        k = n_int*facto_rial(n_int-1)
-        return k
+    
+    k = n_int*facto_rial(n_int-1)
+    return k
 
 
 
