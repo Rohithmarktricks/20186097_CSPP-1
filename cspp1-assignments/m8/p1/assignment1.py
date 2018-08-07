@@ -15,13 +15,16 @@ def facto_rial(n_int):
         return 1
     else:
         k = n_int*facto_rial(n_int-1)
-        return(k)
-    
+        return k
+
 
 
 def main():
-    a = input()
-    print(facto_rial(int(a)))    
+    '''
+    Main function accepts input and prints factorial
+    '''
+    a_int = input()
+    print(facto_rial(int(a_int)))
 
 if __name__ == "__main__":
     main()
