@@ -4,19 +4,21 @@
 # This function takes in one number and returns one number.
 
 
-def sumofdigits(n):
+def sum_of_digits(n_int):
     '''
     n is positive Integer
 
     returns: a positive integer, the sum of digits of n.
     '''
-    # Your code here
-    pass
+    if n_int == 0:
+        return 0
+
+    return n_int%10 + sum_of_digits(n_int//10)
 
 
 def main():
-    a = input()
-    print(sumofdigits(int(a)))  
+    a_int = input()
+    print(sum_of_digits(int(a_int)))  
 
 if __name__== "__main__":
     main()
