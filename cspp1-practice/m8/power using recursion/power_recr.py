@@ -11,7 +11,9 @@ def recurPower(base, exp, i=1):
     returns: int or float, base^exp
     '''
     if i <= exp:
+        print(i)
         if exp == i:
+            print(i)
             return base
 
         return base*recurPower(base, exp, i+1)
