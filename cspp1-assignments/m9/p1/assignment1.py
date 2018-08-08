@@ -19,7 +19,7 @@ def is_word_guessed(secret_word, letters_guessed):
         if i in letters_guessed:
             return True
     
-        return False
+    return False
 
    
 
