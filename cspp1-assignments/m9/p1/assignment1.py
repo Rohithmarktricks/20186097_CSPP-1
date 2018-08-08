@@ -4,6 +4,7 @@ First, implement the function isWordGuessed that takes in two parameters -
 a string, secret_word, and a list of letters, letters_guessed. This function
 returns a boolean - True if secret_word has been guessed (ie, all the letters of
 secret_word are in letters_guessed) and False otherwise.
+@Author: Rohithmarktricks
 '''
 
 
@@ -20,7 +21,6 @@ def is_word_guessed(secret_word, letters_guessed):
             return False
     return True
 
-   
 
 def main():
     '''
