@@ -16,8 +16,10 @@ def get_guessed_word(secret_word, letters_guessed):
     str1 = ""
     for i in secret_word:
         if i not in letters_guessed:
-            return str1+'_'
-        return secret_word
+            str1 += "_"
+        else:
+            str1 += i
+    return str1
 
     
 
