@@ -19,11 +19,11 @@ def choose_word(word_list):
 
 word_list = load_words()
 
-def is_word_guessed(secret_word, letters_guessed):
-    for i in secret_word:
-        if i not in letters_guessed:
-            return False
-    return True
+# def is_word_guessed(secret_word, letters_guessed):
+#     for i in secret_word:
+#         if i not in letters_guessed:
+#             return False
+#     return True
 
 def get_guessed_word(secret_word, letters_guessed):
     str1 = ""
@@ -57,7 +57,7 @@ def hangman(secret_word):
         if letters_guessed in secret_word:
             print("That's a correct guess!")
             test_str += letters_guessed
-            print(is_word_guessed(secret_word,test_str))
+            #print(is_word_guessed(secret_word,test_str))
             print(get_guessed_word(secret_word,test_str))
             avail_alpha = get_available_letters(test_str)
             print(get_available_letters(test_str))
@@ -67,10 +67,11 @@ def hangman(secret_word):
             print("Available choices from {}".format(avail_alpha))
             print("Left guesses :{}".format(guess_num))
 
-    if get_guessed_word == secret_word:
-        print("Your guess is correct")
-    if guess_num == 0:
-        print(secret_word)
+        if test_str == secret_word:
+            print("Your guess is correct")
+            break
+        if guess_num == 0:
+            print(secret_word)
 
 def main():
     secret_word = choose_word(word_list).lower()
