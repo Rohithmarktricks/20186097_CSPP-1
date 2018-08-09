@@ -11,7 +11,7 @@ import random
 
 WORDLIST_FILENAME = "words.txt"
 
-def loadWords():
+def load_words():
     """
     Returns a list of valid words. Words are strings of lowercase letters.
     
@@ -28,7 +28,7 @@ def loadWords():
     print("  ", len(wordlist), "words loaded.")
     return wordlist
 
-def chooseWord(wordlist):
+def choose_word(wordlist):
     """
     wordlist (list): list of words (strings)
 
@@ -41,47 +41,67 @@ def chooseWord(wordlist):
 
 # Load the list of words into the variable wordlist
 # so that it can be accessed from anywhere in the program
-wordlist = loadWords()
+wordlist = load_words()
 
-def isWordGuessed(secretWord, lettersGuessed):
+def is_word_guessed(secret_word, letters_guessed):
     '''
-    secretWord: string, the word the user is guessing
-    lettersGuessed: list, what letters have been guessed so far
-    returns: boolean, True if all the letters of secretWord are in lettersGuessed;
+    secret_word: string, the word the user is guessing
+    letters_guessed: list, what letters have been guessed so far
+    returns: boolean, True if all the letters of secret_word are in letters_guessed;
       False otherwise
     '''
-    # FILL IN YOUR CODE HERE...
+    for i in secret_word:
+        if i not in letters_guessed:
+            return False
+        else:
+        return True
+        # get_available_letters(letters_guessed)
 
 
 
-def getGuessedWord(secretWord, lettersGuessed):
+
+def get_guessed_word(secret_word, letters_guessed):
     '''
-    secretWord: string, the word the user is guessing
-    lettersGuessed: list, what letters have been guessed so far
+    secret_word: string, the word the user is guessing
+    letters_guessed: list, what letters have been guessed so far
     returns: string, comprised of letters and underscores that represents
-      what letters in secretWord have been guessed so far.
+      what letters in secret_word have been guessed so far.
     '''
-    # FILL IN YOUR CODE HERE...
+    str1 = ""
+    for i in secret_word:
+        if i not in letters_guessed:
+            str1 += "_"
+        else:
+            str1 += i
+    return str1
 
 
 
-def getAvailableLetters(lettersGuessed):
+def get_available_letters(letters_guessed):
+
+    
     '''
-    lettersGuessed: list, what letters have been guessed so far
+    letters_guessed: list, what letters have been guessed so far
     returns: string, comprised of letters that represents what letters have not
       yet been guessed.
     '''
-    # FILL IN YOUR CODE HERE...
+    avail_letters = 'abcdefghijklmnopqrstuvwxyz'
+    letters_next = ""
+    for i in avail_letters:
+        if i not in letters_guessed:
+            letters_next += i
+    return letters_next
+   
     
 
-def hangman(secretWord):
+def hangman(secret_word):
     '''
-    secretWord: string, the secret word to guess.
+    secret_word: string, the secret word to guess.
 
     Starts up an interactive game of Hangman.
 
     * At the start of the game, let the user know how many 
-      letters the secretWord contains.
+      letters the secret_word contains.
 
     * Ask the user to supply one guess (i.e. letter) per round.
 
@@ -94,7 +114,19 @@ def hangman(secretWord):
 
     Follows the other limitations detailed in the problem write-up.
     '''
-    # FILL IN YOUR CODE HERE...
+    print("I am thinking of a {} letter word!".format())
+    temp_1 = get_guessed_word(secret_word, letters_guessed)
+    print(temp_1)
+    while True:
+        letters_guessed = input("Enter a guess:")
+        temp_2 = get_available_letters(letters_guessed)
+        if temp_2:
+            print(get_available_letters(letters_guessed))
+            print(is_word_guessed(secret_word, letters_guessed))
+        else:
+            print("Oops! That letter is not in my word")
+            print("you have {} guesses left".format())
+
 
 
 
@@ -103,7 +135,7 @@ def hangman(secretWord):
 
 # When you've completed your hangman function, uncomment these two lines
 # and run this file to test! (hint: you might want to pick your own
-# secretWord while you're testing)
+# secret_word while you're testing)
 
-# secretWord = chooseWord(wordlist).lower()
-# hangman(secretWord)
+# secret_word = choose_word(wordlist).lower()
+# hangman(secret_word)
