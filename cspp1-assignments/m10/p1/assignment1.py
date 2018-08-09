@@ -12,7 +12,7 @@ def get_available_letters(letters_guessed):
     returns: string, comprised of letters that represents what letters have not
       yet been guessed.
     '''
-    letters_next = " "
+    letters_next = ""
     letters_available = 'abcdefghijklmnopqrstuvwxyz'
     for i in letters_available:
         if i not in letters_guessed:
