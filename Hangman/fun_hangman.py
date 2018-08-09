@@ -49,6 +49,7 @@ def hangman(secret_word):
     guess_num = 8
     cond = True
     test_str=""
+    tester_final = ""
     while cond:
         if guess_num <=1:
             print(secret_word)
@@ -58,18 +59,20 @@ def hangman(secret_word):
             print("That's a correct guess!")
             test_str += letters_guessed
             #print(is_word_guessed(secret_word,test_str))
+            tester_final = get_guessed_word(secret_word,test_str)
             print(get_guessed_word(secret_word,test_str))
             avail_alpha = get_available_letters(test_str)
             print(get_available_letters(test_str))
+            if tester_final == secret_word:
+                print("Your guess is correct")
+                break
+
         else:
             guess_num -= 1
             print("Sorry you have made a wrong guess!")
             print("Available choices from {}".format(avail_alpha))
             print("Left guesses :{}".format(guess_num))
 
-        if test_str == secret_word:
-            print("Your guess is correct")
-            break
         if guess_num == 0:
             print(secret_word)
 
