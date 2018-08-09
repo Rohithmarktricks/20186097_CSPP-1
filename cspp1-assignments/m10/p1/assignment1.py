@@ -16,7 +16,10 @@ def get_available_letters(letters_guessed):
     for i in letters_guessed:
         if i not in letters_available:
             return letters_available
-        return letters_available - i
+        else:
+            ind = letters_available.find(i)
+            letters_available = letters_available[1:ind]+""+letters_available[ind+1:]
+            return ''.join(letters_available)
 
 
 
