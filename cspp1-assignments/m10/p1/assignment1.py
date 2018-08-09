@@ -14,14 +14,10 @@ def get_available_letters(letters_guessed):
     '''
     letters_next = " "
     letters_available = 'abcdefghijklmnopqrstuvwxyz'
-    for i in letters_guessed:
-        if i in letters_available:
-            ind = letters_available.find(i)
-            letters_next = letters_available.replace(ind,'')
-        return ''.join(letters_next)
-
-
-
+    for i in letters_available:
+        if i not in letters_guessed:
+            letters_next += i
+    return letters_next
 
 def main():
     '''
