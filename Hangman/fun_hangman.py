@@ -43,6 +43,7 @@ def get_available_letters(letters_guessed):
     return letters_next
 
 def hangman(secret_word):
+    avail_alpha = "abcdefghijklmnopqrstuvwxyz"
     print("My guessed word has {} letters in it".format(len(secret_word)))
     print(secret_word)
     guess_num = 8
@@ -53,16 +54,18 @@ def hangman(secret_word):
             print(secret_word)
             break
         letters_guessed = input("Supply one guess letters :")
-        test_str += letters_guessed
-        print(is_word_guessed(secret_word,test_str))
-        print(get_guessed_word(secret_word,test_str))
-        print(get_available_letters(test_str))
-        # if test_str == secret_word:
-        #     break
-        # else:
-        #     if test_str 
-        guess_num -= 1
-        print("Left guesses :{}".format(guess_num))
+        if letters_guessed in secret_word:
+            print("That's a correct guess!")
+            test_str += letters_guessed
+            print(is_word_guessed(secret_word,test_str))
+            print(get_guessed_word(secret_word,test_str))
+            avail_alpha = get_available_letters(test_str)
+            print(get_available_letters(test_str))
+        else:
+            guess_num -= 1
+            print("Sorry you have made a wrong guess!")
+            print("Available choices from {}".format(avail_alpha))
+            print("Left guesses :{}".format(guess_num))
 
     if get_guessed_word == secret_word:
         print("Your guess is correct")
