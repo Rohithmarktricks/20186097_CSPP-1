@@ -3,6 +3,9 @@ import random
 word_list_FILENAME = "words.txt"
 
 def load_words():
+    '''
+    This function will load the random word from words.txt
+    '''
     print("Loading word list from file...")
     # inFile: file
     inFile = open(word_list_FILENAME, 'r')
@@ -26,6 +29,10 @@ word_list = load_words()
 #     return True
 
 def get_guessed_word(secret_word, letters_guessed):
+    '''
+    This function will give an output
+    in this form Ex:for Hello : __l_o
+    '''
     str1 = ""
     for i in secret_word:
         if i not in letters_guessed:
@@ -35,6 +42,10 @@ def get_guessed_word(secret_word, letters_guessed):
     return str1
 
 def get_available_letters(letters_guessed):
+    '''
+    This function will provide all the remaining letters
+    the alphabets!
+    '''
     letters_next = ""
     letters_available = 'abcdefghijklmnopqrstuvwxyz'
     for i in letters_available:
@@ -43,6 +54,9 @@ def get_available_letters(letters_guessed):
     return letters_next
 
 def hangman(secret_word):
+    '''
+    hangman is the Parent function which gets the information from user defined functions!
+    '''
     avail_alpha = "abcdefghijklmnopqrstuvwxyz"
     print("My guessed word has {} letters in it".format(len(secret_word)))
     print(secret_word)
@@ -77,6 +91,9 @@ def hangman(secret_word):
             print(secret_word)
 
 def main():
+    '''
+    Main Function!
+    '''
     secret_word = choose_word(word_list).lower()
     hangman(secret_word)
 
