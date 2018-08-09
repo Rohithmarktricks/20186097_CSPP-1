@@ -19,7 +19,7 @@ def get_available_letters(letters_guessed):
         else:
             ind = letters_available.find(i)
             letters_available = letters_available[:ind]+" "+letters_available[ind+1:]
-            return ''.join(letters_available)
+        return ''.join(letters_available)
 
 
 
