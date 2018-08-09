@@ -17,7 +17,7 @@ def get_available_letters(letters_guessed):
     for i in letters_guessed:
         if i in letters_available:
             ind = letters_available.find(i)
-            letters_next = letters_available.replace(i,'')
+            letters_next = letters_available.replace(ind,'')
         return ''.join(letters_next)
 
 
