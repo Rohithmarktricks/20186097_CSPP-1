@@ -12,12 +12,13 @@ def get_available_letters(letters_guessed):
     returns: string, comprised of letters that represents what letters have not
       yet been guessed.
     '''
+    letters_next = " "
     letters_available = 'abcdefghijklmnopqrstuvwxyz'
     for i in letters_guessed:
         if i in letters_available:
             ind = letters_available.find(i)
-            letters_available = letters_available[:ind]+""+letters_available[ind+1:]
-        return ''.join(letters_available)
+            letters_next = letters_available[:ind]+""+letters_available[ind+1:]
+        return ''.join(letters_next)
 
 
 
