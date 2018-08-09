@@ -14,7 +14,7 @@ def get_available_letters(letters_guessed):
     '''
     letters_next = " "
     letters_available = 'abcdefghijklmnopqrstuvwxyz'
-    for i in letters_guessed.lowercase():
+    for i in lowercase(letters_guessed):
         if i in letters_available:
             ind = letters_available.find(i)
             letters_next = letters_available[:ind]+""+letters_available[ind+1:]
