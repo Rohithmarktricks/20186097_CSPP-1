@@ -1,6 +1,10 @@
+'''
+Hangman game
+@Author : Rohithmarktricks
+'''
 import random
 
-word_list_FILENAME = "words.txt"
+WORD_LIST_FILENAME = "words.txt"
 
 def load_words():
     '''
@@ -8,19 +12,21 @@ def load_words():
     '''
     print("Loading word list from file...")
     # inFile: file
-    inFile = open(word_list_FILENAME, 'r')
+    in_file = open(WORD_LIST_FILENAME, 'r')
     # line: string
-    line = inFile.readline()
+    line = in_file.readline()
     # word_list: list of strings
-    word_list = line.split()
-    print("  ", len(word_list), "words loaded.")
-    return word_list
+    WORD_LIST = line.split()
+    print("  ", len(WORD_LIST), "words loaded.")
+    return WORD_LIST
 
-def choose_word(word_list):
-   
-    return random.choice(word_list)
+def choose_word(WORD_LIST):
+    '''
+    This function chooses a word randomly from word_list
+    '''
+    return random.choice(WORD_LIST)
 
-word_list = load_words()
+WORD_LIST = load_words()
 
 # def is_word_guessed(secret_word, letters_guessed):
 #     for i in secret_word:
@@ -62,10 +68,10 @@ def hangman(secret_word):
     print(secret_word)
     guess_num = 8
     cond = True
-    test_str=""
+    test_str = ""
     tester_final = ""
     while cond:
-        if guess_num <=1:
+        if guess_num <= 1:
             print(secret_word)
             break
         letters_guessed = input("Supply one guess letters :")
@@ -73,8 +79,8 @@ def hangman(secret_word):
             print("That's a correct guess!")
             test_str += letters_guessed
             #print(is_word_guessed(secret_word,test_str))
-            tester_final = get_guessed_word(secret_word,test_str)
-            print(get_guessed_word(secret_word,test_str))
+            tester_final = get_guessed_word(secret_word, test_str)
+            print(get_guessed_word(secret_word, test_str))
             avail_alpha = get_available_letters(test_str)
             print(get_available_letters(test_str))
             if tester_final == secret_word:
@@ -94,7 +100,7 @@ def main():
     '''
     Main Function!
     '''
-    secret_word = choose_word(word_list).lower()
+    secret_word = choose_word(WORD_LIST).lower()
     hangman(secret_word)
 
 
