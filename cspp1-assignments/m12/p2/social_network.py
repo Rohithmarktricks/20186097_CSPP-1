@@ -32,7 +32,7 @@ def follow(adict, arg1, arg2):
     #     if str_ in adict[i]:
     #         L.append(i)
     # return 
-    for i in adict.keys():
+    for i in list(adict):
         # print(i)
         # print(arg1)
         if i == arg1:
@@ -40,7 +40,7 @@ def follow(adict, arg1, arg2):
             #print(adict[i])
             adict[i].append(arg2)
             #print(adict)
-        if arg1 not in adict.keys():
+        if arg1 not in list(adict):
             adict[arg1] = arg2
 
     return adict
@@ -54,7 +54,7 @@ def unfollow(adict, arg1, arg2):
         so, this should result in removing arg2 from the followers list of arg1
         update the network dictionary and return it
     '''
-    for i in adict.keys():
+    for i in list(adict):
         # print(i)
         # print(arg1)
         if i == arg1:
@@ -76,7 +76,7 @@ def delete_person(adict, arg1):
         update the network dictionary and return it
     '''
     #print(adict.keys())
-    for i in adict.keys():
+    for i in list(adict0:
         if arg1 in adict[i]:
             adict = adict[i].remove(arg1)
 
