@@ -34,6 +34,7 @@ def follow(adict, arg1, arg2):
     # return 
     for i in adict.keys():
         print(i)
+        print(arg1)
         if i == arg1:
             adict[i].append(arg2)
         else:
