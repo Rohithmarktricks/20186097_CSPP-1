@@ -6,16 +6,7 @@
 '''
 # PRINT_SOCIAL = {}
 # LINES = 0
-# def create_social_network(data):
-#     # return PRINT_SOCIAL
-#     final_data = data.split()
-#     j = 0
-#     while j <= (len(final_data)-2):
-#         if final_data[j] not in PRINT_SOCIAL:
-#             if final_data[j+1] == 'follows':
-#                 PRINT_SOCIAL[final_data[j]] = final_data[j+2].split(',')
-#         j = j+3
-#     return PRINT_SOCIAL
+complete_network = {}
 def follow(adict, arg1, arg2):
     '''
         3 arguments are passed to this function
@@ -25,26 +16,13 @@ def follow(adict, arg1, arg2):
         so, this should result in adding arg2 to the followers list of arg1
         update the network dictionary and return it
     '''
-    # print(network.keys())
-    # print(arg1 in network.keys())
-    # print(network[arg1])
-    #L = network
-    # for i in adict:
-    #     if str_ in adict[i]:
-    #         L.append(i)
-    # return
     for i in list(adict):
-        # print(i)
-        # print(arg1)
         if i == arg1:
-            #print(adict[i])
-            #print(adict[i])
             adict[i].append(arg2)
-            #print(adict)
         if arg1 not in list(adict):
             adict[arg1] = [arg2]
-
-    return adict
+    complete_network = adict
+    return complete_network
 
 def unfollow(adict, arg1, arg2):
     '''
@@ -55,15 +33,9 @@ def unfollow(adict, arg1, arg2):
         so, this should result in removing arg2 from the followers list of arg1
         update the network dictionary and return it
     '''
-    for i in list(adict):
-        # print(i)
-        # print(arg1)
-        if i == arg1:
-            j = adict[i].index(arg2)
-            #print(adict[i])
-            del adict[i][j]
-            #print(adict)
-    return adict
+    adict[arg1].remove(arg2)
+    complete_network = adict
+    return complete_network
 
 def delete_person(adict, arg1):
     '''
@@ -76,16 +48,11 @@ def delete_person(adict, arg1):
         update the network dictionary and return it
     '''
     #print(adict.keys())
-    for i in list(adict):
-        if arg1 in adict[i]:
-            #print(arg1 in adict[i])
-            #adict = adict[i].pop(adict[i].index([arg1]))
-            del adict[i][arg1]
-
-    for i in list(adict):
-        if arg1 == i:
-            del adict[arg1]
-
+    if arg1 in adict:
+        del adict[arg1]
+        for i in adict:
+            if arg1 in adict[i]:
+                adict[i].remove(arg1)
     return adict
 
 def main():
