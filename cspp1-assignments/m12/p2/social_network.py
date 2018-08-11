@@ -28,12 +28,16 @@ def follow(network, arg1, arg2):
     # print(network.keys())
     # print(arg1 in network.keys())
     # print(network[arg1])
-    if str(arg1) in network.keys() and str(arg2) not in  network[str(arg1)]:
-        # print(network[str(arg1)])
-        network[str(arg1)] += list(str(arg2))
-        #print(network[str(arg1)])
-    else:
-        network[str(arg1)] = list(str(arg2))
+    #L = network
+    # for i in adict:
+    #     if str_ in adict[i]:
+    #         L.append(i)
+    # return 
+    for i in network:
+        if i == arg1:
+            network[i].append(arg2)
+        else:
+            network[i] = list(arg2)
     return network
     
 def unfollow(network, arg1, arg2):
@@ -71,7 +75,7 @@ def main():
         i += 1
         line = input()
         output = line.split()
-        print(output)
+        #print(output)
         if output[0] == "follow":
             network = follow(network, output[1], output[2])
         elif output[0] == "unfollow":
