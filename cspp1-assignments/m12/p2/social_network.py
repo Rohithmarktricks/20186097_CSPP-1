@@ -80,7 +80,7 @@ def delete_person(adict, arg1):
         if arg1 in adict[i]:
             adict = adict[i].remove(arg1)
 
-        if arg1 in adict.keys():
+        if arg1 in list(adict):
             del adict[arg1]
     return adict
 
