@@ -6,7 +6,7 @@
 '''
 # PRINT_SOCIAL = {}
 # LINES = 0
-complete_network = {}
+COMPLETE_NETWORK = {}
 def follow(adict, arg1, arg2):
     '''
         3 arguments are passed to this function
@@ -16,14 +16,14 @@ def follow(adict, arg1, arg2):
         so, this should result in adding arg2 to the followers list of arg1
         update the network dictionary and return it
     '''
-    global complete_network
+    global COMPLETE_NETWORK
     for i in list(adict):
         if i == arg1:
             adict[i].append(arg2)
         if arg1 not in list(adict):
             adict[arg1] = [arg2]
-    complete_network = adict
-    return complete_network
+    COMPLETE_NETWORK = adict
+    return COMPLETE_NETWORK
 
 def unfollow(adict, arg1, arg2):
     '''
@@ -34,10 +34,10 @@ def unfollow(adict, arg1, arg2):
         so, this should result in removing arg2 from the followers list of arg1
         update the network dictionary and return it
     '''
-    global complete_network
+    global COMPLETE_NETWORK
     adict[arg1].remove(arg2)
-    complete_network = adict
-    return complete_network
+    COMPLETE_NETWORK = adict
+    return COMPLETE_NETWORK
 
 def delete_person(adict, arg1):
     '''
