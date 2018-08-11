@@ -1,5 +1,6 @@
 '''
     Assignment-1 Create Social Network
+    @author: Rohithmarktricks
 '''
 PRINT_SOCIAL = {}
 LINES = 0
