@@ -8,6 +8,7 @@ SCRABBLE_LETTER_VALUES = {
     's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
 }
 
+
 def get_word_score(word, n):
     """
     Returns the score for a word. Assumes the word is a valid word.
@@ -23,7 +24,16 @@ def get_word_score(word, n):
     n: integer (HAND_SIZE; i.e., hand size required for additional points)
     returns: int >= 0
     """
-    return "I am happy"   
+    sum_ = 0
+    for i in list(word):
+        if i in SCRABBLE_LETTER_VALUES:
+            sum_ += SCRABBLE_LETTER_VALUES[i]
+    sum_ = sum_*n
+    if len(set(list)) == n:
+        sum_ = sum_ + 50
+    return sum_
+
+
     
 
 
@@ -33,7 +43,7 @@ def main():
     '''
     data = input()
     data = data.split()
-    print(list(data[0]))
+    #print(list(data[0]))
     print(get_word_score(data[0], int(data[1])))
 
 
