@@ -58,7 +58,7 @@ def main():
     global lines
     string = ''
     LINES = int(input())
-    for i in range(lines):
+    for i in range(LINES):
         i += 1
         string += input()
         string += '\n'
