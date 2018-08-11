@@ -33,10 +33,11 @@ def follow(adict, arg1, arg2):
     #         L.append(i)
     # return 
     for i in adict.keys():
-        print(i)
-        print(arg1)
+        # print(i)
+        # print(arg1)
         if i == arg1:
             adict[i].append(arg2)
+            print(adict)
         else:
             adict[i] = arg2
     return adict
