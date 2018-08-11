@@ -35,7 +35,7 @@ def follow(network, arg1, arg2):
     # return 
     for i in network.keys():
         if i == arg1:
-            network[i].append(arg2)
+           network =  network[i].append(arg2)
         else:
             network[i] = arg2
     return network
