@@ -58,7 +58,7 @@ def unfollow(adict, arg1, arg2):
         # print(i)
         # print(arg1)
         if i == arg1:
-            j = arg1.index(arg2)
+            j = index(arg2)
             #print(adict[i])
             del adict[i][j]
             #print(adict)
