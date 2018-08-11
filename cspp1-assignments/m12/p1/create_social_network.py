@@ -45,7 +45,7 @@ def create_social_network(data):
     j = 0
     while j<=(len(final_data)-2):
         if final_data[j] not in print_social:
-            print_social[final_data[j]] = final_data[j+2]
+            print_social[final_data[j]] = final_data[j+2].split(',')
         j = j+3
     return print_social
 
