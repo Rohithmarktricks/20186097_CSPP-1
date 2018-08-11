@@ -1,6 +1,10 @@
 '''
 Exercise: Assignment-1
-The first step is to implement some code that allows us to calculate the score for a single word. The function get_word_score should accept as input a string of lowercase letters (a word) and return the integer score for that word, using the game's scoring rules.
+The first step is to implement some code that allows us to calculate
+the score for a single word. The function get_word_score should accept
+as input a string of lowercase letters (a word) and return the
+integer score for that word, using the game's scoring rules.
+@author : Rohithmarktricks
 '''
 SCRABBLE_LETTER_VALUES = {
     'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1,
