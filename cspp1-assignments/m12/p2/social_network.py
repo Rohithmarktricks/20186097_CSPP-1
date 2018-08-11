@@ -78,8 +78,9 @@ def delete_person(adict, arg1):
     #print(adict.keys())
     for i in list(adict):
         if arg1 in adict[i]:
-            print(arg1 in adict[i])
-            adict = adict[i].pop(adict[i].index([arg1]))
+            #print(arg1 in adict[i])
+            #adict = adict[i].pop(adict[i].index([arg1]))
+            del adict[i][arg1]
 
     for i in list(adict):
         if arg1 == i:
