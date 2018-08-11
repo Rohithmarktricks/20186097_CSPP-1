@@ -13,7 +13,7 @@ SCRABBLE_LETTER_VALUES = {
 }
 
 
-def get_word_score(word, n):
+def get_word_score(word, num):
     """
     Returns the score for a word. Assumes the word is a valid word.
 
@@ -32,16 +32,10 @@ def get_word_score(word, n):
     for i in word:
         if i in SCRABBLE_LETTER_VALUES:
             sum_ += SCRABBLE_LETTER_VALUES[i]
-    
     sum_ = sum_*len(word)
-    
-    if len(word) == n:
+    if len(word) == num:
         sum_ = sum_ + 50
     return sum_
-
-
-    
-
 
 def main():
     '''
