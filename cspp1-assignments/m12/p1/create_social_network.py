@@ -34,7 +34,9 @@ def create_social_network(data):
     '''
     j = 0
     for i in range(lines):
+        print(i)
         final_data[i] = data[i].split()
+        print(data[i])
         if final_data[i][j] not in print_social:
             print_social[j] = final_data[j+2]
         j += 1
