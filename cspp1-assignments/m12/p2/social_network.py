@@ -36,14 +36,14 @@ def follow(adict, arg1, arg2):
         # print(i)
         # print(arg1)
         if i == arg1:
-            print(adict[i])
-            #adict[i].append(arg2)
-            print(adict)
+            #print(adict[i])
+            adict[i].append(arg2)
+            #print(adict)
         else:
             adict[i] = arg2
     return adict
     
-def unfollow(network, arg1, arg2):
+def unfollow(adict, arg1, arg2):
     '''
         3 arguments are passed to this function
         network is a dictionary representing the social network
@@ -52,10 +52,18 @@ def unfollow(network, arg1, arg2):
         so, this should result in removing arg2 from the followers list of arg1
         update the network dictionary and return it
     '''
+    for i in adict.keys():
+        # print(i)
+        # print(arg1)
+        if i == arg1:
+            #print(adict[i])
+            adict[i].remove(arg2)
+            #print(adict)
+    return adict
     
 
 
-def delete_person(network, arg1):
+def delete_person(adict, arg1):
     '''
         2 arguments are passed to this function
         network is a dictionary representing the social network
@@ -65,8 +73,13 @@ def delete_person(network, arg1):
         also, before deleting arg1, remove arg1 from the everyone's followers list
         update the network dictionary and return it
     '''
-    # remove the pass below and start writing your code
-    pass
+    for i in adict.keys():
+        if arg1 in adict[i]:
+            adict = adict[i].remove(arg1)
+
+        if arg1 in adict.keys():
+            del adict[arg1]
+    return adict
 
 def main():
     '''
