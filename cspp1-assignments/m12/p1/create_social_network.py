@@ -1,7 +1,7 @@
 '''
     Assignment-1 Create Social Network
 '''
-print_social = {}
+PRINT_SOCIAL = {}
 LINES = 0
 def create_social_network(data):
     '''
@@ -37,18 +37,18 @@ def create_social_network(data):
     #     print(i)
     #     final_data[i] = data[i].split()
     #     print(data[i])
-    #     if final_data[i][j] not in print_social:
-    #         print_social[j] = final_data[j+2]
+    #     if final_data[i][j] not in PRINT_SOCIAL:
+    #         PRINT_SOCIAL[j] = final_data[j+2]
     #     j += 1
-    # return print_social
+    # return PRINT_SOCIAL
     final_data = data.split()
     j = 0
     while j <= (len(final_data)-2):
-        if final_data[j] not in print_social:
+        if final_data[j] not in PRINT_SOCIAL:
             if final_data[j+1] == 'follows':
-                print_social[final_data[j]] = final_data[j+2].split(',')
+                PRINT_SOCIAL[final_data[j]] = final_data[j+2].split(',')
         j = j+3
-    return print_social
+    return PRINT_SOCIAL
 
 def main():
     '''
