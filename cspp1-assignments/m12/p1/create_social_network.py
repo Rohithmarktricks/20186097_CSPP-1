@@ -50,7 +50,6 @@ def create_social_network(data):
         j = j+3
     return print_social
 
-   
 def main():
     '''
         handling testcase input and printing output
