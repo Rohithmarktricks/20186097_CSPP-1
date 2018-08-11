@@ -25,8 +25,7 @@ def follow(network, arg1, arg2):
         so, this should result in adding arg2 to the followers list of arg1
         update the network dictionary and return it
     '''
-    if 'arg2' not in network['arg1']:
-        network['arg1'] += 'arg2'
+    network[arg1] += arg2
     return network
     
 def unfollow(network, arg1, arg2):
