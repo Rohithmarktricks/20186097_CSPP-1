@@ -16,6 +16,7 @@ def follow(adict, arg1, arg2):
         so, this should result in adding arg2 to the followers list of arg1
         update the network dictionary and return it
     '''
+    global complete_network
     for i in list(adict):
         if i == arg1:
             adict[i].append(arg2)
@@ -33,6 +34,7 @@ def unfollow(adict, arg1, arg2):
         so, this should result in removing arg2 from the followers list of arg1
         update the network dictionary and return it
     '''
+    global complete_network
     adict[arg1].remove(arg2)
     complete_network = adict
     return complete_network
