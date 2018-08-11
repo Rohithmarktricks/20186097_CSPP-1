@@ -40,9 +40,9 @@ def follow(adict, arg1, arg2):
             print(adict[i])
             adict[i].append(arg2)
             #print(adict)
+        if i != arg1:
+            adict[arg1] = arg2
 
-        if i not in arg1:
-            adict[i] = arg2
     return adict
     
 def unfollow(adict, arg1, arg2):
