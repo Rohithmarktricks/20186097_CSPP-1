@@ -25,12 +25,16 @@ def get_word_score(word, n):
     returns: int >= 0
     """
     sum_ = 0
-    for i in list(word):
-        if i in SCRABBLE_LETTER_VALUES:
-            sum_ += SCRABBLE_LETTER_VALUES[i]
-    sum_ = sum_*len(word)
-    if len(set(list(word))) == n:
-        sum_ = sum_ + 50
+    if word != None:
+        for i in list(word):
+            if i in SCRABBLE_LETTER_VALUES:
+                sum_ += SCRABBLE_LETTER_VALUES[i]
+        sum_ = sum_*len(word)
+
+        if len(set(list(word))) == n:
+            sum_ = sum_ + 50
+    else:
+        sum_ = n
     return sum_
 
 
