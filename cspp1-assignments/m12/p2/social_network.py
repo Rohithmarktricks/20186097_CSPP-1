@@ -15,8 +15,7 @@
 #                 PRINT_SOCIAL[final_data[j]] = final_data[j+2].split(',')
 #         j = j+3
 #     return PRINT_SOCIAL
-
-def follow(network, arg1, arg2):
+def follow(adict, arg1, arg2):
     '''
         3 arguments are passed to this function
         network is a dictionary representing the social network
@@ -33,12 +32,12 @@ def follow(network, arg1, arg2):
     #     if str_ in adict[i]:
     #         L.append(i)
     # return 
-    for i in network.keys():
+    for i in adict.keys():
         if i == arg1:
-           network =  network[i].append(arg2)
+            adict[i].append(arg2)
         else:
-            network[i] = arg2
-    return network
+            adict[i] = arg2
+    return adict
     
 def unfollow(network, arg1, arg2):
     '''
