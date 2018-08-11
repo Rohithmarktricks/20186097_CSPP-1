@@ -33,7 +33,7 @@ def main():
     '''
     data = input()
     data = data.split()
-    print(data[0])
+    print(list(data[0]))
     print(get_word_score(data[0], int(data[1])))
 
 
