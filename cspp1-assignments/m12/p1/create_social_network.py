@@ -2,7 +2,7 @@
     Assignment-1 Create Social Network
 '''
 print_social = {}
-lines = 0
+LINES = 0
 def create_social_network(data):
     '''
         The data argument passed to the function is a string
@@ -57,7 +57,7 @@ def main():
     '''
     global lines
     string = ''
-    lines = int(input())
+    LINES = int(input())
     for i in range(lines):
         i += 1
         string += input()
