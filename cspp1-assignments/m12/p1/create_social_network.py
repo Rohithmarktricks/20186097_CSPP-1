@@ -43,7 +43,7 @@ def create_social_network(data):
     # return print_social
     final_data = data.split()
     j = 0
-    while j<=len(final_data):
+    while j<=(len(final_data)-2):
         if final_data[j] not in print_social:
             print_social[j] = final_data[j+2]
         j = j+3
