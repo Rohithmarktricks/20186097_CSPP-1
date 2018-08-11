@@ -102,7 +102,7 @@ def main():
             #print(network)
         elif output[0] == "unfollow":
             network = unfollow(network, output[1], output[2])
-            print(network)
+            #print(network)
         elif output[0] == "delete":
             network = delete_person(network, output[1])
 
