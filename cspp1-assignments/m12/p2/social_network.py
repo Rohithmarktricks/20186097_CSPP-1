@@ -41,7 +41,7 @@ def follow(adict, arg1, arg2):
             adict[i].append(arg2)
             #print(adict)
         if arg1 not in list(adict):
-            adict[arg1] = arg2
+            adict[arg1] = [arg2]
 
     return adict
     
