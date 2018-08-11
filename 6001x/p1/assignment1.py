@@ -29,7 +29,7 @@ def get_word_score(word, n):
         if i in SCRABBLE_LETTER_VALUES:
             sum_ += SCRABBLE_LETTER_VALUES[i]
     sum_ = sum_*n
-    if len(set(list)) == n:
+    if len(set(list(word))) == n:
         sum_ = sum_ + 50
     return sum_
 
