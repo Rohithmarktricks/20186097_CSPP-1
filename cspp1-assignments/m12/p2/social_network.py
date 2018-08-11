@@ -59,7 +59,7 @@ def unfollow(adict, arg1, arg2):
         # print(arg1)
         if i == arg1:
             #print(adict[i])
-            adict[i].remove(arg2)
+            adict[i].pop(arg2)
             #print(adict)
     return adict
     
