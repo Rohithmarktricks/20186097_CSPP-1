@@ -41,7 +41,7 @@ def follow(adict, arg1, arg2):
             adict[i].append(arg2)
             #print(adict)
         if arg1 not in list(adict):
-            adict[arg1] = list(arg2)
+            adict[arg1] = arg2
 
     return adict
     
@@ -97,7 +97,7 @@ def main():
         #print(output)
         if output[0] == "follow":
             network = follow(network, output[1], output[2])
-            print(network)
+            #print(network)
         elif output[0] == "unfollow":
             network = unfollow(network, output[1], output[2])
             #print(network)
