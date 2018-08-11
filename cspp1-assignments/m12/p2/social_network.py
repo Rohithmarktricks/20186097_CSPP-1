@@ -36,7 +36,8 @@ def follow(adict, arg1, arg2):
         # print(i)
         # print(arg1)
         if i == arg1:
-            adict[i].append(arg2)
+            print(adict[i])
+            #adict[i].append(arg2)
             print(adict)
         else:
             adict[i] = arg2
