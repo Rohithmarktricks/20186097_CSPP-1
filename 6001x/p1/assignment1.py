@@ -27,18 +27,14 @@ def get_word_score(word, n):
     print(word)
     print(n)
     sum_ = 0
-    if word != None:
-        for i in list(word):
-            if i in SCRABBLE_LETTER_VALUES:
-                sum_ += SCRABBLE_LETTER_VALUES[i]
-        sum_ = sum_*len(word)
-
-        print(set(list(word)))
-
-        if len(set(list(word))) == n:
-            sum_ = sum_ + 50
-    else:
-        sum_ = n
+    for i in word:
+        if i in SCRABBLE_LETTER_VALUES:
+            sum_ += SCRABBLE_LETTER_VALUES[i]
+    
+    sum_ = sum_*len(word)
+    
+    if len(word) == n:
+        sum_ = sum_ + 50
     return sum_
 
 
