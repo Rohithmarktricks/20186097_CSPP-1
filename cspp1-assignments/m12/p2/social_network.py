@@ -81,7 +81,9 @@ def delete_person(adict, arg1):
         if arg1 in adict[i]:
             print(arg1 in adict[i])
             adict = adict[i].pop(adict[i].index([arg1]))
-        elif arg1 == i:
+    
+    for i in list(adict):
+        if arg1 == i:
             del adict[arg1]
         
 
@@ -104,11 +106,11 @@ def main():
             #print(network)
         elif output[0] == "unfollow":
             network = unfollow(network, output[1], output[2])
-            print(network)
+            #print(network)
         elif output[0] == "delete":
             network = delete_person(network, output[1])
 
-    #print(network)
+    print(network)
 
 if __name__ == "__main__":
     main()
