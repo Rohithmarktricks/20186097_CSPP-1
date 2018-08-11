@@ -80,8 +80,8 @@ def delete_person(adict, arg1):
     for i in list(adict):
         if arg1 == i:
             del adict[arg1]
-        elif arg1 in adict[i]:
-            adict = adict[i].remove(arg1)
+        # elif arg1 in adict[i]:
+        #     adict = adict[i].remove(arg1)
 
         
     return adict
