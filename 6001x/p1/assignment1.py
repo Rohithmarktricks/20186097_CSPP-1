@@ -33,6 +33,8 @@ def get_word_score(word, n):
                 sum_ += SCRABBLE_LETTER_VALUES[i]
         sum_ = sum_*len(word)
 
+        print(set(list(word)))
+
         if len(set(list(word))) == n:
             sum_ = sum_ + 50
     else:
