@@ -57,7 +57,7 @@ def unfollow(adict, arg1, arg2):
         # print(arg1)
         if i == arg1:
             #print(adict[i])
-            adict[i].remove(arg2)
+            del adict[arg1][arg2]
             #print(adict)
     return adict
     
@@ -73,6 +73,7 @@ def delete_person(adict, arg1):
         also, before deleting arg1, remove arg1 from the everyone's followers list
         update the network dictionary and return it
     '''
+    print(adict.keys())
     for i in adict.keys():
         if arg1 in adict[i]:
             adict = adict[i].remove(arg1)
