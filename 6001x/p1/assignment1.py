@@ -28,7 +28,9 @@ def get_word_score(word, n):
     for i in list(word):
         if i in SCRABBLE_LETTER_VALUES:
             sum_ += SCRABBLE_LETTER_VALUES[i]
+            print(sum_)
     sum_ = sum_*n
+    print(sum_)
     if len(set(list(word))) == n:
         sum_ = sum_ + 50
     return sum_
