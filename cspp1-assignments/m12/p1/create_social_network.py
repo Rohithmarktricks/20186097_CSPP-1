@@ -55,7 +55,7 @@ def main():
     '''
         handling testcase input and printing output
     '''
-    global lines
+    global LINES
     string = ''
     LINES = int(input())
     for i in range(LINES):
