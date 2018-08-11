@@ -76,7 +76,7 @@ def delete_person(adict, arg1):
         update the network dictionary and return it
     '''
     #print(adict.keys())
-    for i in list(adict0:
+    for i in list(adict):
         if arg1 in adict[i]:
             adict = adict[i].remove(arg1)
 
