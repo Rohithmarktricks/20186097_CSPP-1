@@ -31,7 +31,7 @@ def follow(adict, arg1, arg2):
     # for i in adict:
     #     if str_ in adict[i]:
     #         L.append(i)
-    # return 
+    # return
     for i in list(adict):
         # print(i)
         # print(arg1)
@@ -44,7 +44,7 @@ def follow(adict, arg1, arg2):
             adict[arg1] = [arg2]
 
     return adict
-    
+
 def unfollow(adict, arg1, arg2):
     '''
         3 arguments are passed to this function
@@ -63,8 +63,6 @@ def unfollow(adict, arg1, arg2):
             del adict[i][j]
             #print(adict)
     return adict
-    
-
 
 def delete_person(adict, arg1):
     '''
@@ -85,9 +83,7 @@ def delete_person(adict, arg1):
     for i in list(adict):
         if arg1 == i:
             del adict[arg1]
-        
 
-        
     return adict
 
 def main():
