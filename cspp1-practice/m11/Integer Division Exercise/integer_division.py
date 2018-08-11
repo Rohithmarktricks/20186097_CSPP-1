@@ -3,6 +3,7 @@ Exercise: Integer Division Exercise
 Modify the code for integer_division so that this error does not occur.
 @author: Rohithmarktricks
 '''
+count = 0
 def integer_division(x_int, a_int):
     """
     x_int: a_int non-negative integer argument
@@ -10,7 +11,7 @@ def integer_division(x_int, a_int):
 
     returns: integer, the integer division of x divided by a.
     """
-    count = 0
+    global count
     while x_int >= a_int:
         count += 1
         x_int = x_int - a_int
