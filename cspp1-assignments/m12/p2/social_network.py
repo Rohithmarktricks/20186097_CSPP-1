@@ -33,11 +33,11 @@ def follow(network, arg1, arg2):
     #     if str_ in adict[i]:
     #         L.append(i)
     # return 
-    for i in network:
+    for i in network.keys():
         if i == arg1:
             network[i].append(arg2)
         else:
-            network[i] = list(arg2)
+            network[i] = arg2
     return network
     
 def unfollow(network, arg1, arg2):
