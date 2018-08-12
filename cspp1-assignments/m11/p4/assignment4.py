@@ -24,13 +24,13 @@ def main():
     '''
     Main function
     '''
-    n = input()
+    n_len = input()
     adict = {}
-    for i in range(int(n)):
+    for i in range(int(n_len)):
         del i
         data = input()
-        l = data.split()
-        adict[l[0]] = int(l[1])
+        l_list = data.split()
+        adict[l_list[0]] = int(l_list[1])
     print(calculate_handlen(adict))
 
 if __name__ == "__main__":
