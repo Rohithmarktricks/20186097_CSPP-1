@@ -24,9 +24,9 @@ def main():
     Main function to call the list and dictionary.
     '''
     word = input()
-    n = int(input())
+    n_int = int(input())
     adict = {}
-    for i in range(n):
+    for i in range(n_int):
         del i
         data = input()
         l = data.split()
