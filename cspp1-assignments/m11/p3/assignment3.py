@@ -29,10 +29,10 @@ def main():
     for i in range(n_int):
         del i
         data = input()
-        l = data.split()
-        adict[l[0]] = int(l[1])
-    l2 = input().split()
-    print(is_valid_word(word, adict, l2))
+        l_list = data.split()
+        adict[l_list[0]] = int(l_list[1])
+    l_list_2 = input().split()
+    print(is_valid_word(word, adict, l_list_2))
 
 if __name__ == "__main__":
     main()
