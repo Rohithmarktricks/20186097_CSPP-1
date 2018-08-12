@@ -24,8 +24,10 @@ def updateHand(hand, word):
     returns: dictionary (string -> int)
     """
     for i in word:
-        for i in hand:
-            hand.pop(i)
+        if i in hand:
+            del hand[word]
+
+            
     return hand
 
     
