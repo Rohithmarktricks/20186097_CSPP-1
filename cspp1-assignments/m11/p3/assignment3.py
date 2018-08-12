@@ -18,10 +18,8 @@ def isValidWord(word, hand, wordList):
         for i in list(word):
             if i in hand:
                 count += 1
-    if count == len(word):
-        return True
-    else:
-        return False
+    return bool(count == len(word))
+    
 def main():
     '''
     Main function to call the list and dictionary.
