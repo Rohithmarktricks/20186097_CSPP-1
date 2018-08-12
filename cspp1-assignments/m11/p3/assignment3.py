@@ -2,7 +2,7 @@
 Assignment-3
 @author : Rohithmarktricks
 '''
-def is_valid_word(word, hand, wordList):
+def is_valid_word(word, hand, word_list):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
@@ -13,7 +13,7 @@ def is_valid_word(word, hand, wordList):
     wordList: list of lowercase strings
     """
     count = 0
-    if word in wordList:
+    if word in word_list:
         for i in list(word):
             if i in hand:
                 count += 1
