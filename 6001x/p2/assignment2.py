@@ -25,7 +25,7 @@ def updateHand(hand, word):
     """
     for i in word:
         for i in hand:
-            hand = hand.remove(i)
+            hand = hand.del(i)
     return hand
 
     
