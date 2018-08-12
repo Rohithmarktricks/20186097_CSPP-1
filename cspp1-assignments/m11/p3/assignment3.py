@@ -20,6 +20,7 @@ def isValidWord(word, hand, wordList):
     """
     print(word)
     print(wordList)
+    print(hand)
     count = 0
     if word in wordList:
         for i in word:
