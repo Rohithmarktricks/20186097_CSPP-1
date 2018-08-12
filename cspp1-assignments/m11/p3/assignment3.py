@@ -8,7 +8,6 @@ def isValidWord(word, hand, wordList):
     composed of letters in the hand. Otherwise, returns False.
 
     Does not mutate hand or wordList.
-   
     word: string
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
@@ -19,7 +18,7 @@ def isValidWord(word, hand, wordList):
             if i in hand:
                 count += 1
     return bool(count == len(word))
-    
+
 def main():
     '''
     Main function to call the list and dictionary.
@@ -28,7 +27,7 @@ def main():
     n = int(input())
     adict = {}
     for i in range(n):
-        del i 
+        del i
         data = input()
         l = data.split()
         adict[l[0]] = int(l[1])
