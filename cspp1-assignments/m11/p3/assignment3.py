@@ -23,7 +23,7 @@ def isValidWord(word, hand, wordList):
     print(hand)
     print(wordList)
     print(word)
-    c = word in wordList
+    print(word in wordList)
     print(c)
     print(list(word))
     if c:
