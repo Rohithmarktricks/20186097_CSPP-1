@@ -35,6 +35,7 @@ def main():
     n = input()
     adict = {}
     for i in range(int(n)):
+        del i
         data = input()
         l = data.split()
         adict[l[0]] = int(l[1])
