@@ -15,23 +15,22 @@ def calculateHandlen(hand):
     hand: dictionary (string int)
     returns: integer
     """
-    print(hi)
-
-    
+    sum_ = 0
+    for i in hand:
+        sum_ += hand[i]
+    return sum_
 
 def main():
-	'''
-	Main function
-	'''	
-	n=input()
-	adict={}
-	for i in range(int(n)):
-		data=input()
-		l=data.split()
-		adict[l[0]]=int(l[1])
-	print(calculateHandlen(adict))
-		
-
+    '''
+    Main function
+    ''' 
+    n=input()
+    adict={}
+    for i in range(int(n)):
+        data=input()
+        l=data.split()
+        adict[l[0]]=int(l[1])
+    print(calculateHandlen(adict))
 
 if __name__== "__main__":
-	main()
+    main()

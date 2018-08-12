@@ -5,6 +5,7 @@ At this point, we have written code to generate a random hand and display that h
 Testing: Make sure the test_isValidWord tests pass. In addition, you will want to test your implementation by calling it multiple times on the same hand - what should the correct behavior be? Additionally, the empty string ('') is not a valid word - if you code this function correctly, you shouldn't need an additional check for this condition.
 
 Fill in the code for isValidWord in ps4a.py and be sure you've passed the appropriate tests in test_ps4a.py before pasting your function definition here.
+@author : Rohithmarktricks
 '''
 
 def isValidWord(word, hand, wordList):
@@ -18,23 +19,15 @@ def isValidWord(word, hand, wordList):
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
     """
-    print(word)
-    print(wordList)
-    print(hand)
     count = 0
-    print(str(word) in wordList)
     if word in wordList:
         for i in word:
-            print(i)
             if i in hand:
                 count += 1
-    print(count)
-    print(word)
     if count == len(word):
         return True
     else:
         return False
-    
 
 def main():
     word=input()
@@ -46,8 +39,6 @@ def main():
         adict[l[0]]=int(l[1])
     l2=input().split()
     print(isValidWord(word,adict,l2))
-        
-
 
 if __name__== "__main__":
     main()
