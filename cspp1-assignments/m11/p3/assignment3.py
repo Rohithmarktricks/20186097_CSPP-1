@@ -15,11 +15,7 @@ def is_valid_word(word, hand, word_list):
     count = 0
     if word in word_list:
         for i in word:
-            if i == i+1:
-                count += 1
             if i in hand:
-                if i == i+1:
-                    count += 2
                 count += 1
     return bool(count == len(word))
 
