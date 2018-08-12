@@ -5,6 +5,8 @@ count = 0
 a = "Rohith"
 print(a)
 c = ['Rohith', 'rohith']
+for i in c:
+	print(c.index(i))
 print(a in c)
 b = {'r':1, 'o':2, 'h':3, 'i':4, 't':5, 'h':6}
 if a in c:
