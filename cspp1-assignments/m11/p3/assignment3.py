@@ -18,6 +18,7 @@ def isValidWord(word, hand, wordList):
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
     """
+    print(wordList)
     count = 0
     if word in wordList:
         for i in word:
