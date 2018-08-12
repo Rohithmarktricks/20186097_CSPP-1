@@ -25,7 +25,7 @@ def updateHand(hand, word):
     """
     for i in list(word):
         if i in hand:
-            del hand[i]
+            hand[i] -= 1
 
             
     return hand
