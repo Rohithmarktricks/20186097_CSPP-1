@@ -23,9 +23,9 @@ def update_hand(hand, word):
     hand: dictionary (string -> int)
     returns: dictionary (string -> int)
     """
-    for i in list(word):
-        if i in hand:
-            hand[i] -= 1
+    for letter in word:
+        if letter in hand:
+            hand[letter] -= 1
     return hand
 
 def main():
