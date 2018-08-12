@@ -29,7 +29,7 @@ def isValidWord(word, hand, wordList):
             if i in hand:
                 count += 1
     print(count)
-    if count == len(word):
+    if count != len(word):
         return True
     else:
         return False
