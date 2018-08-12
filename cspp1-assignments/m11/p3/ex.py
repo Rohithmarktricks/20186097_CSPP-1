@@ -3,6 +3,7 @@
 # print(a in b)
 count = 0
 a = "Rohith"
+print(a)
 c = ['Rohith', 'rohith']
 b = {'r':1, 'o':2, 'h':3, 'i':4, 't':5, 'h':6}
 if a in c:
