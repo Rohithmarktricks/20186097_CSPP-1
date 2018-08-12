@@ -8,7 +8,7 @@ which can be done in under five lines of code.
 @author : Rohithmarktricks
 '''
 
-def calculateHandlen(hand):
+def calculate_handlen(hand):
     """
     Returns the length (number of letters) in the current hand.
 
@@ -16,8 +16,8 @@ def calculateHandlen(hand):
     returns: integer
     """
     sum_ = 0
-    for i in hand:
-        sum_ += hand[i]
+    for iter_ in hand:
+        sum_ += hand[iter_]
     return sum_
 
 def main():
@@ -31,7 +31,7 @@ def main():
         data = input()
         l = data.split()
         adict[l[0]] = int(l[1])
-    print(calculateHandlen(adict))
+    print(calculate_handlen(adict))
 
 if __name__ == "__main__":
     main()
