@@ -37,8 +37,8 @@ def main():
     for i in range(int(num_input)):
         del i
         data = input()
-        l = data.split()
-        adict[l[0]] = int(l[1])
+        list_data = data.split()
+        adict[list_data[0]] = int(list_data[1])
     data1 = input()
     print(update_hand(adict, data1))
 
