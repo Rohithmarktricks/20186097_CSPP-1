@@ -32,7 +32,7 @@ def main():
     '''
     Main function that takes dictionary and no. of times they occur.
     '''
-	n = input()
+	n=input()
 	adict = {}
 	for i in range(int(n)):
 		data = input()
