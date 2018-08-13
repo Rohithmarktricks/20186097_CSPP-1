@@ -113,25 +113,25 @@ def test_isValidWord(wordList):
     handCopy = handOrig.copy()
 
     if not isValidWord(word, handCopy, wordList):
-        print "FAILURE: test_isValidWord()"
-        print "\tExpected True, but got False for word: '" + word + "' and hand:", handOrig
+        print("FAILURE: test_isValidWord()")
+        print("\tExpected True, but got False for word: '" + word + "' and hand:", handOrig)
 
         failure = True
 
     # Test a second time to see if wordList or hand has been modified
     if not isValidWord(word, handCopy, wordList):
-        print "FAILURE: test_isValidWord()"
+        print("FAILURE: test_isValidWord()")
 
         if handCopy != handOrig:
-            print "\tTesting word", word, "for a second time - be sure you're not modifying hand."
-            print "\tAt this point, hand ought to be", handOrig, "but it is", handCopy
+            print("\tTesting word", word, "for a second time - be sure you're not modifying hand.")
+            print("\tAt this point, hand ought to be", handOrig, "but it is", handCopy)
 
         else:
-            print "\tTesting word", word, "for a second time - have you modified wordList?"
+            print("\tTesting word", word, "for a second time - have you modified wordList?")
             wordInWL = word in wordList
-            print "The word", word, "should be in wordList - is it?", wordInWL
+            print("The word", word, "should be in wordList - is it?", wordInWL)
 
-        print "\tExpected True, but got False for word: '" + word + "' and hand:", handCopy
+        print("\tExpected True, but got False for word: '" + word + "' and hand:", handCopy)
 
         failure = True
 
@@ -140,8 +140,8 @@ def test_isValidWord(wordList):
     word = "rapture"
 
     if isValidWord(word, hand, wordList):
-        print "FAILURE: test_isValidWord()"
-        print "\tExpected False, but got True for word: '" + word + "' and hand:", hand
+        print("FAILURE: test_isValidWord()")
+        print("\tExpected False, but got True for word: '" + word + "' and hand:", hand)
 
         failure = True
 
@@ -150,8 +150,8 @@ def test_isValidWord(wordList):
     word = "honey"
 
     if not isValidWord(word, hand, wordList):
-        print "FAILURE: test_isValidWord()"
-        print "\tExpected True, but got False for word: '" + word + "' and hand:", hand
+        print("FAILURE: test_isValidWord()")
+        print("\tExpected True, but got False for word: '" + word + "' and hand:", hand)
 
         failure = True
 
@@ -160,8 +160,8 @@ def test_isValidWord(wordList):
     word = "honey"
 
     if isValidWord(word, hand, wordList):
-        print "FAILURE: test_isValidWord()"
-        print "\tExpected False, but got True for word: '" + word + "' and hand:", hand
+        print("FAILURE: test_isValidWord()")
+        print("\tExpected False, but got True for word: '" + word + "' and hand:", hand)
 
         failure = True
 
@@ -170,8 +170,8 @@ def test_isValidWord(wordList):
     word = "evil"
 
     if not isValidWord(word, hand, wordList):
-        print "FAILURE: test_isValidWord()"
-        print "\tExpected True, but got False for word: '" + word + "' and hand:", hand
+        print("FAILURE: test_isValidWord()")
+        print("\tExpected True, but got False for word: '" + word + "' and hand:", hand)
 
         failure = True
 
@@ -179,25 +179,25 @@ def test_isValidWord(wordList):
     word = "even"
 
     if isValidWord(word, hand, wordList):
-        print "FAILURE: test_isValidWord()"
-        print "\tExpected False, but got True for word: '" + word + "' and hand:", hand
-        print "\t(If this is the only failure, make sure isValidWord() isn't mutating its inputs)"
+        print("FAILURE: test_isValidWord()")
+        print("\tExpected False, but got True for word: '" + word + "' and hand:", hand)
+        print("\t(If this is the only failure, make sure isValidWord() isn't mutating its inputs)")
 
         failure = True
 
     if not failure:
-        print "SUCCESS: test_isValidWord()"
+        print("SUCCESS: test_isValidWord()")
 
 
 wordList = loadWords()
-print "----------------------------------------------------------------------"
-print "Testing getWordScore..."
+print("----------------------------------------------------------------------")
+print("Testing getWordScore...")
 test_getWordScore()
-print "----------------------------------------------------------------------"
-print "Testing updateHand..."
+print("----------------------------------------------------------------------")
+print("Testing updateHand...")
 test_updateHand()
-print "----------------------------------------------------------------------"
-print "Testing isValidWord..."
+print("----------------------------------------------------------------------")
+print("Testing isValidWord...")
 test_isValidWord(wordList)
-print "----------------------------------------------------------------------"
-print "All done!"
+print("----------------------------------------------------------------------")
+print("All done!")

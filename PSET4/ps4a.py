@@ -27,14 +27,14 @@ def loadWords():
     Depending on the size of the word list, this function may
     take a while to finish.
     """
-    print "Loading word list from file..."
+    print("Loading word list from file...")
     # inFile: file
     inFile = open(WORDLIST_FILENAME, 'r', 0)
     # wordList: list of strings
     wordList = []
     for line in inFile:
         wordList.append(line.strip().lower())
-    print "  ", len(wordList), "words loaded."
+    print("  ", len(wordList), "words loaded.")
     return wordList
 
 
@@ -92,8 +92,8 @@ def displayHand(hand):
     """
     for letter in hand.keys():
         for j in range(hand[letter]):
-            print letter,              # print all on the same line
-    print                               # print an empty line
+            print (" ",letter)              # print all on the same line
+    print('\n')                               # print an empty line
 
 
 #
@@ -207,9 +207,9 @@ def playHand(hand, wordList, n):
     totalScore = 0
     while calculateHandlen(hand) > 0:
         # Display the hand
-        print hand
+        print(hand)
         # Ask user for input
-        userInput = raw_input("Enter smth")
+        userInput = input("Enter smth")
         # If the input is a single period:
         if userInput == '.':
             # End the game (break out of the loop)
@@ -219,19 +219,19 @@ def playHand(hand, wordList, n):
             # If the word is not valid:
             if not isValidWord(userInput, hand, wordList):
                 # Reject invalid word (print a message followed by a blank line)
-                print "Your word is rejected\n"
+                print("Your word is rejected\n")
             # Otherwise (the word is valid):
             else:
                 # Tell the user how many points the word earned, and the updated
                 # total score, in one line followed by a blank line
                 wordScore = getWordScore(userInput)
                 totalScore += wordScore
-                print "You've earned {}, your score now is {}".format(wordScore, totalScore)
+                print("You've earned {}, your score now is {}".format(wordScore, totalScore))
                 # Update the hand
                 hand = updateHand(hand, userInput)
     # Game is over (user entered a '.' or ran out of letters), so tell user the
     # total score
-    print "Total Score = {}".format(totalScore)
+    print("Total Score = {}".format(totalScore))
 
 
 #
@@ -250,7 +250,7 @@ def playGame(wordList):
     2) When done playing the hand, repeat from step 1
     """
     # TO DO ... <-- Remove this comment when you code this function
-    print "playGame not yet implemented."  # <-- Remove this line when you code
+    print("playGame not yet implemented.")  # <-- Remove this line when you code
     # the function
 
 
