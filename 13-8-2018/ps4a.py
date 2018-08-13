@@ -48,7 +48,7 @@ def getFrequencyDict(sequence):
     for x in sequence:
         freq[x] = freq.get(x,0) + 1
     return freq
-	
+    
 
 # (end of helper code)
 # -----------------------------------
@@ -149,10 +149,11 @@ def updateHand(hand, word):
     hand: dictionary (string -> int)    
     returns: dictionary (string -> int)
     """
+    update_hand = hand.copy()
     for letter in word:
-    	if letter in hand:
-    		hand[letter] -= 1
-	return hand
+        if letter in update_hand:
+            update_hand[letter] -= 1
+    return update_hand
 
 
 
@@ -171,10 +172,14 @@ def isValidWord(word, hand, word_list):
     wordList: list of lowercase strings
     """
     count = 0
+    #dict_new = {}
+    #print(hand)
+    new_hand = hand.copy()
     if word in word_list:
         for i in word:
-            if i in hand:
-                count += 1
+            if i in new_hand and new_hand[i] > 0:
+                new_hand[i] -= 1
+                count += 1    
     return bool(count == len(word))
 
 
@@ -219,14 +224,16 @@ def playHand(hand, wordList, n):
       
     """
     print(hand)
+    no_hand = 0
+    for i in hand:
+        no_hand += hand[i]  
     print("Enter the input a valid 'word' or a single 'period . '")
     init_word = input()
     if init_word != '.':
-    	return_1 = isValidWord(init_word)
-	if return_1 == True:
-		score_int = getWordScore(init_word,)
-		hand = updateHand(hand, init_word)
-
+        return_1 = isValidWord(init_word)
+        if return_1 == True:
+            print(getWordScore(init_word,no_hand))
+    
 
     # BEGIN PSEUDOCODE <-- Remove this comment when you code this function; do your coding within the pseudocode (leaving those comments in-place!)
     # Keep track of the total score
@@ -278,13 +285,13 @@ def playGame(wordList):
     #print("playGame not yet implemented.") # <-- Remove this line when you code the function
     user_report = input("Enter the input from the options : 'n' or 'r' or 'e' ")
     if user_report == 'n':
-    	num_ = input("Enter the number :")
-    	random_gen = dealHand(num_)
-    	playHand(random_gen)
-	if user_report == 'r':
-		pass
-	if user_report == 'e':
-		break
+        num_ = input("Enter the number :")
+        random_gen = dealHand(num_)
+        playHand(random_gen)
+    if user_report == 'r':
+        pass
+    if user_report == 'e':
+        pass
 
 
 

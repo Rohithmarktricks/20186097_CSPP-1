@@ -13,10 +13,12 @@ def is_valid_word(word, hand, word_list):
     wordList: list of lowercase strings
     """
     count = 0
+    new_hand = hand.copy()
     if word in word_list:
         for i in word:
-            if i in hand:
+            if i in new_hand and new_hand[i] > 0:
                 count += 1
+                new_hand[i] -= 1
     return bool(count == len(word))
 
 def main():
