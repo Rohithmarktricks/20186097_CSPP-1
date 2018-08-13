@@ -293,10 +293,10 @@ def playGame(wordList):
         num_ = input("Enter the number :")
         random_gen = dealHand(num_)
         playHand(random_gen)
-    if user_report == 'r':
-        pass
-    if user_report == 'e':
-        pass
+    elif user_report == 'r':
+        playHand(random_gen)
+    elif user_report == 'e':
+        print("Exit the game!")
 
 
 
