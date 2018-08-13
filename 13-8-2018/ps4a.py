@@ -1,4 +1,9 @@
 # The 6.00 Word Game
+'''
+Problem set 4
+Game
+@author : Rohithmarktricks
+'''
 
 import random
 import string
