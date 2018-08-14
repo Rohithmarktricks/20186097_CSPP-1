@@ -33,15 +33,24 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    suit_values= []
-    count = 0
-    for h in hand:
-        suit_values.append(h[1])
-    ref_suit = suit_values[0]
-    for i in range(1,len(suit_values)):
-        if ref_suit == suit_values[i]:
-            count += 1
-    if count == len(suit_values):
+    # suit_values= []
+    # count = 0
+    # for h in hand:
+    #     suit_values.append(h[1])
+    # ref_suit = suit_values[0]
+    # for i in range(1,len(suit_values)):
+    #     if ref_suit == suit_values[i]:
+    #         count += 1
+    # if count == len(suit_values):
+    #     return True
+    # return False
+    suit_list = []
+    sum_values = 0
+    for i in hand:
+        suit_list.append(i[1])
+    for i in suit_list:
+        sum_values += ord(i)
+    if sum_values == 5*ord(i):
         return True
     return False
 
