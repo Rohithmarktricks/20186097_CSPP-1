@@ -3,7 +3,6 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-global_dict = {'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'T':10,'J':11,'Q':12,'K':13,'A':14} 
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -14,23 +13,16 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    #print(hand)
-    list_new = []
-    list_suit = []
-    count = 0
-    for i in hand:
-        list_new.extend(i[0])
-        list_suit.extend(i[1])
-    for i in range(len(list_new)):
-        list_new[i] = global_dict[list_new[i]]
-    list_new.sort()
-    for j in range(len(list_new)-1):
-        if (list_new[j+1] - list_new[j]) == 1:
-            count += 1
-    if count == len(list_new):
-        return is_flush(list_suit)
-    else:
-        return 1
+    global_dict = {'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'T':10,'J':11,'Q':12,'K':13,'A':14}
+    face_values = []
+    for h in hand:
+        face_values.append(global_dict[h[0]])
+    face_values.sort()
+    flag = 0
+    for i in range(len(face_values)-1):
+        if face_values[i+1]-face_values[i] != 1:
+            return False
+    return True
 
 def is_flush(hand):
     '''
@@ -41,15 +33,21 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    count2 = 0
-    flag = ord(hand[0])
-    for i in range(1,len(hand)):
-        if flag == ord(hand[i]):
-            count2 += 1
-    if count2 == len(hand):
-        return 3
-    else:
-        return 2
+    suit_values= []
+    count = 0
+    for h in hand:
+        suit_values.append(h[1])
+    ref_suit = suit_values[0]
+    for i in range(1,len(suit_values)):
+        if ref_suit == suit_values[i]:
+            count += 1
+    if count == len(suit_values):
+        return True
+    return False
+
+
+
+
 
 def hand_rank(hand):
     '''
@@ -59,22 +57,6 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
-    #temp_straight = []
-    temp_straight = is_straight(hand)
-    #temp = max(temp_straight)
-    if temp_straight == 1:
-        return 1
-    elif temp_straight == 2:
-        return 2
-    elif temp_straight == 3:
-        return 3
-    else:
-        return 0
-
-
-
-
-
 
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
@@ -91,7 +73,12 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-
+    if is_straight(hand) == True and is_flush(hand) == True:
+        return 3
+    elif is_flush(hand) == True:
+        return 2
+    elif is_straight(hand) == True:
+        return 1 
 
 def poker(hands):
     '''
