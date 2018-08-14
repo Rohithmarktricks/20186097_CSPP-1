@@ -60,7 +60,7 @@ def hand_rank(hand):
         or a flush or a straight flush.
     '''
     temp_straight = []
-    temp_straight += is_straight(hand)
+    temp_straight.append(is_straight(hand))
     temp = max(temp_straight)
     if temp == 1:
         return 1
