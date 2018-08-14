@@ -14,6 +14,7 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
+    print(hand)
     list_new = []
     list_suit = []
     count = 0
