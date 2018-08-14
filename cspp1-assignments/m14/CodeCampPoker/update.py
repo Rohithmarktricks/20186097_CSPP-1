@@ -14,12 +14,12 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-     list_new = []
-    list_suit = []
+    list_new = []
+    #list_suit = []
     count = 0
     for i in hand:
         list_new.extend([i[0][0]])
-        list_suit.extend(i[1])
+    #    list_suit.extend(i[1])
     for i in range(len(list_new)):
         list_new[i] = global_dict[list_new[i]]
     list_new.sort()
