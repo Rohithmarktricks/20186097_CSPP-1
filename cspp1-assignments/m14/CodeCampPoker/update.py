@@ -44,12 +44,12 @@ def is_flush(hand):
     count = 0
     for i in hand:
         #list_new.extend([i[0][0]])
-        list_suit.extend(ord(i[1]))
+        list_suit.extend(i[1])
     #for i in range(len(list_new)):
         #list_suit[i] = global_suit[list_new[i]]
     list_suit.sort()
     for j in range(len(list_suit)-1):
-        if (list_suit[j+1] - list_suit[j]) == 1:
+        if (ord(list_suit[j+1]) - ord(list_suit[j])) == 1:
             count += 1
     if count == len(list_suit):
         return True
