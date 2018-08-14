@@ -22,7 +22,6 @@ def is_straight(hand):
         list_suit.extend(i[1])
     for i in range(len(list_new)):
         list_new[i] = global_dict[list_new[i]]
-    #print(list_new)
     list_new.sort()
     for j in range(len(list_new)-1):
         if (list_new[j+1] - list_new[j]) == 1:
