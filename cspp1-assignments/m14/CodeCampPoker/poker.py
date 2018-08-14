@@ -59,18 +59,17 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
-    temp_straight = []
-    temp_straight.append(is_straight(hand))
-    if len(temp_straight) == 5:
-        temp = max(temp_straight)
-        if temp == 1:
-            return 1
-        elif temp == 2:
-            return 2
-        elif temp == 3:
-            return 3
-        else:
-            return 0
+    #temp_straight = []
+    temp_straight = is_straight(hand)
+    #temp = max(temp_straight)
+    # if temp == 1:
+    #     return 1
+    # elif temp == 2:
+    #     return 2
+    # elif temp == 3:
+    #     return 3
+    # else:
+    #     return 0
 
 
 
