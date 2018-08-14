@@ -79,6 +79,8 @@ def hand_rank(hand):
         return 2
     elif is_straight(hand) == True:
         return 1 
+    else:
+        return 0
 
 def poker(hands):
     '''
