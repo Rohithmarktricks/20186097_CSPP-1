@@ -28,7 +28,7 @@ def is_straight(hand):
         if (list_new[j+1] - list_new[j]) == 1:
             count += 1
     if count == len(list_new):
-        is_flush(list_suit)
+        return is_flush(list_suit)
     else:
         return 1
 
