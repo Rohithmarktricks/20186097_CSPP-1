@@ -2,6 +2,7 @@
     Write a program to evaluate poker hands and determine the winner
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
+    @Author : Rohithmarktricks
 '''
 def is_straight(hand):
     '''
@@ -33,6 +34,8 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
+    # This way can be used, but it will get more complicated.And you have to compare with different
+    # suites like clubs, spades, hearts, diamonds.
     # suit_values= []
     # count = 0
     # for h in hand:
