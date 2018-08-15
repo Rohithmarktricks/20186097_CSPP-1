@@ -68,7 +68,7 @@ def is_four_a_kind(hand):
     suit_list.sort()
     for i in range(len(suit_list)-3):
         if suit_list[i] == suit_list[i+1] == suit_list[i+2] == suit_list[i+3]:
-    return True
+            return True
 
 def is_three_a_kind(hand):
     '''
@@ -80,7 +80,7 @@ def is_three_a_kind(hand):
     suit_list.sort()
     for i in range(len(suit_list)-2):
         if suit_list[i] == suit_list[i+1] == suit_list[i+2]:
-    return True
+            return True
 
 def is_one_pair(hand):
     '''
