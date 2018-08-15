@@ -34,6 +34,7 @@ def is_flush(hand):
     # This way can be used, but it will get more complicated.And you have to compare with different
     # suites like clubs, spades, hearts, diamonds.
     sum_values = 0
+    i_suit = hand[0]
     for i_suit in hand:
         sum_values += ord(i_suit)
     if sum_values == 5*ord(i_suit):
