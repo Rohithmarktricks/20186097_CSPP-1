@@ -107,7 +107,7 @@ def is_two_pair(hand):
     #new_suit_list = sorted(suit_list)
     suit_list.sort()
     #a_list = list(set(new_suit_list))
-    if len(new_suit_list) - len(set(suit_list)) == 2:
+    if len(suit_list) - len(set(suit_list)) == 2:
         return True
     return False
 
