@@ -155,7 +155,7 @@ def hand_rank(hand):
         return 4
     elif is_full_house(face_hand):
         return 7
-    elif is_flush(face_hand):
+    elif is_flush(suit_hand):
         return 6
     elif is_straight(face_hand):
         return 5
