@@ -67,7 +67,7 @@ def is_four_a_kind(hand):
     '''
     suit_list = []
     for i in hand:
-        suit_list.append(global_dict[letter[0]])
+        suit_list.append(global_dict[i[0]])
     new_suit_list = sorted(suit_list)
     a = list(set(new_suit_list))
     if new_suit_list[0] == new_suit_list[1] == new_suit_list[2]:
@@ -89,7 +89,7 @@ def is_three_a_kind(hand):
     '''
     suit_list = []
     for i in hand:
-        suit_list.append(global_dict[letter[0]])
+        suit_list.append(global_dict[i[0]])
     new_suit_list = sorted(suit_list)
     a = list(set(new_suit_list))
     if new_suit_list[0] == new_suit_list[1] == new_suit_list[2] == new_suit_list[3]:
@@ -110,7 +110,7 @@ def is_one_pair(hand):
     '''
     suit_list = []
     for i in hand:
-        suit_list.append(global_dict[letter[0]])
+        suit_list.append(global_dict[i[0]])
     new_suit_list = sorted(suit_list)
     a = list(set(new_suit_list))
     if len(new_suit_list) - len(a) == 1:
@@ -123,7 +123,7 @@ def is_two_pair(hand):
     '''
     suit_list = []
     for i in hand:
-        suit_list.append(global_dict[letter[0]])
+        suit_list.append(global_dict[i[0]])
     new_suit_list = sorted(suit_list)
     a = list(set(new_suit_list))
     if len(new_suit_list) - len(a) == 2:
