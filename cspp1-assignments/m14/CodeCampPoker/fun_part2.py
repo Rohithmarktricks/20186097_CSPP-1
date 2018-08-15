@@ -99,9 +99,9 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     face_hand = []
     suit_hand = []
-    for i in hand:
-        face_hand.append(GOBAL_DICT[i[0]])
-        suit_hand.append(i[1])
+    for i_val in hand:
+        face_hand.append(GOBAL_DICT[i_val[0]])
+        suit_hand.append(i_val[1])
     face_hand.sort()
     suit_hand.sort()
 
