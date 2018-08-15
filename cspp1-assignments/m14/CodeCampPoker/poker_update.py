@@ -65,7 +65,7 @@ def is_four_a_kind(hand):
     '''
     suit_list = []
     for i in hand:
-        suit_list.append(i[1])
+        suit_list.append(global_dict[letter[0]])
     new_suit_list = sorted(suit_list)
     a = list(set(new_suit_list))
     if new_suit_list[0] == new_suit_list[1] == new_suit_list[2]:
@@ -87,7 +87,7 @@ def is_three_a_kind(hand):
     '''
     suit_list = []
     for i in hand:
-        suit_list.append(i[1])
+        suit_list.append(global_dict[letter[0]])
     new_suit_list = sorted(suit_list)
     a = list(set(new_suit_list))
     if new_suit_list[0] == new_suit_list[1] == new_suit_list[2] == new_suit_list[3]:
@@ -108,7 +108,7 @@ def is_one_pair(hand):
     '''
     suit_list = []
     for i in hand:
-        suit_list.append(i[1])
+        suit_list.append(global_dict[letter[0]])
     new_suit_list = sorted(suit_list)
     a = list(set(new_suit_list))
     if len(new_suit_list) - len(a) == 1:
@@ -121,7 +121,7 @@ def is_two_pair(hand):
     '''
     suit_list = []
     for i in hand:
-        suit_list.append(i[1])
+        suit_list.append(global_dict[letter[0]])
     new_suit_list = sorted(suit_list)
     a = list(set(new_suit_list))
     if len(new_suit_list) - len(a) == 2:
@@ -164,18 +164,18 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
         return 8
-    elif is_flush(hand):
-        return 5
     elif is_four_a_kind(hand):
         return 7
-    elif is_three_a_kind(hand):
-        return 3
-    elif is_one_pair(hand):
-        return 1
-    elif is_two_pair(hand):
-        return 2
     elif is_full_house(hand):
         return 6
+    elif is_flush(hand):
+        return 5
+    elif is_three_a_kind(hand):
+        return 3
+    elif is_two_pair(hand):
+        return 2
+    elif is_one_pair(hand):
+        return 1
     else:
         return 4    
 
