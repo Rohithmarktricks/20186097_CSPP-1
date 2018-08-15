@@ -82,6 +82,7 @@ def is_three_a_kind(hand):
     for i in range(len(suit_list)-2):
         if suit_list[i] == suit_list[i+1] == suit_list[i+2]:
             return True
+        return False
 
 def is_one_pair(hand):
     '''
