@@ -17,10 +17,6 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    # face_values = []
-    # for letter in hand:
-    #     face_values.append(GOBAL_DICT[letter[0]])
-    # face_values.sort()
     for i in range(len(hand)-1):
         if hand[i+1]-hand[i] != 1:
             return False
@@ -37,21 +33,7 @@ def is_flush(hand):
     '''
     # This way can be used, but it will get more complicated.And you have to compare with different
     # suites like clubs, spades, hearts, diamonds.
-    # suit_values= []
-    # count = 0
-    # for h in hand:
-    #     suit_values.append(h[1])
-    # ref_suit = suit_values[0]
-    # for i in range(1,len(suit_values)):
-    #     if ref_suit == suit_values[i]:
-    #         count += 1
-    # if count == len(suit_values):
-    #     return True
-    # return False
-    #suit_list = []
     sum_values = 0
-    # for i in hand:
-    #     suit_list.append(i[1])
     for i in hand:
         sum_values += ord(i)
     if sum_values == 5*ord(i):
@@ -62,10 +44,6 @@ def is_four_a_kind(hand):
     '''
     Returns True if four cards in a hand are same!
     '''
-    # suit_list = []
-    # for i in hand:
-    #     suit_list.append(GOBAL_DICT[i[0]])
-    # suit_list.sort()
     for i in range(len(hand)-3):
         if hand[i] == hand[i+1] == hand[i+2] == hand[i+3]:
             return True
@@ -74,10 +52,6 @@ def is_three_a_kind(hand):
     '''
     Returns True if 3 cards in a hand are same!
     '''
-    # suit_list = []
-    # for i in hand:
-    #     suit_list.append(GOBAL_DICT[i[0]])
-    # suit_list.sort()
     for i in range(len(hand)-2):
         if hand[i] == hand[i+1] == hand[i+2]:
             return True
@@ -87,10 +61,6 @@ def is_one_pair(hand):
     '''
     Returns True if there is a pair of same cards in a hand!
     '''
-    # suit_list = []
-    # for i in hand:
-    #     suit_list.append(GOBAL_DICT[i[0]])
-    # suit_list.sort()
     if len(hand) - len(set(hand)) == 1:
         return True
     return False
@@ -99,23 +69,9 @@ def is_two_pair(hand):
     '''
     Returns True if there are two pairs of same card in a hand!
     '''
-    # suit_list = []
-    # for i in hand:
-    #     suit_list.append(GOBAL_DICT[i[0]])
-    # suit_list.sort()
     if len(hand) - len(set(hand)) == 2:
         return True
     return False
-
-def is_full_house(hand):
-    '''
-    Returns True if there is a three_of_a_kind and one_pair in a hand
-    '''
-    if is_three_a_kind(hand) and is_one_pair(hand):
-        return True
-    return False
-
-
 
 def hand_rank(hand):
     '''
@@ -153,7 +109,7 @@ def hand_rank(hand):
         return 8
     elif is_four_a_kind(face_hand):
         return 4
-    elif is_full_house(face_hand):
+    elif is_three_a_kind(hand) and is_one_pair(hand):
         return 7
     elif is_flush(suit_hand):
         return 6
