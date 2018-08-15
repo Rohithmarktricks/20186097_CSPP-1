@@ -48,6 +48,7 @@ def is_four_a_kind(hand):
     for i in range(len(hand)-3):
         if hand[i] == hand[i+1] == hand[i+2] == hand[i+3]:
             return True
+        return False
 
 def is_three_a_kind(hand):
     '''
