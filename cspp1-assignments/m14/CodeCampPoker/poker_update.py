@@ -17,8 +17,10 @@ def is_straight(hand):
     global_dict = {'2': 2, '3': 3, '4': 4, '5': 5, '6':6, '7':7, '8':8, '9':9,\
     'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
     face_values = []
+    suit_values = []
     for letter in hand:
         face_values.append(global_dict[letter[0]])
+        #sum_values.append(letter[1])
     face_values.sort()
     for i in range(len(face_values)-1):
         if face_values[i+1]-face_values[i] != 1:
@@ -57,7 +59,72 @@ def is_flush(hand):
         return True
     return False
 
+def is_four_a_kind(hand):
+    '''
+    Returns True if four cards in a hand are same!
+    '''
+    suit_list = []
+    for i in hand:
+        suit_list.append(i[1])
+    new_suit_list = sorted(suit_list)
+    a = list(set(new_suit_list))
+    total = []
+    for j in range(len(a)):
+        total.append(sum(s.count(a[j])for s in new_suit_list))
+    if (i==4 for i in total):
+        return True
+    return False
 
+def is_three_a_kind(hand):
+    '''
+    Returns True if 3 cards in a hand are same!
+    '''
+    suit_list = []
+    for i in hand:
+        suit_list.append(i[1])
+    new_suit_list = sorted(suit_list)
+    a = list(set(new_suit_list))
+    total = []
+    for j in range(len(a)):
+        total.append(sum(s.count(a[j])for s in new_suit_list))
+    if (i==3 for i in total):
+        return True
+    return False
+
+
+def is_one_pair(hand):
+    '''
+    Returns True if there is a pair of same cards in a hand!
+    '''
+    suit_list = []
+    for i in hand:
+        suit_list.append(i[1])
+    new_suit_list = sorted(suit_list)
+    a = list(set(new_suit_list))
+    if len(new_suit_list) - len(a) == 1:
+        return True
+    return False
+
+def is_two_pair(hand):
+    '''
+    Returns True if there are two pairs of same card in a hand!
+    '''
+    suit_list = []
+    for i in hand:
+        suit_list.append(i[1])
+    new_suit_list = sorted(suit_list)
+    a = list(set(new_suit_list))
+    if len(new_suit_list) - len(a) == 2:
+        return True
+    return False
+
+def is_full_house(hand):
+    '''
+    Returns True if there is a three_of_a_kind and one_pair in a hand
+    '''
+    if is_three_a_kind(hand) and one_pair(hand):
+        return True
+    return False
 
 
 
@@ -86,12 +153,21 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
-        return 3
+        return 8
     elif is_flush(hand):
-        return 2
-    elif is_straight(hand):
+        return 5
+    elif is_four_a_kind(hand):
+        return 7
+    elif is_three_a_kind(hand):
+        return 3
+    elif is_one_pair(hand):
         return 1
-    return 0
+    elif is_two_pair(hand):
+        return 2
+    elif is_full_house(hand):
+        return 6
+    else:
+        return 4    
 
 def poker(hands):
     '''
