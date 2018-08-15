@@ -69,7 +69,7 @@ def is_four_a_kind(hand):
     for i in range(len(suit_list)-3):
         if suit_list[i] == suit_list[i+1] == suit_list[i+2] == suit_list[i+3]:
             return True
-                
+
 def is_three_a_kind(hand):
     '''
     Returns True if 3 cards in a hand are same!
