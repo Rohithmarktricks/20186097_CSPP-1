@@ -140,7 +140,7 @@ def is_full_house(hand):
     '''
     Returns True if there is a three_of_a_kind and one_pair in a hand
     '''
-    if is_three_a_kind(hand) and one_pair(hand):
+    if is_three_a_kind(hand) and is_one_pair(hand):
         return True
     return False
 
