@@ -94,8 +94,8 @@ def is_three_a_kind(hand):
     suit_list.sort()
     #a = list(set(new_suit_list))
     for i in range(len(suit_list)-2):
-    if suit_list[i] == suit_list[i+1] == suit_list[i+2] == suit_list[i+3]:
-        return True
+        if suit_list[i] == suit_list[i+1] == suit_list[i+2] == suit_list[i+3]:
+            return True
     # elif new_suit_list[1] == new_suit_list[2] == new_suit_list[3] == new_suit_list[4]:
     #     return True
     # total = []
