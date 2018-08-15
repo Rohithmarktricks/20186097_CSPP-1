@@ -109,7 +109,7 @@ def hand_rank(hand):
         return 8
     elif is_four_a_kind(face_hand):
         return 4
-    elif is_three_a_kind(hand) and is_one_pair(hand):# To check Full_house 
+    elif is_three_a_kind(hand) and is_one_pair(hand):# To check Full_house
         return 7
     elif is_flush(suit_hand):
         return 6
