@@ -68,12 +68,18 @@ def is_four_a_kind(hand):
         suit_list.append(i[1])
     new_suit_list = sorted(suit_list)
     a = list(set(new_suit_list))
-    total = []
-    for j in range(len(a)):
-        total.append(sum(s.count(a[j])for s in new_suit_list))
-    if (i==4 for i in total):
+    if new_suit_list[0] == new_suit_list[1] == new_suit_list[2]:
         return True
-    return False
+    elif new_suit_list[1] == new_suit_list[2] == new_suit_list[3]:
+        return True
+    elif new_suit_list[2] == new_suit_list[3] == new_suit_list[4]:
+        return True
+    # total = []
+    # for j in range(len(a)):
+    #     total.append(sum(s.count(a[j])for s in new_suit_list))
+    # if (i==4 for i in total):
+    #     return True
+    # return False
 
 def is_three_a_kind(hand):
     '''
@@ -84,12 +90,16 @@ def is_three_a_kind(hand):
         suit_list.append(i[1])
     new_suit_list = sorted(suit_list)
     a = list(set(new_suit_list))
-    total = []
-    for j in range(len(a)):
-        total.append(sum(s.count(a[j])for s in new_suit_list))
-    if (i==3 for i in total):
+    if new_suit_list[0] == new_suit_list[1] == new_suit_list[2] == new_suit_list[3]:
         return True
-    return False
+    elif new_suit_list[1] == new_suit_list[2] == new_suit_list[3] == new_suit_list[4]:
+        return True
+    # total = []
+    # for j in range(len(a)):
+    #     total.append(sum(s.count(a[j])for s in new_suit_list))
+    # if (i==3 for i in total):
+    #     return True
+    # return False
 
 
 def is_one_pair(hand):
