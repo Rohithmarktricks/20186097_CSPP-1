@@ -5,7 +5,7 @@
     @Author : Rohithmarktricks
 
 '''
-global_dict = {'2': 2, '3': 3, '4': 4, '5': 5, '6':6, '7':7, '8':8,\
+GOBAL_DICT = {'2': 2, '3': 3, '4': 4, '5': 5, '6':6, '7':7, '8':8,\
 '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
 def is_straight(hand):
     '''
@@ -19,7 +19,7 @@ def is_straight(hand):
     '''
     face_values = []
     for letter in hand:
-        face_values.append(global_dict[letter[0]])
+        face_values.append(GOBAL_DICT[letter[0]])
     face_values.sort()
     for i in range(len(face_values)-1):
         if face_values[i+1]-face_values[i] != 1:
@@ -64,7 +64,7 @@ def is_four_a_kind(hand):
     '''
     suit_list = []
     for i in hand:
-        suit_list.append(global_dict[i[0]])
+        suit_list.append(GOBAL_DICT[i[0]])
     suit_list.sort()
     for i in range(len(suit_list)-3):
         if suit_list[i] == suit_list[i+1] == suit_list[i+2] == suit_list[i+3]:
@@ -76,7 +76,7 @@ def is_three_a_kind(hand):
     '''
     suit_list = []
     for i in hand:
-        suit_list.append(global_dict[i[0]])
+        suit_list.append(GOBAL_DICT[i[0]])
     suit_list.sort()
     for i in range(len(suit_list)-2):
         if suit_list[i] == suit_list[i+1] == suit_list[i+2]:
@@ -88,7 +88,7 @@ def is_one_pair(hand):
     '''
     suit_list = []
     for i in hand:
-        suit_list.append(global_dict[i[0]])
+        suit_list.append(GOBAL_DICT[i[0]])
     new_suit_list = sorted(suit_list)
     a = list(set(new_suit_list))
     if len(new_suit_list) - len(a) == 1:
@@ -101,7 +101,7 @@ def is_two_pair(hand):
     '''
     suit_list = []
     for i in hand:
-        suit_list.append(global_dict[i[0]])
+        suit_list.append(GOBAL_DICT[i[0]])
     new_suit_list = sorted(suit_list)
     a = list(set(new_suit_list))
     if len(new_suit_list) - len(a) == 2:
