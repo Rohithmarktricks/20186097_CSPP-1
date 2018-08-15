@@ -145,7 +145,7 @@ def hand_rank(hand):
     suit_hand=[]
     for i in hand:
         face_hand.append(GOBAL_DICT[i[0]])
-        suit_hand.append(GOBAL_DICT[i[1]])
+        suit_hand.append(i[1])
     face_hand.sort()
     suit_hand.sort()
 
