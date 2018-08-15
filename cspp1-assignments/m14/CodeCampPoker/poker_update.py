@@ -3,7 +3,10 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
     @Author : Rohithmarktricks
+
 '''
+global_dict = {'2': 2, '3': 3, '4': 4, '5': 5, '6':6, '7':7, '8':8,\
+'9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -14,8 +17,7 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    global_dict = {'2': 2, '3': 3, '4': 4, '5': 5, '6':6, '7':7, '8':8, '9':9,\
-    'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
+    #global_dict = {'2': 2, '3': 3, '4': 4, '5': 5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
     face_values = []
     suit_values = []
     for letter in hand:
