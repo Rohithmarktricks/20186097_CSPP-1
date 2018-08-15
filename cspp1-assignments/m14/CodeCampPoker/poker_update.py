@@ -141,6 +141,14 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
+    face_hand=[]
+    suit_hand=[]
+    for i in hand:
+        face_hand.append(GOBAL_DICT[i[0]])
+        suit_hand.append(GOBAL_DICT[i[1]])
+    face_hand.sort()
+    suit_hand.sort()
+
     if is_straight(hand) and is_flush(hand):
         return 8
     elif is_four_a_kind(hand):
