@@ -70,6 +70,7 @@ def is_four_a_kind(hand):
         if suit_list[i] == suit_list[i+1] == suit_list[i+2] == suit_list[i+3]:
             return True
         return False
+    return True
 
 def is_three_a_kind(hand):
     '''
