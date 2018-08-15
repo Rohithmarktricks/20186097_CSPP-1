@@ -178,9 +178,9 @@ def hand_rank(hand):
         return 3
     elif is_two_pair(hand):
         return 2
-    elif is_one_pair(hand):
+    else:
         return 1
-        
+
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
