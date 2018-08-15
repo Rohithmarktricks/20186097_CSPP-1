@@ -90,9 +90,7 @@ def is_one_pair(hand):
     suit_list = []
     for i in hand:
         suit_list.append(GOBAL_DICT[i[0]])
-    #new_suit_list = sorted(suit_list)
     suit_list.sort()
-    #a_list = list(set(suit_list))
     if len(suit_list) - len(set(suit_list)) == 1:
         return True
     return False
@@ -104,9 +102,7 @@ def is_two_pair(hand):
     suit_list = []
     for i in hand:
         suit_list.append(GOBAL_DICT[i[0]])
-    #new_suit_list = sorted(suit_list)
     suit_list.sort()
-    #a_list = list(set(new_suit_list))
     if len(suit_list) - len(set(suit_list)) == 2:
         return True
     return False
