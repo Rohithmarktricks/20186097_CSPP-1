@@ -172,15 +172,15 @@ def hand_rank(hand):
         return 6
     elif is_flush(hand):
         return 5
+    elif is_straight(hand):
+        return 4
     elif is_three_a_kind(hand):
         return 3
     elif is_two_pair(hand):
         return 2
     elif is_one_pair(hand):
         return 1
-    else:
-        return 4    
-
+        
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
