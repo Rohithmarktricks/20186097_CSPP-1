@@ -17,12 +17,9 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    #global_dict = {'2': 2, '3': 3, '4': 4, '5': 5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
     face_values = []
-    suit_values = []
     for letter in hand:
         face_values.append(global_dict[letter[0]])
-        #sum_values.append(letter[1])
     face_values.sort()
     for i in range(len(face_values)-1):
         if face_values[i+1]-face_values[i] != 1:
@@ -69,23 +66,9 @@ def is_four_a_kind(hand):
     for i in hand:
         suit_list.append(global_dict[i[0]])
     suit_list.sort()
-    #new_suit_list = sorted(suit_list)
-    #a = list(set(new_suit_list))
     for i in range(len(suit_list)-3):
         if suit_list[i] == suit_list[i+1] == suit_list[i+2] == suit_list[i+3]:
             return True
-    # if new_suit_list[0] == new_suit_list[1] == new_suit_list[2]:
-    #     return True
-    # elif new_suit_list[1] == new_suit_list[2] == new_suit_list[3]:
-    #     return True
-    # elif new_suit_list[2] == new_suit_list[3] == new_suit_list[4]:
-    #     return True
-    # # total = []
-    # for j in range(len(a)):
-    #     total.append(sum(s.count(a[j])for s in new_suit_list))
-    # if (i==4 for i in total):
-    #     return True
-    # return False
 
 def is_three_a_kind(hand):
     '''
@@ -94,21 +77,10 @@ def is_three_a_kind(hand):
     suit_list = []
     for i in hand:
         suit_list.append(global_dict[i[0]])
-    #new_suit_list = sorted(suit_list)
     suit_list.sort()
-    #a = list(set(new_suit_list))
     for i in range(len(suit_list)-2):
         if suit_list[i] == suit_list[i+1] == suit_list[i+2]:
             return True
-    # elif new_suit_list[1] == new_suit_list[2] == new_suit_list[3] == new_suit_list[4]:
-    #     return True
-    # total = []
-    # for j in range(len(a)):
-    #     total.append(sum(s.count(a[j])for s in new_suit_list))
-    # if (i==3 for i in total):
-    #     return True
-    # return False
-
 
 def is_one_pair(hand):
     '''
