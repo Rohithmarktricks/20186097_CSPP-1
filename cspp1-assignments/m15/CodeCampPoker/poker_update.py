@@ -164,6 +164,7 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
+    '''
     def high_card(hands):
         a = max(hands[0])
         b = max(hands[1])
@@ -175,7 +176,8 @@ def poker(hands):
     if temp_ < max(hands, key=hand_rank):
         return max(hands, key=hand_rank)
     return temp_
-    #return max(hands, key=hand_rank)
+    '''
+    return max(hands, key=hand_rank)
 
 if __name__ == "__main__":
     # read the number of test cases
