@@ -4,5 +4,3 @@ def high_card(hands):
 	if a > b:
 		return 2
 	return 1
-
-
