@@ -116,20 +116,28 @@ def hand_rank(hand):
     # card_rank.sort()
     # card_rank.reverse()
     if is_straight(face_hand) and is_flush(suit_hand):#For checking stright_flush
+        print('is_straight')
         return 9#8
     elif is_three_a_kind(hand) and is_one_pair(hand):# For checking Full_house
+        print('is_three_a_kind')
         return 8#7
     elif is_flush(suit_hand):
+        print('flush')
         return 7#6
     elif is_straight(face_hand):
+        print('is_straight')
         return 6#5
     elif is_four_a_kind(face_hand):
+        print('is_four_a_kind')
         return 5#4
     elif is_three_a_kind(face_hand):
+        print('three Kind')
         return 4#3
-    elif is_two_pair(face_hand):
+    elif is_two_pair(face_hand):\
+        print('two_pair')
         return 3#2
     elif is_one_pair(face_hand):
+        print('one pair')
         return 2#1
     return 1 #,card_rank)#0
 
