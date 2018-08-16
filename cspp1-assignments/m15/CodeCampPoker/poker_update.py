@@ -112,9 +112,9 @@ def hand_rank(hand):
 
     # if royal_flush(hand):
     #   return 10
-    card_rank = ['--23456789TJQKA'.index(c) for c,s in hand]
-    card_rank.sort()
-    card_rank.reverse()
+    # card_rank = ['--23456789TJQKA'.index(c) for c,s in hand]
+    # card_rank.sort()
+    # card_rank.reverse()
     if is_straight(face_hand) and is_flush(suit_hand):#For checking stright_flush
         return 9#8
     elif is_three_a_kind(hand) and is_one_pair(hand):# For checking Full_house
@@ -131,7 +131,7 @@ def hand_rank(hand):
         return 3#2
     elif is_one_pair(face_hand):
         return 2#1
-    return (1,card_rank)#0
+    return 1 #,card_rank)#0
 
 def poker(hands):
     '''
