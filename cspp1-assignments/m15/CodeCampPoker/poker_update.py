@@ -133,7 +133,7 @@ def hand_rank(hand):
     elif is_three_a_kind(face_hand):
         print('three Kind')
         return 4#3
-    elif is_two_pair(face_hand):\
+    elif is_two_pair(face_hand):
         print('two_pair')
         return 3 #2
     elif is_one_pair(face_hand):
