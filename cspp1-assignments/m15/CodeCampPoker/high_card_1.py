@@ -1,6 +1,8 @@
-def high_card(hand):
-	a = []
-	if max(hand) > max(a):
-		a.extend(hand)
-		return True
-	return False
+def high_card(hands):
+	a = max(hands[0])
+	b = max(hands[1])
+	if a > b:
+		return 2
+	return 1
+
+
