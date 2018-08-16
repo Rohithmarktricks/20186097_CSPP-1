@@ -78,7 +78,7 @@ def is_two_pair(hand):
     return False
 
 # def royal_flush(hand):
-# 	face_hand = []
+#   face_hand = []
 #     suit_hand = []
 #     for i in hand:
 #         face_hand.append(GOBAL_DICT[i[0]])
@@ -87,9 +87,9 @@ def is_two_pair(hand):
 #     suit_hand.sort()
 
 #     if len(set(suit_hand))==1:
-#     	if(len(set(face_hand)))==5:
-#     		return True
-# 		return False
+#       if(len(set(face_hand)))==5:
+#           return True
+#       return False
 
 
 
@@ -127,7 +127,7 @@ def hand_rank(hand):
     suit_hand.sort()
 
     # if royal_flush(hand):
-    # 	return 10
+    #   return 10
     if is_straight(face_hand) and is_flush(suit_hand):#For checking stright_flush
         return 9#8
     elif is_three_a_kind(hand) and is_one_pair(hand):# For checking Full_house
@@ -165,15 +165,16 @@ def poker(hands):
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
     def high_card(hands):
-	a = max(hands[0])
-	b = max(hands[1])
-	if a > b:
-		return 11
-	return 1
-	temp_ = high_card(hands)
-	if temp_ < max(hands, key=hand_rank):
-		return max(hands, key=hand_rank)
-	return temp_
+        a = max(hands[0])
+        b = max(hands[1])
+        if a > b:
+            return 11
+        return 1
+
+    temp_ = high_card(hands)
+    if temp_ < max(hands, key=hand_rank):
+        return max(hands, key=hand_rank)
+    return temp_
     #return max(hands, key=hand_rank)
 
 if __name__ == "__main__":
