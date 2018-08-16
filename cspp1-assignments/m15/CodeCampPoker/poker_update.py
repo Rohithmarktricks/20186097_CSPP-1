@@ -77,6 +77,20 @@ def is_two_pair(hand):
         return True
     return False
 
+def royal_flush(hand):
+	face_hand = []
+    suit_hand = []
+    for i in hand:
+        face_hand.append(GOBAL_DICT[i[0]])
+        suit_hand.append(i[1])
+    face_hand.sort()
+    suit_hand.sort()
+
+    if len(set(suit_hand))==1:
+    	if(len(set(face_hand)))==5:
+    		return True
+		return False
+
 
 
 
@@ -112,6 +126,8 @@ def hand_rank(hand):
     face_hand.sort()
     suit_hand.sort()
 
+    if royal_flush(hand):
+    	return 10
     if is_straight(face_hand) and is_flush(suit_hand):#For checking stright_flush
         return 9#8
     elif is_three_a_kind(hand) and is_one_pair(hand):# For checking Full_house
