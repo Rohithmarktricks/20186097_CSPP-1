@@ -113,22 +113,22 @@ def hand_rank(hand):
     suit_hand.sort()
 
     if is_straight(face_hand) and is_flush(suit_hand):#For checking stright_flush
-        return 8
+        return 9#8
     elif is_four_a_kind(face_hand):
-        return 4
+        return 5#4
     elif is_three_a_kind(hand) and is_one_pair(hand):# For checking Full_house
-        return 7
+        return 8#7
     elif is_flush(suit_hand):
-        return 6
+        return 7#6
     elif is_straight(face_hand):
-        return 5
+        return 6#5
     elif is_three_a_kind(face_hand):
-        return 3
+        return 4#3
     elif is_two_pair(face_hand):
-        return 2
+        return 3#2
     elif is_one_pair(face_hand):
-        return 1
-    return 0
+        return 2#1
+    return 1#0
 
 def poker(hands):
     '''
