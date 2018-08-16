@@ -114,14 +114,14 @@ def hand_rank(hand):
 
     if is_straight(face_hand) and is_flush(suit_hand):#For checking stright_flush
         return 9#8
-    elif is_four_a_kind(face_hand):
-        return 5#4
     elif is_three_a_kind(hand) and is_one_pair(hand):# For checking Full_house
         return 8#7
     elif is_flush(suit_hand):
         return 7#6
     elif is_straight(face_hand):
         return 6#5
+    elif is_four_a_kind(face_hand):
+        return 5#4
     elif is_three_a_kind(face_hand):
         return 4#3
     elif is_two_pair(face_hand):
