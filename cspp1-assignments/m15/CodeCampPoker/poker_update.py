@@ -135,7 +135,7 @@ def hand_rank(hand):
         return 4#3
     elif is_two_pair(face_hand):\
         print('two_pair')
-        return 3#2
+        return 3 #2
     elif is_one_pair(face_hand):
         print('one pair')
         return 2#1
