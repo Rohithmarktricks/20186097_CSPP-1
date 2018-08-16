@@ -5,9 +5,8 @@
     @Author : Rohithmarktricks
 
 '''
-GOBAL_DICT = {
-'2': 2, '3': 3, '4': 4, '5': 5, '6':6, '7':7, '8':8,'9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14\
-}
+GOBAL_DICT = {'2': 2, '3': 3, '4': 4, '5': 5, '6':6, '7':7, '8':8,\
+'9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -46,18 +45,20 @@ def is_four_a_kind(hand):
     '''
     Returns True if four cards in a hand are same!
     '''
-    for i in range(len(hand)-3):
-        if hand[i] == hand[i+1] == hand[i+2] == hand[i+3]:
-            return True
+    # for i in range(len(hand)-3):
+    #     if hand[i] == hand[i+1] == hand[i+2] == hand[i+3]:
+    #         return True
+    return len(set(hand)) == 2
 
 def is_three_a_kind(hand):
     '''
     Returns True if 3 cards in a hand are same!
     '''
-    for i in range(len(hand)-2):
-        if hand[i] == hand[i+1] == hand[i+2]:
-            return True
-        return False
+    # for i in range(len(hand)-2):
+    #     if hand[i] == hand[i+1] == hand[i+2]:
+    #         return True
+    #     return False
+    return len(set(hand)) == 3
 
 
 def is_one_pair(hand):
