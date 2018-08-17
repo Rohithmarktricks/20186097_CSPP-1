@@ -56,8 +56,8 @@ def similarity(dict1, dict2):
     '''
     dict1 = dict1.lower().replace('\'', '')
     dict2 = dict2.lower().replace('\'', '')
-    dict1 = re.sub('[^\w\s]', ' ', dict1).lower().strip().split()
-    dict2 = re.sub('[^\w\s]', ' ', dict2).lower().strip().split()
+    dict1 = re.sub(r'[^\w\s]', ' ', dict1).lower().strip().split()
+    dict2 = re.sub(r'[^\w\s]', ' ', dict2).lower().strip().split()
 
     # Load stopwords here.
     file_stop = load_stopwords("stopwords.txt")
@@ -65,13 +65,11 @@ def similarity(dict1, dict2):
     final_dict = {}
     final_dict2 = {}
     for l_iter in dict1:
-        if l_iter not in file_stop:
-            if len(l_iter) != 0:
-                final_dict[l_iter] = final_dict.get(l_iter, 0)+1
+        if l_iter not in file_stop and i not in '1234567890':
+            final_dict[l_iter] = final_dict.get(l_iter, 0)+1
     for m_iter in dict2:
-        if m_iter not in file_stop:
-            if len(m_iter) != 0:
-                final_dict2[m_iter] = final_dict2.get(m_iter, 0)+1
+        if m_iter not in file_stop and i not in '1234567890':
+            final_dict2[m_iter] = final_dict2.get(m_iter, 0)+1
     return create_dict(final_dict, final_dict2)
 
 
