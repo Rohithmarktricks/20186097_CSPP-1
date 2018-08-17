@@ -16,8 +16,8 @@ def similarity(dict1, dict2):
     dict2 = re.sub('[^A-Za-z]+', ' ', dict2)
     word1 = dict1.split()
     word2 = dict2.split()
-    word1 = word1.strip()
-    word2 = word2.strip()
+    #word1 = word1.strip()
+    #word2 = word2.strip()
     for i in word1:
         if i in '0123456789':
             del i
