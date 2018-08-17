@@ -28,7 +28,7 @@ def similarity(dict1, dict2):
     for h in file_stop:
         if h in word1:
             word1.remove(h)
-    file_stop = load_stopwords("stopwords.txt")
+    #file_stop = load_stopwords("stopwords.txt")
     for k in file_stop:
         if k in word2:
             word2.remove(k)
