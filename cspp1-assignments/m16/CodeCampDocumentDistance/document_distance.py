@@ -34,10 +34,10 @@ def final_cal(new_dict):
     '''
     This finally calcualtes the score
     '''
-    numer = sum(i[0]* i[1] for i in new_dict)
-    denomi = math.sqrt(sum(i[0]**2 for i in new_dict)) \
-    * math.sqrt(sum(i[1]**2 for i in new_dict))
-    return round(numer/denomi,1)
+    numer = sum(new_dict[i][0]* new_dict[i][1] for i in new_dict)
+    denomi = math.sqrt(sum(new_dict[i][0]**2 for i in new_dict)) \
+    * math.sqrt(sum(new_dict[i][1]**2 for i in new_dict))
+    return (numer/denomi, 1)
 
 def load_stopwords(filename):
     '''
