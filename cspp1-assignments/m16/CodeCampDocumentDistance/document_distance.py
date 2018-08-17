@@ -35,7 +35,7 @@ def final_cal(new_dict):
     numer = sum(new_dict[i][0]* new_dict[i][1] for i in new_dict)
     denomi = math.sqrt(sum(new_dict[i][0]**2 for i in new_dict)) \
     * math.sqrt(sum(new_dict[i][1]**2 for i in new_dict))
-    return round(numer/denomi, 1)
+    return numer/denomi
 
 def load_stopwords(filename):
     '''
