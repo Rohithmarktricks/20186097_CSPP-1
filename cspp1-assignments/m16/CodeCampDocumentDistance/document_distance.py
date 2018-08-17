@@ -10,10 +10,10 @@ def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    dict1 = dict1.lower().strip()
-    dict2 = dict2.lower().strip()
-    dict1 = re.sub('[^A-Za-z]+', ' ', dict1)
-    dict2 = re.sub('[^A-Za-z]+', ' ', dict2)
+    # dict1 = dict1.lower().strip()
+    # dict2 = dict2.lower().strip()
+    dict1 = re.sub('[^A-Za-z]+', ' ', dict1).lower().strip()
+    dict2 = re.sub('[^A-Za-z]+', ' ', dict2).lower().strip()
     word1 = dict1.split()
     word2 = dict2.split()
     #word1 = word1.strip()
