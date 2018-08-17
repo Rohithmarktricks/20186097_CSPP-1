@@ -3,8 +3,8 @@
 '''
 import math
 import re
-new = re.sub('[^A-Za-z0-9]+', ' ', exp)
-print(new)
+# new = re.sub('[^A-Za-z0-9]+', ' ', exp)
+# print(new)
 
 def similarity(dict1, dict2):
     '''
