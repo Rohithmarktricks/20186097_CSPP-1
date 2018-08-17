@@ -7,12 +7,12 @@ def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    dict1 = dict1.lower()
-    dict2 = dict2.lower()
+    dict1 = dict1.lower().strip()
+    dict2 = dict2.lower().strip()
     word1 = dict1.split()
     word2 = dict2.split()
-    word1 = word1.strip()
-    word2 = word2.strip()
+    # word1 = word1.strip()
+    # word2 = word2.strip()
     for i in word1:
         if i in '0123456789':
             del i
