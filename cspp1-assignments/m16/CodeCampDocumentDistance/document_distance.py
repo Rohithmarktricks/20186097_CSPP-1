@@ -7,7 +7,7 @@ import re
 
 def create_dict(final_dict, final_dict2):
     '''
-    Takes two dictionaries and returns a single dictionary 
+    Takes two dictionaries and returns a single dictionary
     that has the frequency of words.
     '''
     new_dict = {}
@@ -29,7 +29,7 @@ def final_re(new_dict):
     '''
     numer = sum(new_dict[i][0]* new_dict[i][1] for i in new_dict)
     denomi = math.sqrt(sum(new_dict[i][0]**2 for i in new_dict)) \
-    * math.sqrt(sum(new_dict[i][1]**2 for i in new_dict)) 
+    * math.sqrt(sum(new_dict[i][1]**2 for i in new_dict))
     return round(numer/denomi, 1)
 
 def load_stopwords(filename):
@@ -51,12 +51,12 @@ def similarity(dict1, dict2):
 
     # Load stopwords here.
     file_stop = load_stopwords("stopwords.txt")
-    
+
     final_dict = {}
     final_dict2 = {}
     for l in dict1:
         if l not in file_stop:
-            final_dict[l] = final_dict.get(l, 0)+1         
+            final_dict[l] = final_dict.get(l, 0)+1
     for m in dict2:
         if m not in file_stop:
             final_dict2[m] = final_dict2.get(m, 0)+1
