@@ -56,8 +56,8 @@ def similarity(dict1, dict2):
     '''
     dict1 = dict1.lower().replace('\'', '')
     dict2 = dict2.lower().replace('\'', '')
-    dict1 = re.sub('[^A-Za-z]+', ' ', dict1).lower().strip().split()
-    dict2 = re.sub('[^A-Za-z]+', ' ', dict2).lower().strip().split()
+    dict1 = re.sub('[^\w\s]', ' ', dict1).lower().strip().split()
+    dict2 = re.sub('[^\w\s]', ' ', dict2).lower().strip().split()
 
     # Load stopwords here.
     file_stop = load_stopwords("stopwords.txt")
