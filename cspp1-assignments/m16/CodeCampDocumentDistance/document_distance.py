@@ -37,10 +37,10 @@ def similarity(dict1, dict2):
     final_dict2 = {}
     for l in word1:
         if l not in file_stop:
-        final_dict[l] = final_dict.get(l, 0)+1         
+            final_dict[l] = final_dict.get(l, 0)+1         
     for m in word2:
         if m not in file_stop:
-        final_dict2[m] = final_dict2.get(m, 0)+1
+            final_dict2[m] = final_dict2.get(m, 0)+1
     new_dict = {}
     new_common_keys = list(set(final_dict.keys()) & set(final_dict2.keys()))
     for i in new_common_keys:
