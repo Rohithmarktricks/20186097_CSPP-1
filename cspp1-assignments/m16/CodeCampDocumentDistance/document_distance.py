@@ -18,12 +18,12 @@ def similarity(dict1, dict2):
     word2 = dict2.split()
     #word1 = word1.strip()
     #word2 = word2.strip()
-    for i in word1:
-        if i in '0123456789':
-            del i
-    for j in word2:
-        if j in '0123456789':
-            del j
+    # for i in word1:
+    #     if i in '0123456789':
+    #         del i
+    # for j in word2:
+    #     if j in '0123456789':
+    #         del j
     file_stop = load_stopwords("stopwords.txt")
     for h in file_stop:
         if h in word1:
