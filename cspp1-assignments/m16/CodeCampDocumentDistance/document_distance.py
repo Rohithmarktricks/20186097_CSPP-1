@@ -1,5 +1,6 @@
 '''
     Document Distance - A detailed description is given in the PDF
+    @author : Rohithmarktricks
 '''
 import math
 import re
