@@ -26,7 +26,7 @@ def similarity(dict1, dict2):
             final_dict2[m] = final_dict2.get(m, 0)+1
     return create_dict(final_dict, final_dict2)
 
-def create_dict(dictionary1, dictionary2):
+def create_dict(final_dict, final_dict2):
     new_dict = {}
     new_common_keys = list(set(final_dict.keys()) & set(final_dict2.keys()))
 
