@@ -53,7 +53,7 @@ def similarity(dict1, dict2):
 
     numer = sum(new_dict[i][0]* new_dict[i][1] for i in new_dict)
     denomi = math.sqrt(sum(new_dict[i][0]**2 for i in new_dict)) * math.sqrt(sum(new_dict[i][1]**2 for i in new_dict)) 
-    return round(numer/denomi, 2)
+    return round(numer/denomi, 1)
 
 
 
