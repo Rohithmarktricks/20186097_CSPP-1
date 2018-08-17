@@ -32,10 +32,11 @@ def similarity(dict1, dict2):
     for l in word1:
         final_dict[l] = list(final_dict.get(l, 0)+1)          
     for m in word2:
-        final_dict2[m] = final_dict.get(l, 0)+1
+        final_dict2[m] = list(final_dict.get(m, 0)+1)
     for i in final_dict2:
         if i in final_dict:
-            final_dict[i].extend(final_dict2[i])
+            final_dict[i] += final_dict2[i]
+
     numer = sum(final_dict[i][0]* final_dict[i][1] for i in final_dict)
     denomi = math.sqrt(sum(final_dict[i][0]**2 for i in final_dict)) * math.sqrt(sum(final_dict[i][1]**2 for i in final_dict)) 
     return numer/denomi 
