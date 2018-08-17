@@ -10,28 +10,11 @@ def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    # dict1 = dict1.lower().strip()
-    # dict2 = dict2.lower().strip()
     dict1 = re.sub('[^A-Za-z]+', ' ', dict1).lower().strip().split()
     dict2 = re.sub('[^A-Za-z]+', ' ', dict2).lower().strip().split()
-    # word1 = dict1.split()
-    # word2 = dict2.split()
-    #word1 = word1.strip()
-    #word2 = word2.strip()
-    # for i in word1:
-    #     if i in '0123456789':
-    #         del i
-    # for j in word2:
-    #     if j in '0123456789':
-    #         del j
+
+    # Load stopwords here.
     file_stop = load_stopwords("stopwords.txt")
-    # for h in file_stop:
-    #     if h in word1:
-    #         word1.remove(h)
-    # #file_stop = load_stopwords("stopwords.txt")
-    # for k in file_stop:
-    #     if k in word2:
-    #         word2.remove(k)
     
     final_dict = {}
     final_dict2 = {}
@@ -41,8 +24,12 @@ def similarity(dict1, dict2):
     for m in dict2:
         if m not in file_stop:
             final_dict2[m] = final_dict2.get(m, 0)+1
+    return create_dict(final_dict, final_dict2)
+
+def create_dict(dictionary1, dictionary2):
     new_dict = {}
     new_common_keys = list(set(final_dict.keys()) & set(final_dict2.keys()))
+
     for i in new_common_keys:
         new_dict[i] = [final_dict[i], final_dict2[i]]
     for i in final_dict:
