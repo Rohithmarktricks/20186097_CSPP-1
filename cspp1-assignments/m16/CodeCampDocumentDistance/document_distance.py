@@ -27,6 +27,10 @@ def similarity(dict1, dict2):
     return create_dict(final_dict, final_dict2)
 
 def create_dict(final_dict, final_dict2):
+    '''
+    Takes two dictionaries and returns a single dictionary 
+    that has the frequency of words.
+    '''
     new_dict = {}
     new_common_keys = list(set(final_dict.keys()) & set(final_dict2.keys()))
 
@@ -41,6 +45,9 @@ def create_dict(final_dict, final_dict2):
     return final_re(new_dict)
 
 def final_re(new_dict):
+    '''
+    This finally calcualtes the score
+    '''
     numer = sum(new_dict[i][0]* new_dict[i][1] for i in new_dict)
     denomi = math.sqrt(sum(new_dict[i][0]**2 for i in new_dict)) * math.sqrt(sum(new_dict[i][1]**2 for i in new_dict)) 
     return round(numer/denomi, 1)
