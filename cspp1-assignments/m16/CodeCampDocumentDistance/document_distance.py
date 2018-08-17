@@ -12,10 +12,10 @@ def similarity(dict1, dict2):
     '''
     # dict1 = dict1.lower().strip()
     # dict2 = dict2.lower().strip()
-    dict1 = re.sub('[^A-Za-z]+', ' ', dict1).lower().strip()
-    dict2 = re.sub('[^A-Za-z]+', ' ', dict2).lower().strip()
-    word1 = dict1.split()
-    word2 = dict2.split()
+    dict1 = re.sub('[^A-Za-z]+', ' ', dict1).lower().strip().split()
+    dict2 = re.sub('[^A-Za-z]+', ' ', dict2).lower().strip().split()
+    # word1 = dict1.split()
+    # word2 = dict2.split()
     #word1 = word1.strip()
     #word2 = word2.strip()
     # for i in word1:
@@ -35,10 +35,10 @@ def similarity(dict1, dict2):
     
     final_dict = {}
     final_dict2 = {}
-    for l in word1:
+    for l in dict1:
         if l not in file_stop:
             final_dict[l] = final_dict.get(l, 0)+1         
-    for m in word2:
+    for m in dict2:
         if m not in file_stop:
             final_dict2[m] = final_dict2.get(m, 0)+1
     new_dict = {}
