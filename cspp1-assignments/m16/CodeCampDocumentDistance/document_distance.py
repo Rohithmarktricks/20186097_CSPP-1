@@ -4,7 +4,7 @@
 '''
 import math
 import re
-SPECIAL_CHARS = ',./?!@#$%^&*()_'
+SPECIAL_CHARS = ',./?!@#$%^&*()_:;[]+*-/~`'
 
 def create_dict(final_dict, final_dict2):
     '''
