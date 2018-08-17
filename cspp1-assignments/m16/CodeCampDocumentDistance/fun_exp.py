@@ -35,5 +35,25 @@ Function that returns another function!
 '''
 # To calculate a.x^2 + b.x.y + c.y^2
 
-def second_degree(a,b,c):
-	def values(x,y)
+# def second_degree(a,b,c):
+# 	def values(x,y):
+# 		return a*x**2 + b*x*y + c*y**2
+# 	return values
+
+# fun = second_degree('a','b','c')
+# fun2 = second_degree('x','y','z')
+# print(fun(1,2))
+
+import string
+d = {}
+#s = string.ascii_lowercase[:]
+a = 'alkdfibaeuberkgbakfaerniorhwebfalwkfnaoieu'
+for i in a:
+	if i not in d:
+		d[i] = 1
+	else:
+		d[i] += 1
+
+l = list(set(d.values()))
+print(l)
+
