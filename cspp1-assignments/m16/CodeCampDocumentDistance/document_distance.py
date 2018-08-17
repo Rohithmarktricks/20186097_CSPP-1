@@ -4,6 +4,7 @@
 '''
 import math
 import re
+special_chars = ',./?!@#$%^&*()_'
 
 def create_dict(final_dict, final_dict2):
     '''
@@ -14,13 +15,17 @@ def create_dict(final_dict, final_dict2):
     new_common_keys = list(set(final_dict.keys()) & set(final_dict2.keys()))
 
     for i in new_common_keys:
-        new_dict[i] = [final_dict[i], final_dict2[i]]
+        if i not in new_dict:
+            if i not in special_chars:
+                new_dict[i] = [final_dict[i], final_dict2[i]]
     for i in final_dict:
         if i not in new_dict:
-            new_dict[i] = [final_dict[i], 0]
+            if i not in special_chars:
+                new_dict[i] = [final_dict[i], 0]
     for i in final_dict2:
         if i not in new_dict:
-            new_dict[i] = [0, final_dict2[i]]
+            if i not in special_chars:
+                new_dict[i] = [0, final_dict2[i]]
     return final_re(new_dict)
 
 def final_re(new_dict):
