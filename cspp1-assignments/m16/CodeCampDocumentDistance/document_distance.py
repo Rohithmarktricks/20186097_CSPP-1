@@ -65,7 +65,7 @@ def similarity(dict1, dict2):
         if l_iter not in file_stop and l_iter not in '1234567890':
             final_dict[l_iter] = final_dict.get(l_iter, 0)+1
     for m_iter in dict2:
-        if m_iter not in file_stop and l_iter not in '1234567890':
+        if m_iter not in file_stop and m_iter not in '1234567890':
             final_dict2[m_iter] = final_dict2.get(m_iter, 0)+1
     return create_dict(final_dict, final_dict2)
 
