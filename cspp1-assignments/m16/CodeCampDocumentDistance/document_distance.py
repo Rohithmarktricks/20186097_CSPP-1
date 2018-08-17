@@ -2,6 +2,9 @@
     Document Distance - A detailed description is given in the PDF
 '''
 import math
+import re
+new = re.sub('[^A-Za-z0-9]+', ' ', exp)
+print(new)
 
 def similarity(dict1, dict2):
     '''
@@ -9,6 +12,8 @@ def similarity(dict1, dict2):
     '''
     dict1 = dict1.lower().strip()
     dict2 = dict2.lower().strip()
+    dict1 = re.sub('[^A-Za-z0-9]+', ' ', dict1)
+    dict1 = re.sub('[^A-Za-z0-9]+', ' ', dict2)
     word1 = dict1.split()
     word2 = dict2.split()
     # word1 = word1.strip()
