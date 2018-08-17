@@ -25,19 +25,21 @@ def similarity(dict1, dict2):
     #     if j in '0123456789':
     #         del j
     file_stop = load_stopwords("stopwords.txt")
-    for h in file_stop:
-        if h in word1:
-            word1.remove(h)
-    #file_stop = load_stopwords("stopwords.txt")
-    for k in file_stop:
-        if k in word2:
-            word2.remove(k)
+    # for h in file_stop:
+    #     if h in word1:
+    #         word1.remove(h)
+    # #file_stop = load_stopwords("stopwords.txt")
+    # for k in file_stop:
+    #     if k in word2:
+    #         word2.remove(k)
     
     final_dict = {}
     final_dict2 = {}
     for l in word1:
+        if l not in file_stop:
         final_dict[l] = final_dict.get(l, 0)+1         
     for m in word2:
+        if m not in file_stop:
         final_dict2[m] = final_dict2.get(m, 0)+1
     new_dict = {}
     new_common_keys = list(set(final_dict.keys()) & set(final_dict2.keys()))
