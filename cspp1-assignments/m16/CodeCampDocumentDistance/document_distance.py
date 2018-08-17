@@ -16,8 +16,8 @@ def similarity(dict1, dict2):
     dict2 = re.sub('[^A-Za-z]+', ' ', dict2)
     word1 = dict1.split()
     word2 = dict2.split()
-    # word1 = word1.strip()
-    # word2 = word2.strip()
+    word1 = word1.strip()
+    word2 = word2.strip()
     for i in word1:
         if i in '0123456789':
             del i
@@ -32,9 +32,9 @@ def similarity(dict1, dict2):
     for k in file_stop:
         if k in word2:
             word2.remove(k)
+    
     final_dict = {}
     final_dict2 = {}
-    final_list = []
     for l in word1:
         final_dict[l] = final_dict.get(l, 0)+1         
     for m in word2:
@@ -49,8 +49,9 @@ def similarity(dict1, dict2):
     for i in final_dict2:
         if i not in new_dict:
             new_dict[i] = [0, final_dict2[i]]
+    return final_re(new_dict)
 
-
+def final_re(new_dict):
     numer = sum(new_dict[i][0]* new_dict[i][1] for i in new_dict)
     denomi = math.sqrt(sum(new_dict[i][0]**2 for i in new_dict)) * math.sqrt(sum(new_dict[i][1]**2 for i in new_dict)) 
     return round(numer/denomi, 1)
