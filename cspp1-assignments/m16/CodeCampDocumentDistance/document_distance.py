@@ -26,9 +26,9 @@ def create_dict(final_dict, final_dict2):
         if i not in new_dict:
             if i not in SPECIAL_CHARS:
                 new_dict[i] = [0, final_dict2[i]]
-    return final_re(new_dict)
+    return final_cal(new_dict)
 
-def final_re(new_dict):
+def final_cal(new_dict):
     '''
     This finally calcualtes the score
     '''
