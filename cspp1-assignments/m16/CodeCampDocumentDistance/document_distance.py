@@ -17,17 +17,18 @@ def create_dict(final_dict, final_dict2):
     for i in new_common_keys:
         if i not in new_dict:
             if i not in SPECIAL_CHARS:
-                if len(i) > 0:
+                if len(i) > 1:
                     new_dict[i] = [final_dict[i], final_dict2[i]]
     for i in final_dict:
         if i not in new_dict:
             if i not in SPECIAL_CHARS:
-                if len(i) > 0:
+                if len(i) > 1:
                     new_dict[i] = [final_dict[i], 0]
     for i in final_dict2:
         if i not in new_dict:
             if i not in SPECIAL_CHARS:
-                new_dict[i] = [0, final_dict2[i]]
+                if len(i) > 1:
+                    new_dict[i] = [0, final_dict2[i]]
     return final_cal(new_dict)
 
 def final_cal(new_dict):
@@ -63,11 +64,11 @@ def similarity(dict1, dict2):
     final_dict2 = {}
     for l_iter in dict1:
         if l_iter not in file_stop:
-            if len(l_iter) > 0:
+            if len(l_iter) > 1:
                 final_dict[l_iter] = final_dict.get(l_iter, 0)+1
     for m_iter in dict2:
         if m_iter not in file_stop:
-            if len(m_iter) > 0:
+            if len(m_iter) > 1:
                 final_dict2[m_iter] = final_dict2.get(m_iter, 0)+1
     return create_dict(final_dict, final_dict2)
 

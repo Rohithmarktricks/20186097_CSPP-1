@@ -26,10 +26,14 @@ function calling another fuction
 # 	print("I am 'f'")
 # 	print("Now I would like to intoduce another function")
 # 	func()
-# 	print("The funcs true name is", func.__name__)
+# 	print("The funcs true name is", func.__name__).
 
 # f(g)
 
 '''
 Function that returns another function!
 '''
+# To calculate a.x^2 + b.x.y + c.y^2
+
+def second_degree(a,b,c):
+	def values(x,y)
