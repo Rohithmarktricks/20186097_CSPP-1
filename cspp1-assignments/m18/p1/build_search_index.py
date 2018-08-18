@@ -78,6 +78,7 @@ def build_search_index(docs):
                     search_index[letter] = [(i_ref, new_dict[letter])]
                 else:
                     new = tuple([i_ref, new_dict[letter]])
+                    print(new)
                     search_index[letter].append(new)
     return search_index
 
