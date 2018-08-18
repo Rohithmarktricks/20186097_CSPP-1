@@ -48,7 +48,7 @@ def search(search_index, query):
 
     for i,j in list(enumerate(new_list)):
         found.append(j[0])
-    print(set(found)) 
+    return set(found) 
 
 
     
