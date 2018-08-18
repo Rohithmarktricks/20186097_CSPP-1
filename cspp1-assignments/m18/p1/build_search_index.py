@@ -70,6 +70,7 @@ def build_search_index(docs):
 
         #doc_id_list.append(doc_id)
         #doc_list.append(doc)
+    new_dict_1 = {}
     for i in new_dict_1:   #zip(doc_id_list, doc_list):
         new_doc = word_list(new_dict_1[i])
         ref_id = i
