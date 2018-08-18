@@ -40,12 +40,11 @@ def search(search_index, query):
     '''
     new_list = []
     found = []
-    se = {}
     query = query.lower().split()
     for word in query:
         if word in search_index.keys():
-            se.append(search_index[word])
-    print(se)
+            new_list.extend(search_index[word])
+    print(new_list)
 
     for i,j in list(enumerate(new_list)):
         found.append(j[0])
