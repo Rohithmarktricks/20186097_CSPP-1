@@ -44,7 +44,7 @@ def search(search_index, query):
     for word in query:
         if word in search_index.keys():
             new_list.extend(search_index[word])
-    print(new_list)
+    #print(new_list)
 
     for i,j in list(enumerate(new_list)):
         found.append(j[0])
