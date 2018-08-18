@@ -63,16 +63,22 @@ def build_search_index(docs):
     # return search index
     search_index = {}
     new_dict = {}
+    doc_id_list = []
+    doc_list = []
     file_stop = load_stopwords("stopwords.txt")
     for doc_id,doc in list(enumerate(docs)):
-    	new_doc = word_list(doc)
+    	doc_id_list.append(doc_id)
+    	doc_list.append(doc)
+    for i in zip(doc_id_list, doc_list):
+		new_doc = word_list(i[1])
+    	i_ref = i[0]
     	for letter in new_doc:
     		if letter not in file_stop and letter not in '0123456789':
     			new_dict[letter] = new_dict.get(letter, 0)+1
-    			if doc_id not in search_index:
-    				search_index[doc_id] = [(doc_id, new_dict[letter])]
+    			if i_ref not in search_index:
+    				search_index[i_ref] = [(i_ref, new_dict[letter])]
     			else:
-    				search_index[doc_id] = search_index[doc_id].append(tuple((doc_id, new_dict[letter])))	
+    				search_index[i_ref] = search_index[i_ref].append(tuple((i_ref, new_dict[letter])))	
     return search_index
 
 # helper function to print the search index
