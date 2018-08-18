@@ -45,6 +45,7 @@ def search(search_index, query):
             new_list.extend(search_index[word])
 
     for i, j in list(enumerate(new_list)):
+        del i
         found.append(j[0])
     return set(found)
 
