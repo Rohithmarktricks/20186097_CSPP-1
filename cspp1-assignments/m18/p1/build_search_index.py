@@ -68,7 +68,7 @@ def build_search_index(docs):
     for doc_id, doc in list(enumerate(docs)):
         doc_id_list.append(doc_id)
         doc_list.append(doc)
-        new = zip(doc_id_list, doc_list):
+        new = zip(doc_id_list, doc_list)
         for i in new:
             new_doc = word_list(i[0][1])
             i_ref = i[0][0]
