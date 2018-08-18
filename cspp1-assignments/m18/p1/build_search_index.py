@@ -77,7 +77,7 @@ def build_search_index(docs):
                     if word not in search_index:
                         search_index[word] = [id_, new_dict[word]]
                     else:
-                        if id_ not in search_index[word]:
+                        if id_ not in search_index[word][0]:
                             search_index[word] = search_index[word].append((id_, new_dict[word]))
                         else:
                             search_index[word] = search_index[word][1]+new_dict[word]
