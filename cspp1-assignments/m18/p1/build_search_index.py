@@ -41,7 +41,7 @@ def word_list(text):
         return a list of words
     '''
     text = text.lower().replace('\'', '')
-    text = re.sub(r'[^\w\s]', ' ', dict1).lower().strip().split()
+    text = re.sub(r'[^\w\s]', ' ', text).lower().strip().split()
     print(text)
    
 
