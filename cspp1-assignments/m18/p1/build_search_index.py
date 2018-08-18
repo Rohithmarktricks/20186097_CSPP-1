@@ -76,9 +76,9 @@ def build_search_index(docs):
             if letter not in file_stop and letter not in '0123456789':
                 new_dict[letter] = new_dict.get(letter, 0)+1
                 if i_ref not in search_index:
-                    search_index[i_ref] = [(i_ref, new_dict[letter])]
+                    search_index[letter] = [(i_ref, new_dict[letter])]
                 else:
-                    search_index[i_ref] += (i_ref, new_dict[letter])
+                    search_index[letter] += (i_ref, new_dict[letter])
     return search_index
 
 # helper function to print the search index
