@@ -44,16 +44,63 @@ Function that returns another function!
 # fun2 = second_degree('x','y','z')
 # print(fun(1,2))
 
-import string
-d = {}
-#s = string.ascii_lowercase[:]
-a = 'alkdfibaeuberkgbakfaerniorhwebfalwkfnaoieu'
-for i in a:
-	if i not in d:
-		d[i] = 1
-	else:
-		d[i] += 1
+# import string
+# d = {}
+# #s = string.ascii_lowercase[:]
+# a = 'alkdfibaeuberkgbakfaerniorhwebfalwkfnaoieu'
+# for i in a:
+# 	if i not in d:
+# 		d[i] = 1
+# 	else:
+# 		d[i] += 1
 
-l = list(set(d.values()))
-print(l)
+# l = list(set(d.values()))
+# print(l)
+# for i in l:
+# 	if i not in new.keys():
+# 		pass
+#print('{} {} {}'.format(* 'abs'))
 
+# stop = ['is', 'a', 'be']
+# sentence = ['RaJu', 'is', 'a', 'be', 'random']
+# for i in sentence:
+# 	if i in stop:
+# 		sentence.remove(i)
+# print(sentence)
+
+# from string import Template
+
+# t = Template('Hi, I am $name\n')
+
+# names = ['Rohith', 'Sam', 'Saiteja']
+# for i in names:
+# 	print(t.substitute(name = i))
+
+# d = {1:"Rohith", 2:'Saiteja', 3:'Sam'}
+# #print(d.values())
+# print([i+'!' for i in d.values()])
+# #print(x)
+# a = [6, 7, 8, 9, 10]
+# print(list(map((lambda x:x**2), a)))
+'''
+Example for functions for map in python
+def squ(x):
+	return x**x
+def cub(x):
+	return x*x*x
+
+funcs = [squ, cub]
+
+list_ = [1, 2, 3, 4]
+for i in list_:
+	print(map(lambda x:x(i), funcs))
+'''
+# a = [1, 2, 3, 4, 5, 6, 2]
+# b = [5, 6, 7, 5, 2, 10, 2]
+#print([str(x for x in a if x in b).strip()])
+
+init_tuple = [(0, 1), (1, 2), (2, 3)]
+
+result = sum(n for _, n in init_tuple)
+print()
+print(result)

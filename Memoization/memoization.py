@@ -1,3 +1,5 @@
+import sys
+sys.setrecursionlimit(100000)
 def fib_memo(n, d):
 	if n in d:
 		return d[n]
