@@ -85,7 +85,7 @@ def build_search_index(docs):
                     else:
                         search_index[letter].append((i_ref, new_dict[letter]))
 
-    return search_index
+    return set(search_index)
 
 # helper function to print the search index
 # use this to verify how the search index looks
