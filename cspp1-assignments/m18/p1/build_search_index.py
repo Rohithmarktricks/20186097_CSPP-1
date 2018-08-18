@@ -77,7 +77,7 @@ def build_search_index(docs):
                 if letter not in search_index:
                     search_index[letter] = [(i_ref, new_dict[letter])]
                 else:
-                    if i_ref == search_index[letter][0]:
+                    if i_ref in new_dict.keys():
                         search_index[letter] = search_index[letter][1]+1
                     else:
                         search_index[letter].append((i_ref, new_dict[letter]))
