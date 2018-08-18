@@ -46,10 +46,9 @@ def search(search_index, query):
 
     for i, j in list(enumerate(new_list)):
         found.append(j[0])
-    return set(found) 
+    return set(found)
 
 
-    
 
 def process_queries(search_index, queries):
     '''
@@ -70,7 +69,6 @@ def main():
 
     # read the number of search queries
     lines = int(input())
-    
     # read the search queries into a list
     queries = []
     for i in range(lines):
