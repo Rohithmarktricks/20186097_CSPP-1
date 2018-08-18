@@ -78,10 +78,11 @@ def build_search_index(docs):
                     search_index[letter] = [(i_ref, new_dict[letter])]
                     k = i_ref
                 else:
-                    if i_ref == k:
-                        search_index[letter][k] = search_index[letter][0][1]+1
-                    else:
-                        search_index[letter].append((i_ref, new_dict[letter]))
+                    [search_index[letter],(i_ref, new_dict[letter])]
+                    # if i_ref == k:
+                    #     search_index[letter][k] = search_index[letter][0][1]+1
+                    # else:
+                    #     search_index[letter].append((i_ref, new_dict[letter]))
     return search_index
 
 # helper function to print the search index
