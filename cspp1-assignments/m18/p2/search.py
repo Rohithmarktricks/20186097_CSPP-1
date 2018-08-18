@@ -28,6 +28,7 @@
 
     Note: PyLint score need not be 10/10. Anything above 9.5 is good.
 '''
+import string
 
 def search(search_index, query):
     '''
@@ -39,12 +40,16 @@ def search(search_index, query):
     '''
     new_list = []
     found = []
-    if query in search_index:
-        new_list.extend(search_index[query])
+    se = {}
+    query = query.lower().split()
+    for word in query:
+        if word in search_index.keys():
+            se.append(search_index[word])
+    print(se)
 
     for i,j in list(enumerate(new_list)):
-        found.extend(j[0])
-    return set(found) 
+        found.append(j[0])
+    print(set(found)) 
 
 
     
