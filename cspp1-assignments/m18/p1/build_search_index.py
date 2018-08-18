@@ -66,7 +66,7 @@ def build_search_index(docs):
     doc_list = []
     file_stop = load_stopwords("stopwords.txt")
     for doc_id, doc in list(enumerate(docs)):
-    new_dict_1[doc_id] = list(doc)
+        new_dict_1[doc_id] = list(doc)
 
         #doc_id_list.append(doc_id)
         #doc_list.append(doc)
