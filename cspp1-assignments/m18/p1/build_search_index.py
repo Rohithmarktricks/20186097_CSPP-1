@@ -79,7 +79,7 @@ def build_search_index(docs):
                     k = i_ref
                 else:
                     if i_ref == k:
-                        search_index[letter] = search_index[letter][1]+1
+                        search_index[letter] = search_index[letter]+1
                     else:
                         search_index[letter].append((i_ref, new_dict[letter]))
     return search_index
