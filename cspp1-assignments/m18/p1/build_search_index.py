@@ -43,7 +43,6 @@ def word_list(text):
     text = text.lower().replace('\'', '')
     text = re.sub(r'[^\w\s]', ' ', text).lower().strip().split()
     return text
-   
 
 def build_search_index(docs):
     '''
@@ -66,7 +65,7 @@ def build_search_index(docs):
     doc_id_list = []
     doc_list = []
     file_stop = load_stopwords("stopwords.txt")
-    for doc_id,doc in list(enumerate(docs)):
+    for doc_id, doc in list(enumerate(docs)):
         doc_id_list.append(doc_id)
         doc_list.append(doc)
     for i in zip(doc_id_list, doc_list):
