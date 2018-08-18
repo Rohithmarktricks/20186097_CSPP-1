@@ -68,18 +68,19 @@ def build_search_index(docs):
     for doc_id, doc in list(enumerate(docs)):
         doc_id_list.append(doc_id)
         doc_list.append(doc)
-    for i in zip(doc_id_list, doc_list):
-        new_doc = word_list(i[1])
-        i_ref = i[0]
-        for letter in new_doc:
-            if letter not in file_stop and letter not in '0123456789':
-                new_dict[letter] = new_dict.get(letter, 0)+1
-                if i_ref not in search_index:
-                    search_index[letter] = [(i_ref, new_dict[letter])]
-                else:
+        new = zip(doc_id_list, doc_list):
+        for i in new:
+            new_doc = word_list(i[0][1])
+            i_ref = i[0][0]
+            for letter in new_doc:
+                if letter not in file_stop and letter not in '0123456789':
+                    new_dict[letter] = new_dict.get(letter, 0)+1
+                    if i_ref not in search_index:
+                        search_index[letter] = [(i_ref, new_dict[letter])]
+                    else:
                     # new = [i_ref, new_dict[letter]]
                     # print(new)
-                    [search_index[letter],(i_ref, new_dict[letter])]
+                        [search_index[letter],(i_ref, new_dict[letter])]
     return search_index
 
 # helper function to print the search index
