@@ -74,7 +74,7 @@ def build_search_index(docs):
         for letter in new_doc:
             if letter not in file_stop and letter not in '0123456789':
                 new_dict[letter] = new_dict.get(letter, 0)+1
-                if i_ref not in search_index:
+                if letter not in search_index:
                     search_index[letter] = [(i_ref, new_dict[letter])]
                 else:
                     # new = [i_ref, new_dict[letter]]
