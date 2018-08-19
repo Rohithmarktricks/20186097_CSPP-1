@@ -21,7 +21,6 @@
     }
 '''
 import re
-
 # helper function to load the stop words from a file
 def load_stopwords(filename):
     '''
@@ -37,62 +36,36 @@ def load_stopwords(filename):
 def word_list(text):
     '''
         Change case to lower and split the words using a SPACE
-        Clean up the text by remvoing all the non alphabet characters
+        Clean up the text by removing all the non alphabet characters
         return a list of words
     '''
-    text = text.lower().replace('\'', '')
-    text = re.sub(r'[^\w\s]', ' ', text).lower().strip().split()
-    return text
+    words = re.sub('[^a-z]', " ", text.lower().replace('\'', '')).split(" ")
+    stopwords = load_stopwords("stopwords.txt")
+    words_list = [word.strip() for word in words if word not in stopwords and len(word) > 0]
+    return words_list
 
-def build_search_index(docs):
+def build_search_index(documents):
     '''
         Process the docs step by step as given below
     '''
 
     # initialize a search index (an empty dictionary)
-
+    dictionary = {}
     # iterate through all the docs
-    # keep track of doc_id which is the list index corresponding the document
-    # hint: use enumerate to obtain the list index in the for loop
-
+    for document_id, document in enumerate(documents):
+        # keep track of doc_id which is the list index corresponding the document
+        # hint: use enumerate to obtain the list index in the for loop
+        document_words_list = word_list(document)
         # clean up doc and tokenize to words list
-
-        # add or update the words of the doc to the search index
-
-    # return search index
-    search_index = {}
-    #new_dict = {}
-    #doc_id_list = []
-    #doc_list = []
-    file_stop = load_stopwords("stopwords.txt")
-    for doc_id, doc in enumerate(docs):
-        #doc_id_list.append(doc_id)
-        #doc_list.append(doc)
-    #for i in zip(doc_id_list, doc_list):
-        new_doc_list = word_list(doc)
-        #i_ref = doc_id
-        for word in new_doc_list:
-            if word not in file_stop and letter not in '0123456789':
-                search_index[word] = [(doc_id, new_doc_list.count(word))]
+        for word in document_words_list:
+            if word not in dictionary:
+                dictionary[word] = [(document_id, document_words_list.count(word))]
             else:
-                if (doc_id, new_doc_list.count(word)) not in search_index[word]:
-                    search_index[word].append((doc_id, new_doc_list.count(word)))
-
-
-
-                # new_dict[letter] = new_dict.get(letter, 0)+1
-                # if letter not in search_index:
-                #     search_index[letter] = [(i_ref, new_dict[letter])]
-                #     #k = i_ref
-                # else:
-                #     #if i_ref == k:
-                #     # search_index[letter] = search_index[letter][1] + 1
-                #     if i_ref in new_dict.keys():
-                #         search_index[letter] = search_index[letter][1]+1
-                #     else:
-                #         search_index[letter].append((i_ref, new_dict[letter]))
-
-    return search_index
+                # add or update the words of the doc to the search index
+                if (document_id, document_words_list.count(word)) not in dictionary[word]:
+                    dictionary[word].append((document_id, document_words_list.count(word)))
+    # return search index
+    return dictionary
 
 # helper function to print the search index
 # use this to verify how the search index looks
