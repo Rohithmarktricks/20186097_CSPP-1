@@ -73,10 +73,11 @@ def build_search_index(docs):
         #i_ref = doc_id
         for word in new_doc_list:
             if word not in file_stop and word not in '0123456789':
-                search_index[word] = [(doc_id, new_doc_list.count(word))]
-            else:
-                if (doc_id, new_doc_list.count(word)) not in search_index[word]:
-                    search_index[word].append((doc_id, new_doc_list.count(word)))
+                if len(word) > 0:
+                    search_index[word] = [(doc_id, new_doc_list.count(word))]
+                else:
+                    if (doc_id, new_doc_list.count(word)) not in search_index[word]:
+                        search_index[word].append((doc_id, new_doc_list.count(word)))
 
 
 
