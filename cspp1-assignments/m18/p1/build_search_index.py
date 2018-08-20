@@ -42,7 +42,9 @@ def word_list(text):
     '''
     text = text.lower().replace('\'', '')
     text = re.sub(r'[^\w\s]', ' ', text).lower().strip().split()
-    return text
+    stopwords = load_stopwords("stopwords.txt")
+    words_list = [word.strip() for word in text if word not in stopwords and len(word) > 0]
+    return words_list
 
 def build_search_index(docs):
     '''
@@ -64,7 +66,7 @@ def build_search_index(docs):
     #new_dict = {}
     #doc_id_list = []
     #doc_list = []
-    file_stop = load_stopwords("stopwords.txt")
+    # file_stop = load_stopwords("stopwords.txt")
     for doc_id, doc in enumerate(docs):
         #doc_id_list.append(doc_id)
         #doc_list.append(doc)
@@ -72,26 +74,11 @@ def build_search_index(docs):
         new_doc_list = word_list(doc)
         #i_ref = doc_id
         for word in new_doc_list:
-            if word not in file_stop and word not in '0123456789':
-                if len(word) > 0:
-                    search_index[word] = [(doc_id, new_doc_list.count(word))]
-                else:
-                    if (doc_id, new_doc_list.count(word)) not in search_index[word]:
-                        search_index[word].append((doc_id, new_doc_list.count(word)))
-
-
-
-                # new_dict[letter] = new_dict.get(letter, 0)+1
-                # if letter not in search_index:
-                #     search_index[letter] = [(i_ref, new_dict[letter])]
-                #     #k = i_ref
-                # else:
-                #     #if i_ref == k:
-                #     # search_index[letter] = search_index[letter][1] + 1
-                #     if i_ref in new_dict.keys():
-                #         search_index[letter] = search_index[letter][1]+1
-                #     else:
-                #         search_index[letter].append((i_ref, new_dict[letter]))
+            if word not in search_index:
+                search_index[word] = [(doc_id, new_doc_list.count(word))]
+            else:
+                if (doc_id, new_doc_list.count(word)) not in search_index[word]:
+                    search_index[word].append((doc_id, new_doc_list.count(word)))
 
     return search_index
 
