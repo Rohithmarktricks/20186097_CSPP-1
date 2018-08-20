@@ -7,6 +7,7 @@ import time
 # Computer chooses a word
 #
 #
+HAND_SIZE_2 = 7 
 def compChooseWord(hand, wordList, n):
     """
     Given a hand and a wordList, find the word that gives 
@@ -107,7 +108,7 @@ def playGame(wordList):
     1) Asks the user to input 'n' or 'r' or 'e'.
         * If the user inputs 'e', immediately exit the game.
         * If the user inputs anything that's not 'n', 'r', or 'e', keep asking them again.
-
+    
     2) Asks the user to input a 'u' or a 'c'.
         * If the user inputs anything that's not 'c' or 'u', keep asking them again.
 
@@ -125,9 +126,31 @@ def playGame(wordList):
     wordList: list (string)
     """
     # TO DO... <-- Remove this comment when you code this function
-    print("playGame not yet implemented.") # <-- Remove this when you code this function
-
-        
+    #print("playGame not yet implemented.") # <-- Remove this when you code this function
+    hand = None
+    while True:
+        user_report = input("Enter the input from the options : 'n' or 'r' or 'e' ")
+        if user_report == 'n' or user_report == 'r':
+            user_game_choice_2 = user_report
+        elif user_report == 'e':
+            break
+        else:
+            print("invalid Input! Please enter again :")
+        user_game_choice = input("Choose between 'u' and 'c' ")
+        # user
+        if user_game_choice == 'u':
+            if user_game_choice_2 == 'n':
+                hand = dealHand(HAND_SIZE_2)
+                playHand(hand, wordList, HAND_SIZE_2)
+            elif user_game_choice_2 == 'r':
+                playHand(hand, wordList, HAND_SIZE_2)
+        # Computer
+        elif user_game_choice == 'c':
+            if user_game_choice_2 == 'n':
+                hand = dealHand(HAND_SIZE_2)
+                compPlayHand(hand, wordList, HAND_SIZE_2)
+            elif user_game_choice_2 == 'r':
+                compPlayHand(hand, wordList, HAND_SIZE_2)
 #
 # Build data structures used for entire session and play game
 #
