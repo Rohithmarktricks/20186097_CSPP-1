@@ -38,7 +38,7 @@
 # Fill in the apply_shift(self, shift) method of the Message class.
 # You may find it easier to use build_shift_dict(self, shift).
 # Remember that spaces and punctuation should not be changed by the cipher.
-
+import string
 # Helper code
 def load_words(file_name):
     '''
