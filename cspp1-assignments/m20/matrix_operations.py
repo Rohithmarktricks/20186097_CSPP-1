@@ -13,10 +13,10 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    rows = len(m1)
-    columns = len(m2[0])
-    multi_matrix = generate_resultant_matrix(rows, columns)
-    if len(m1[0]) == len(m2[0]):
+    #rows = len(m1)
+    #columns = len(m2[0])
+    #multi_matrix = generate_resultant_matrix(rows, columns)
+    if len(m1[0]) == len(m2):
         return [[sum(a*b for a,b in zip(X_row,Y_col)) for Y_col in zip(*m2)] for X_row in m1]
         #pass
     else:
