@@ -1,4 +1,10 @@
 import numpy as np
+
+def generate_resultant_matrix(rows, columns):
+    # res_matrix = [[0]*columns]*rows
+    # return res_matrix
+    return [[0 for i in range(columns)] for j in range(rows)]
+
 def mult_matrix(m1, m2):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -7,8 +13,17 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    result = [[sum(a*b for a,b in zip(X_row,Y_col)) for Y_col in zip(*m2)] for X_row in m1]
-
+    rows = len(m1)
+    columns = len(m2[0])
+    multi_matrix = generate_resultant_matrix(rows, columns)
+    if len(m1[0]) == len(m2[0]):
+        result = [[sum(a*b for a,b in zip(X_row,Y_col)) for Y_col in zip(*m2)] for X_row in m1]
+        #pass
+    else:
+        print("Error: Matrix shpaes invalid for multi")
+        return pass
+    
+    
 
 def add_matrix(m1, m2):
     '''
@@ -18,13 +33,18 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    add_mat = []
+    final = []
+    rows = len(m1)
+    columns = len(m1[0])
+    add_matrix = generate_resultant_matrix(rows, columns)
     if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
-        for i in m1:
-            for j in i:
-                    add_mat.append([i+j])
-    return add_mat
-
+        for i in range(rows):
+            for j in range(columns):
+                add_matrix[i][j] = m1[i][j] + m2[i][j]
+        return add_matrix
+    else:
+        print("Error: Matrix shapes invalid for addition")
+        return None
 
 def read_matrix():
     '''
@@ -34,55 +54,28 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    # s1 = input().split(",")
-    # mat1 = []
-    # for i in range(int(s1[0])+1):
-    #     temp = input().split(" ")
-    # for j in range(int(s1[0])):
-    #     for k in range(int(s1[1])):
-    #         mat1.append(int(temp[j][k]))
-    # return mat1
-    # mat = []
-    #[rows, columns] = input().split(",")
-    matrix_final = []
+    matrix = []
     list_input = input().split(",")
     rows, columns = int(list_input[0]), int(list_input[1])
-    for i in range(rows):
-        matrix = input().split(" ")
-        if len(matrix) == columns:
-            matrix_final.append([int(value) for value in matrix])
+    for _ in range(rows):
+        list_matrix_row = input().split()
+        if columns == len(list_matrix_row):
+            matrix.append([int(i) for i in list_matrix_row])
         else:
             print("Error!")
-    return matrix_final, rows, columns
+    return matrtix
 
 def main():
     # read matrix 1
     mat_1 = read_matrix()
-    #new = []
-    # order = len(mat_1)
-    # for i in range(order):
-    #     for j in range(order):
-    #         new.append(map(int, mat_1[i][j]))
-
+    if mat_1 is None:
+        exit()
     mat_2 = read_matrix()
-    #000000000000000000000000000000000000new_2 = []
-    # order = len(mat_2)
-    # for i in range(order):
-    #     for j in range(order):
-    #         new_2.append(map(int, mat_2[i][j]))
+    if mat_2 is None:
+        exit()
 
-    #print(np.add(mat_1, mat_2))
-    #print(new_2)
-    #print(mat_1[0], mat_2[0])
-
-    
-
-    # read matrix 2
-
-    # add matrix 1 and matrix 2
     print(add_matrix(mat_1, mat_2))
 
-    # multiply matrix 1 and matrix 2
     print(mult_matrix(mat_1, mat_2))
 
 if __name__ == '__main__':

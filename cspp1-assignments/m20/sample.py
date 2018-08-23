@@ -17,9 +17,14 @@ import numpy as np
 # A = [[1, 2, 3, 4],[1, 2, 3, 4],[5, 6, 4, 5]]
 # B = [[5, 6, 7, 8],[1, 2, 3, 4],[5, 6, 4, 5]]
 # print([i for i in zip(A,B)])
-# n = 2
-# Grid = [[0]*n]*n
-# print(Grid)
+n = 2
+rows = 2
+cols = 3
+Grid = [[0]*n][:]*n
+Grid = [[0 for i in range(cols)] for j in range(rows)]
+print(Grid)
+#Grid[0][1] = 2
+#print(Grid)
 
-a = [[1, 2],[2, 2]]
-print(len(a))
+# a = [[1, 2],[2, 2]]
+# print(len(a))
