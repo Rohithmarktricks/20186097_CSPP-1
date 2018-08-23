@@ -21,8 +21,8 @@ def add_matrix(m1, m2):
     add_mat = []
     if len(m1) == len(m2):
         for i in m1:
-            for in m2:
-                if len(i) == len(i):
+            for j in m2:
+                if len(i) == len(j):
                     add_mat.append([i+j])
     return add_mat
 
