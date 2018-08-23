@@ -37,7 +37,7 @@ def add_matrix(m1, m2):
     rows = len(m1)
     columns = len(m1[0])
     add_matrix = generate_resultant_matrix(rows, columns)
-    if len(m1[0]) == len(m2[0]):
+    if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
         for i in range(rows):
             for j in range(columns):
                 add_matrix[i][j] = m1[i][j] + m2[i][j]
@@ -63,6 +63,7 @@ def read_matrix():
             matrix.append([int(i) for i in list_matrix_row])
         else:
             print("Error: Invalid input for the matrix")
+            return None
     return matrix
 
 def main():
