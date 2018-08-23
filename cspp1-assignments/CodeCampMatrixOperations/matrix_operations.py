@@ -70,6 +70,9 @@ def read_matrix():
     return matrix
 
 def main():
+    '''
+    Main function
+    '''
     # read matrix 1
     mat_1 = read_matrix()
     if mat_1 is None:
