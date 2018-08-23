@@ -11,7 +11,7 @@ def generate_resultant_matrix(rows, columns):
     # return res_matrix
     return [[0 for i in range(columns)] for j in range(rows)]
 
-def mult_matrix(m1, m2):
+def mult_matrix(matrix_1, matrix_2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -19,17 +19,17 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    #rows = len(m1)
-    #columns = len(m2[0])
+    #rows = len(matrix_1)
+    #columns = len(matrix_2[0])
     #multi_matrix = generate_resultant_matrix(rows, columns)
-    if len(m1[0]) == len(m2):
-        return [[sum(a*b for a, b in zip(X_row, Y_col)) for Y_col in zip(*m2)] for X_row in m1]
+    if len(matrix_1[0]) == len(matrix_2):
+        return [[sum(a*b for a, b in zip(X_row, Y_col)) for Y_col in zip(*matrix_2)] for X_row in matrix_1]
         #pass
     else:
         print("Error: Matrix shapes invalid for mult")
         return None
 
-def add_matrix(m1, m2):
+def add_matrix(matrix_1, matrix_2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -38,13 +38,13 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     final = []
-    rows = len(m1)
-    columns = len(m1[0])
+    rows = len(matrix_1)
+    columns = len(matrix_1[0])
     add_matrix = generate_resultant_matrix(rows, columns)
-    if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
+    if len(matrix_1) == len(matrix_2) and len(matrix_1[0]) == len(matrix_2[0]):
         for i in range(rows):
             for j in range(columns):
-                add_matrix[i][j] = m1[i][j] + m2[i][j]
+                add_matrix[i][j] = matrix_1[i][j] + matrix_2[i][j]
         return add_matrix
     else:
         print("Error: Matrix shapes invalid for addition")
