@@ -21,7 +21,7 @@ def mult_matrix(m1, m2):
         #pass
     else:
         print("Error: Matrix shpaes invalid for multi")
-        return pass
+        return None
     
     
 
