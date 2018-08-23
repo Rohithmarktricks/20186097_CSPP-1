@@ -25,7 +25,6 @@ def mult_matrix(matrix_1, matrix_2):
     if len(matrix_1[0]) == len(matrix_2):
         return [[sum(a*b for a, b in zip(X_row, Y_col))\
         for Y_col in zip(*matrix_2)] for X_row in matrix_1]
-        #pass
     else:
         print("Error: Matrix shapes invalid for mult")
         return None
@@ -38,7 +37,6 @@ def add_matrix(matrix_1, matrix_2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    final = []
     rows = len(matrix_1)
     columns = len(matrix_1[0])
     add_matrix = generate_resultant_matrix(rows, columns)
