@@ -63,7 +63,7 @@ def read_matrix():
             matrix.append([int(i) for i in list_matrix_row])
         else:
             print("Error!")
-    return matrtix
+    return matrix
 
 def main():
     # read matrix 1
