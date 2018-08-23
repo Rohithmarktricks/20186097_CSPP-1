@@ -1,6 +1,12 @@
-import numpy as np
+'''
+To find addition and multiplication of the given matrices
+@author : Rohithmarktricks
+'''
 
 def generate_resultant_matrix(rows, columns):
+    '''
+    To generate the zeros of the resultant matrices.
+    '''
     # res_matrix = [[0]*columns]*rows
     # return res_matrix
     return [[0 for i in range(columns)] for j in range(rows)]
@@ -22,8 +28,6 @@ def mult_matrix(m1, m2):
     else:
         print("Error: Matrix shapes invalid for mult")
         return None
-    
-    
 
 def add_matrix(m1, m2):
     '''
