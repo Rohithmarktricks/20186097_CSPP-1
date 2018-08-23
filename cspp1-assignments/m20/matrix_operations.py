@@ -20,7 +20,7 @@ def add_matrix(m1, m2):
     '''
     add_mat = []
     if len(m1) == len(m2):
-        for i in m1 and i in m2:
+        for i in m1 and j in m2:
             if len(i) == len(i):
                 add_mat.append([i+j])
     return add_mat
