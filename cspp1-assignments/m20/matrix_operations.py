@@ -80,7 +80,7 @@ def main():
     # read matrix 2
 
     # add matrix 1 and matrix 2
-    print(add_mat(mat_1, mat_2))
+    print(add_matrix(mat_1, mat_2))
 
     # multiply matrix 1 and matrix 2
     print(mult_matrix(mat_1, mat_2))
