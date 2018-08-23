@@ -22,7 +22,7 @@ def add_matrix(m1, m2):
     if len(m1) == len(m2):
         for i in range(len(m1)):
             if len(m1[i]) == len(m2[i]):
-                add_mat.append([m1[i]+m2[i] for i in range(0,range(len(m1[i])))])
+                add_mat.append([m1[i]+m2[i] for i in range(0,len(m1[i]))])
         return add_mat
 
 
