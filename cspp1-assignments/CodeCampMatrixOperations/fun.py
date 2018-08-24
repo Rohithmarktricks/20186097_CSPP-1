@@ -6,5 +6,8 @@ print(zip(*s))
 # b = [4,5,6]
 # for i in zip(a,b):
 # 	print(i)
-a = [1,2,2]
-print(len(set(a)))
+a = [[1,2,2],[2,2,3]]
+new = 0
+for row in a:
+	new += row.count(2)
+print(new)
