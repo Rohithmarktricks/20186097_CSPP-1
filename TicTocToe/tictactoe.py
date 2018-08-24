@@ -32,13 +32,15 @@ def check_variables(check_test_x,check_variable):
     else:
         for row in new:
             if row[0] ==check_variable and len(set(row)) == 1:
-                return True
-            else:
-                if (check_test_x[0][0] == check_test_x[1][1] == check_test_x[2][2] == check_variable) or\
-                    (check_test_x[0][2] == check_test_x[1][1] == check_test_x[2][0]== check_variable):
-                    return True
-                else:
-                    return False
+                count_ += 1
+    if count_ == 1:
+        return True
+    else:
+        if (check_test_x[0][0] == check_test_x[1][1] == check_test_x[2][2] == check_variable) or\
+            (check_test_x[0][2] == check_test_x[1][1] == check_test_x[2][0]== check_variable):
+            return True
+        else:
+            return False
                                 
     
 def main():

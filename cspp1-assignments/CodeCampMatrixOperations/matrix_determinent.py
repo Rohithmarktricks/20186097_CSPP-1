@@ -10,5 +10,4 @@ def get_matrix_determinent(matrix):
 	else:
 		determinant = 0
 		for element in range(len(matrix)):
-			determinant += ((-1)**element)*matrix[0][element]\
-			*get_matrix_determinent(get_matrix_minor(matrix,0,element))
+			determinant += ((-1)**element)*matrix[0][element]*get_matrix_determinent(get_matrix_minor(matrix,0,element))
