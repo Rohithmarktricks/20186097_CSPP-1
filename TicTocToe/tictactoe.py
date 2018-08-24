@@ -32,8 +32,8 @@ def check_x(check_test_x):
                 if row[0] =='x' and len(set(row)) == 1:
                     return True
                 else:
-                    if (check_test_x[0][0] == check_test_x[1][1] == check_test_x[2][2] == 'x') or\
-                        (check_test_x[0][2] == check_test_x[1][1] == check_test_x[2][0] == 'x'):
+                    if (check_test_x[0][0] == check_test_x[1][1] == check_test_x[2][2]) or\
+                        (check_test_x[0][2] == check_test_x[1][1] == check_test_x[2][0]):
                         return True
                     else:
                         return False
@@ -48,8 +48,8 @@ def check_o(check_test_o):
                 if row[0] =='o' and len(set(row)) == 1:
                     return True
                 else:
-                    if (check_test_o[0][0] == check_test_o[1][1] == check_test_o[2][2] == 'o') or\
-                        (check_test_o[0][2] == check_test_o[1][1] == check_test_o[2][0] == 'o'):
+                    if (check_test_o[0][0] == check_test_o[1][1] == check_test_o[2][2]) or\
+                        (check_test_o[0][2] == check_test_o[1][1] == check_test_o[2][0]):
                         return True
                     else:
                         return False
