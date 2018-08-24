@@ -27,8 +27,7 @@ def is_valid_game(new_test):
     if x_ns > 5 or o_ns > 5:
         print("invalid game")
         return None
-    else:
-        return True
+    return True
 
 def check_variables(check_test, check_variable):
     '''
@@ -59,6 +58,7 @@ def main():
     '''
     tictactoe = []
     for i in range(ROWS):
+        del i
         tictactoe.append(input().split())
     test = is_valid_input(tictactoe)
     if test:
