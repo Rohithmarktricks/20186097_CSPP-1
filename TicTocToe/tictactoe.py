@@ -14,7 +14,7 @@ def read_tictactoe():
                 return None
     return tictactoe
 
-def is_valid_game():
+def is_valid_game(tictactoe):
     x_ns = tictactoe.count('x')
     o_ns = tictactoe.count('o')
     if x_ns or o_ns > 5:
