@@ -49,7 +49,7 @@ def check_variables(check_test, check_variable):
         return True
     else:
         if (check_test[0][0] == check_test[1][1] == check_test[2][2] == check_variable) or\
-            (check_test[0][2] == check_test[1][1] == check_test[2][0]== check_variable):
+            (check_test[0][2] == check_test[1][1] == check_test[2][0] == check_variable):
             return True
         else:
             return False
