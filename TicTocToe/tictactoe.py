@@ -58,6 +58,8 @@ def check_o():
     
 def main():
     test = read_tictactoe()
+    if test is None:
+        exit()
     if is_valid_game(test):
         if check_x(test):
             print('x')
