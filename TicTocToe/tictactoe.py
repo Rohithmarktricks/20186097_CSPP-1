@@ -32,7 +32,7 @@ def check_x():
             for row in new:
                 if row[0] =='x' and len(set(row)) == 1:
                     return True
-                elif:
+                else:
                     if (tictactoe[0][0] == tictactoe[1][1] == tictactoe[2][2] == 'x') or\
                         (tictactoe[0][2] == tictactoe[1][1] == tictactoe[2][0] == 'x'):
                         return True
