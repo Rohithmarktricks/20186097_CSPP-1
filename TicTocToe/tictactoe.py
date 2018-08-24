@@ -28,7 +28,7 @@ def check_x():
     for row in tictactoe:
         if row[0] == 'x' and len(set(row)) == 1 :
             return True
-        elif:
+        else:
             for row in new:
                 if row[0] =='x' and len(set(row)) == 1:
                     return True
