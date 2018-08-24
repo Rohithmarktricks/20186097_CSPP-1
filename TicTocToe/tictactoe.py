@@ -14,18 +14,18 @@ def read_tictactoe():
                 return None
     return tictactoe
 
-def is_valid_game(tictactoe):
-    x_ns = tictactoe.count('x')
-    o_ns = tictactoe.count('o')
+def is_valid_game(new_test):
+    x_ns = new_test.count('x')
+    o_ns = new_test.count('o')
     if x_ns or o_ns > 5:
         print("Invalid Game")
         return None
     else:
         return True
 
-def check_x(tictactoe):
-    new = zip(*tictactoe)
-    for row in tictactoe:
+def check_x(check_test_x):
+    new = zip(*check_test_x)
+    for row in check_test_x:
         if row[0] == 'x' and len(set(row)) == 1 :
             return True
         else:
@@ -33,15 +33,15 @@ def check_x(tictactoe):
                 if row[0] =='x' and len(set(row)) == 1:
                     return True
                 else:
-                    if (tictactoe[0][0] == tictactoe[1][1] == tictactoe[2][2] == 'x') or\
-                        (tictactoe[0][2] == tictactoe[1][1] == tictactoe[2][0] == 'x'):
+                    if (check_test_x[0][0] == check_test_x[1][1] == check_test_x[2][2] == 'x') or\
+                        (check_test_x[0][2] == check_test_x[1][1] == check_test_x[2][0] == 'x'):
                         return True
                     else:
                         return False
 
-def check_o(tictactoe):
-    new = zip(*tictactoe)
-    for row in tictactoe:
+def check_o(check_test_o):
+    new = zip(*check_test_o)
+    for row in check_test_o:
         if row[0] == 'o' and len(set(row)) == 1 :
             return True
         else:
@@ -49,8 +49,8 @@ def check_o(tictactoe):
                 if row[0] =='o' and len(set(row)) == 1:
                     return True
                 else:
-                    if (tictactoe[0][0] == tictactoe[1][1] == tictactoe[2][2] == 'o') or\
-                        (tictactoe[0][2] == tictactoe[1][1] == tictactoe[2][0] == 'o'):
+                    if (check_test_o[0][0] == check_test_o[1][1] == check_test_o[2][2] == 'o') or\
+                        (check_test_o[0][2] == check_test_o[1][1] == check_test_o[2][0] == 'o'):
                         return True
                     else:
                         return False
