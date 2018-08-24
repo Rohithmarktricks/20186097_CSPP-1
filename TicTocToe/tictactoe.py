@@ -44,11 +44,11 @@ def check_o():
     for row in tictactoe:
         if row[0] == 'o' and len(set(row)) == 1 :
             return True
-        elif:
+        else:
             for row in new:
                 if row[0] =='o' and len(set(row)) == 1:
                     return True
-                elif:
+                else:
                     if (tictactoe[0][0] == tictactoe[1][1] == tictactoe[2][2] == 'o') or\
                         (tictactoe[0][2] == tictactoe[1][1] == tictactoe[2][0] == 'o'):
                         return True
