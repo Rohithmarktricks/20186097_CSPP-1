@@ -67,7 +67,7 @@ def main():
             elif check_o(tictactoe):
                 print('o')
     else:
-        print("invalid game")
+        print("invalid input")
         quit()            
 
 main()
