@@ -23,7 +23,7 @@ def is_valid_game():
     else:
         return True
 
-def check_x():
+def check_x(tictactoe):
     new = zip(*tictactoe)
     for row in tictactoe:
         if row[0] == 'x' and len(set(row)) == 1 :
@@ -39,7 +39,7 @@ def check_x():
                     else:
                         return False
 
-def check_o():
+def check_o(tictactoe):
     new = zip(*tictactoe)
     for row in tictactoe:
         if row[0] == 'o' and len(set(row)) == 1 :
