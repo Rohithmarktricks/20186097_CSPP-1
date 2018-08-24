@@ -1,8 +1,14 @@
+'''
+To declare the winner for the TicTocToe Game
+@author : Rohithmarktricks
+'''
 ROWS = 3
 COLUMNS = 3
 
-
 def is_valid_input(list_):
+    '''
+    To check if the input is a valid input
+    '''
     for i in list_:
         for j in i:
             if j not in 'x.o':
@@ -10,6 +16,9 @@ def is_valid_input(list_):
     return True
 
 def is_valid_game(new_test):
+    '''
+    to check if it is a valid game
+    '''
     x_ns = 0
     o_ns = 0
     for row in new_test:
@@ -22,6 +31,9 @@ def is_valid_game(new_test):
         return True
 
 def check_variables(check_test, check_variable):
+    '''
+    To check whether variable 'x' or 'o' is present
+    '''
     count_ = 0
     new = zip(*check_test)
     for row in check_test:
@@ -41,15 +53,11 @@ def check_variables(check_test, check_variable):
             return True
         else:
             return False
-
-def draw_game(check_test):
-    for i in check_test:
-        for j in i:
-            check_variable
-
-                                
     
 def main():
+    '''
+    Main function
+    '''
     tictactoe = []
     for i in range(ROWS):
         tictactoe.append(input().split())
@@ -69,5 +77,3 @@ def main():
         quit()            
 
 main()
-
-#print(check_o([['o','.','.'],['x','x','.'],['o','o','o']]))
