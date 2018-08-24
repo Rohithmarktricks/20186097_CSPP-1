@@ -37,13 +37,13 @@ def check_variables(check_test, check_variable):
     count_ = 0
     new = zip(*check_test)
     for row in check_test:
-        if row[0] == check_variable and len(set(row)) == 1 :
+        if row[0] == check_variable and len(set(row)) == 1:
             count_ += 1
     if count_ == 1:
         return True
     else:
         for row in new:
-            if row[0] ==check_variable and len(set(row)) == 1:
+            if row[0] == check_variable and len(set(row)) == 1:
                 count_ += 1
     if count_ == 1:
         return True
