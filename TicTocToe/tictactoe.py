@@ -22,7 +22,7 @@ def is_valid_game(new_test):
     else:
         return True
 
-def check_variables(check_test_x,check_variableh):
+def check_variables(check_test_x,check_variable):
     count_ = 0
     new = zip(*check_test_x)
     for row in check_test_x:
