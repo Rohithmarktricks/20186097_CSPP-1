@@ -3,12 +3,11 @@ COLUMNS = 3
 
 
 def is_valid_input(list_):
-        for i in list_:
-            for j in i:
-                if j not in 'x.o':
-                    return False
-                else:
-                    return True
+    for i in list_:
+        for j in i:
+            if j not in 'x.o':
+                return False
+    return True
 
 def is_valid_game(new_test):
     x_ns = 0
