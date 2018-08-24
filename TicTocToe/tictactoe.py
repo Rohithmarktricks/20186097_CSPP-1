@@ -53,7 +53,6 @@ def check_variables(check_test, check_variable):
             return True
         else:
             return False
-    
 def main():
     '''
     Main function
@@ -66,9 +65,9 @@ def main():
         if is_valid_game(tictactoe):
             if check_variables(tictactoe, 'x') and check_variables(tictactoe, 'o'):
                 print('invalid game')
-            elif check_variables(tictactoe,'x'):
+            elif check_variables(tictactoe, 'x'):
                 print('x')
-            elif check_variables(tictactoe,'o'):
+            elif check_variables(tictactoe, 'o'):
                 print('o')
             else:
                 print('draw')
