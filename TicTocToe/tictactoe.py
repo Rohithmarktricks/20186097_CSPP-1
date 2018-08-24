@@ -17,7 +17,7 @@ def is_valid_game(new_test):
         x_ns += row.count('x')
         o_ns += row.count('o')
     if x_ns or o_ns > 5:
-        print("invalid Game")
+        print("invalid game")
         return None
     else:
         return True
