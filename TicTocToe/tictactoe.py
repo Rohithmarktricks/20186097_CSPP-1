@@ -73,6 +73,6 @@ def main():
                 print('draw')
     else:
         print("invalid input")
-        quit()            
+        quit()
 
 main()
