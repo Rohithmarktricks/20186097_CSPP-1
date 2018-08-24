@@ -23,8 +23,7 @@ def mult_matrix(matrix_1, matrix_2):
     #columns = len(matrix_2[0])
     #multi_matrix = generate_resultant_matrix(rows, columns)
     if len(matrix_1[0]) == len(matrix_2):
-        return [[sum(a*b for a, b in zip(X_row, Y_col))\
-        for Y_col in zip(*matrix_2)] for X_row in matrix_1]
+        return [[sum(a*b for a, b in zip(X_row, Y_col))for Y_col in zip(*matrix_2)] for X_row in matrix_1]
     else:
         print("Error: Matrix shapes invalid for mult")
         return None
