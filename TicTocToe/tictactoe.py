@@ -21,10 +21,10 @@ def is_valid_game(new_test):
     else:
         return True
 
-def check_variables(check_test_x,check_variable):
+def check_variables(check_test,check_variable):
     count_ = 0
-    new = zip(*check_test_x)
-    for row in check_test_x:
+    new = zip(*check_test)
+    for row in check_test:
         if row[0] == check_variable and len(set(row)) == 1 :
             count_ += 1
     if count_ == 1:
@@ -36,11 +36,17 @@ def check_variables(check_test_x,check_variable):
     if count_ == 1:
         return True
     else:
-        if (check_test_x[0][0] == check_test_x[1][1] == check_test_x[2][2] == check_variable) or\
-            (check_test_x[0][2] == check_test_x[1][1] == check_test_x[2][0]== check_variable):
+        if (check_test[0][0] == check_test[1][1] == check_test[2][2] == check_variable) or\
+            (check_test[0][2] == check_test[1][1] == check_test[2][0]== check_variable):
             return True
         else:
             return False
+
+def draw_game(check_test):
+    for i in check_test:
+        for j in i:
+            check_variable
+
                                 
     
 def main():
@@ -56,6 +62,8 @@ def main():
                 print('x')
             elif check_variables(tictactoe,'o'):
                 print('o')
+            else:
+                print('draw')
     else:
         print("invalid input")
         quit()            
