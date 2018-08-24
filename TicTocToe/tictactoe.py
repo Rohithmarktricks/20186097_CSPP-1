@@ -2,17 +2,13 @@ ROWS = 3
 COLUMNS = 3
 
 
-def read_tictactoe():
-    tictactoe = []
-    for _ in range(ROWS):
-        list_matrix_row = input().split(" ")
-        for i in list_matrix_row:
-            if i in 'x.o':
-                tictactoe.append([i  for i in list_matrix_row])
-            else:
-                print("Invalid input")
-                return None
-    return tictactoe
+def is_valid_input(list_):
+        for i in list_:
+            for j in i:
+                if j not in 'x.o':
+                    return False
+                else:
+                    return True
 
 def is_valid_game(new_test):
     x_ns = new_test.count('x')
@@ -57,15 +53,17 @@ def check_o(check_test_o):
                                 
     
 def main():
-    test = read_tictactoe()
-    if test is None:
-        exit()
-    if is_valid_game(test):
-        if check_x(test):
-            print('x')
-        elif check_o(test):
-            print('o')
+    tictactoe = []
+    for i in range(ROWS):
+        tictactoe.append(input().split())
+    test = is_valid_input(tictactoe)
+    if test:
+        if is_valid_game(tictactoe):
+            if check_x(tictactoe):
+                print('x')
+            elif check_o(tictactoe):
+                print('o')
     else:
-        exit()
+        quit()            
 
-
+main()
