@@ -14,7 +14,7 @@ def is_valid_game(new_test):
     x_ns = new_test.count('x')
     o_ns = new_test.count('o')
     if x_ns or o_ns > 5:
-        print("Invalid Game")
+        print("invalid Game")
         return None
     else:
         return True
@@ -64,6 +64,7 @@ def main():
             elif check_o(tictactoe):
                 print('o')
     else:
+        print("invalid game")
         quit()            
 
 main()
