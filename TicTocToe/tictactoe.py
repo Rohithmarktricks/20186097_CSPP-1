@@ -11,8 +11,11 @@ def is_valid_input(list_):
                     return True
 
 def is_valid_game(new_test):
-    x_ns = new_test.count('x')
-    o_ns = new_test.count('o')
+    x_ns = 0
+    o_ns = 0
+    for row in new_test:
+        x_ns += row.count('x')
+        o_ns += row.count('o')
     if x_ns or o_ns > 5:
         print("invalid Game")
         return None
