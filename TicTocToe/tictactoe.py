@@ -49,7 +49,9 @@ def main():
     test = is_valid_input(tictactoe)
     if test:
         if is_valid_game(tictactoe):
-            if check_variables(tictactoe,'x'):
+            if check_variables(tictactoe, 'x') and check_variables(tictactoe, 'o'):
+                print('draw')
+            elif check_variables(tictactoe,'x'):
                 print('x')
             elif check_variables(tictactoe,'o'):
                 print('o')
