@@ -12,6 +12,7 @@ def check_row(sudoku):
         if len(set(row)) == 9:
             return True
         return False
+
 def check_column(sudoku):
     fun2 = zip(*sudoku)
     for row in fun2:
@@ -20,7 +21,12 @@ def check_column(sudoku):
         return False
 
 def check_matrix(sudoku):
-    pass
+    fun = []
+    for rows in sudoku:
+        for column in sudoku:
+            fun.append()
+
+   
 
 
 
@@ -30,8 +36,12 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    check_row(sudoku)
-    check_column(sudoku)
+    if check_row(sudoku):
+        if check_column(sudoku):
+        print(False)
+    else:
+        print(False)
+
 
 def main():
     '''
