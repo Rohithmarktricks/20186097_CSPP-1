@@ -12,7 +12,7 @@ def frequency_graph(dictionary):
 
     KEY.sort()
     for i in range(len(KEY)):
-        print(str(KEY[i][0])+' - '+str(KEY[i][1]))
+        print(str(KEY[i][0])+' - '+'#'*KEY[i][1])
 
 
 def main():
