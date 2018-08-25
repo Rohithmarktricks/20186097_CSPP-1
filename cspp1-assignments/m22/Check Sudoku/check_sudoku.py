@@ -78,7 +78,7 @@ def check_sudoku(sudoku):
             if check_matrix(sudoku):
                 return False
             return True
-    
+    return False
 
 
 def main():
