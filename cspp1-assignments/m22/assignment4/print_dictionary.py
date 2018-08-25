@@ -8,8 +8,8 @@ def print_dictionary(dictionary):
     '''
     print_dictionary function
     '''
-    for KEYs in dictionary.items():
-        KEY.append(KEYs)
+    for keys in dictionary.items():
+        KEY.append(keys)
 
     KEY.sort()
     for i in range(len(KEY)):
