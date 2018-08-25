@@ -25,13 +25,15 @@ def check_column(sudoku):
     to check with columns of matrix
     '''
     fun2 = zip(*sudoku)
-    for row in fun2:
-        if len(set(row)) == 9:
-            for i in row:
-                if i in '123456789':
-                    return True
+    for row in sudoku:
+        for element in row:
+            if row.count(element) !=1 and row.count(element) >= 1:
                 return False
-        return False
+    for row1 in fun2:
+        for element1 in row1:
+            if row.count(element) !=1 and row.count(element) >= 1:
+                return False
+    return True
 
 # def check_matrix(sudoku):
 #     '''
@@ -83,11 +85,9 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    if check_row(sudoku):
-        if check_column(sudoku):
-            return True
-        return False
-    return False
+    new = check_row(sudoku)
+    if new:
+        return check_column(sudoku)
 
 
 def main():
@@ -103,7 +103,7 @@ def main():
         del i
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
-        sudoku.append([int(i) for i in row])
+        sudoku.append(row)
     # call solution function and print result to console
     print(check_sudoku(sudoku))
 
