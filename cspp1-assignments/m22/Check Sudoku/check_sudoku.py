@@ -14,7 +14,10 @@ def check_row(sudoku):
     '''
     for row in sudoku:
         if len(set(row)) == 9:
-            return True
+            for i in row:
+                if i in '123456789':
+                    return True
+                return False
         return False
 
 def check_column(sudoku):
@@ -24,7 +27,10 @@ def check_column(sudoku):
     fun2 = zip(*sudoku)
     for row in fun2:
         if len(set(row)) == 9:
-            return True
+            for i in row:
+                if i in '123456789':
+                    return True
+                return False
         return False
 
 def check_matrix(sudoku):
