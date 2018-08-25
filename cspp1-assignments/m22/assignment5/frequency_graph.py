@@ -12,9 +12,6 @@ def frequency_graph(dictionary):
         print(str(KEY[i][0])+' - '+'#'*KEY[i][1])
 
 def main():
-	'''
-	Main Function
-	'''
     dictionary = eval(input())
     frequency_graph(dictionary)
 
