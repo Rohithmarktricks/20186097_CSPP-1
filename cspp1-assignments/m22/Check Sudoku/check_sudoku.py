@@ -9,12 +9,18 @@
 '''
 import numpy as np
 def check_row(sudoku):
+    '''
+    To check with rows of martix
+    '''
     for row in sudoku:
         if len(set(row)) == 9:
             return True
         return False
 
 def check_column(sudoku):
+    '''
+    to check with columns of matrix
+    '''
     fun2 = zip(*sudoku)
     for row in fun2:
         if len(set(row)) == 9:
@@ -22,6 +28,9 @@ def check_column(sudoku):
         return False
 
 def check_matrix(sudoku):
+    '''
+    to check the 3x3 grid
+    '''
     new = np.array(sudoku)
     a_arr = new[0].reshape((3,3))
     b_arr = new[1].reshape((3,3))
@@ -86,7 +95,6 @@ def main():
         main function to read input sudoku from console
         call check_sudoku function and print the result to console
     '''
-    
     # initialize empty list
     sudoku = []
 
