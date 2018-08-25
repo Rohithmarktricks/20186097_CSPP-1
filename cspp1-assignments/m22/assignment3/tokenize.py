@@ -4,6 +4,7 @@ each word
 '''
 adict = {}
 def tokenize(string):
+    string = string.split()
     for word in string:
         if word not in adict:
             adict[word] = 1
