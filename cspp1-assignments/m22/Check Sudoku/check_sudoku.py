@@ -83,9 +83,11 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    if check_row(sudoku)and check_column(sudoku):
-        if check_matrix(sudoku):
-            return True
+    if check_row(sudoku):
+        if check_column(sudoku):
+            if check_matrix(sudoku):
+                return True
+            return False
         return False
     return False
 

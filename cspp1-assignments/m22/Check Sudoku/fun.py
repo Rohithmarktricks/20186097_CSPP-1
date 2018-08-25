@@ -8,6 +8,11 @@ a= [[8, 4, 5, 6, 3, 2, 1, 2, 9],
 [3, 6, 1, 4, 2, 9, 7, 8 ,5],
 [5, 7, 4, 1, 8, 6, 2, 9, 3],
 [9, 2, 8, 3, 5, 7, 4, 6, 1]]
+
+trans = zip(*a)
+for row in trans:
+	print(row)
+#print(trans)
 new = np.array(a)
 t = new[0].reshape((3,3))
 print(t)
