@@ -10,7 +10,7 @@ def print_dictionary(dictionary):
     '''
     for keys in dictionary.items():
         key.append(keys)
-        
+
     key.sort()
     for i in range(len(key)):
         print(str(key[i][0])+' - '+str(key[i][1]))
