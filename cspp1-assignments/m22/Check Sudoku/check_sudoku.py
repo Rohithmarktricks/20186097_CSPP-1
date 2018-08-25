@@ -38,10 +38,9 @@ def check_sudoku(sudoku):
     '''
     if check_row(sudoku):
         if check_column(sudoku):
-            print(True)
-        else:print(False)
-    else:
-        print(False)
+            return True
+        return False
+    return False
 
 
 def main():
