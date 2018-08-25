@@ -32,15 +32,15 @@ def check_matrix(sudoku):
     to check the 3x3 grid
     '''
     new = np.array(sudoku)
-    a_arr = new[0].reshape((3,3))
-    b_arr = new[1].reshape((3,3))
-    c_arr = new[2].reshape((3,3))
-    d_arr = new[3].reshape((3,3))
-    e_arr = new[4].reshape((3,3))
-    f_arr = new[5].reshape((3,3))
-    g_arr = new[6].reshape((3,3))
-    h_arr = new[7].reshape((3,3))
-    i_arr = new[8].reshape((3,3))
+    a_arr = new[0].reshape((3, 3))
+    b_arr = new[1].reshape((3, 3))
+    c_arr = new[2].reshape((3, 3))
+    d_arr = new[3].reshape((3, 3))
+    e_arr = new[4].reshape((3, 3))
+    f_arr = new[5].reshape((3, 3))
+    g_arr = new[6].reshape((3, 3))
+    h_arr = new[7].reshape((3, 3))
+    i_arr = new[8].reshape((3, 3))
 
     final = np.concatenate((a_arr[0], b_arr[0], c_arr[0]))
     final2 = np.concatenate((a_arr[1], b_arr[1], c_arr[1]))
@@ -100,6 +100,7 @@ def main():
 
     # loop to read 9 lines of input from console
     for i in range(9):
+        del i
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
         sudoku.append(row)
