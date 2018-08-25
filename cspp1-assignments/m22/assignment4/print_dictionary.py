@@ -8,7 +8,7 @@ def print_dictionary(dictionary):
 	'''
 	print_dictionary function
 	'''
-    for keys in dictionary:
+    for keys in dictionary.items():
     	key.append(keys)
     key.sort()
     for i in range(len(key)):
