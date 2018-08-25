@@ -13,12 +13,10 @@ def check_row(sudoku):
     To check with rows of martix
     '''
     for row in sudoku:
-        if len(set(row)) == 9:
             for i in row:
-                if i in '123456789':
-                    return True
-                return False
-        return False
+                if i not in '12345678910':
+                    return False
+    return False
 
 def check_column(sudoku):
     '''
