@@ -85,9 +85,7 @@ def check_sudoku(sudoku):
     '''
     if check_row(sudoku):
         if check_column(sudoku):
-            if check_matrix(sudoku):
-                return True
-            return False
+            return True
         return False
     return False
 
@@ -105,7 +103,8 @@ def main():
         del i
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
-        sudoku.append(row)
+        for i in row:
+            sudoku.append(int(i))
     # call solution function and print result to console
     print(check_sudoku(sudoku))
 
