@@ -76,8 +76,8 @@ def check_sudoku(sudoku):
     '''
     if check_row(sudoku) and check_column(sudoku):
         count_ += 1
-            if check_matrix(sudoku):
-                count_ += 1
+        if check_matrix(sudoku):
+            count_ += 1
     if count_ == 2:
         return True
     return False
