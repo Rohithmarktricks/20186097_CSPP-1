@@ -29,7 +29,7 @@ def check_column(sudoku):
                 return False
     for row1 in fun2:
         for element1 in row1:
-            if row.count(element) !=1 and row.count(element) >= 1:
+            if row1.count(element) !=1 and row1.count(element) >= 1:
                 return False
     return True
 
