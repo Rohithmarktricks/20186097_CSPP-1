@@ -7,7 +7,6 @@ def frequency_graph(dictionary):
 	'''
 	Frequency_graph function!
 	'''
-
     for keys in dictionary.items():
         KEY.append(keys)
 
@@ -15,6 +14,7 @@ def frequency_graph(dictionary):
     for i in range(len(KEY)):
         print(str(KEY[i][0])+\
         	' - '+'#'*KEY[i][1])
+
 
 def main():
 	'''
