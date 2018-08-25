@@ -13,9 +13,9 @@ def check_row(sudoku):
     To check with rows of martix
     '''
     for row in sudoku:
-            for i in row:
-                if i not in '12345678910':
-                    return False
+        for i in row:
+            if i not in '12345678910':
+                return False
     return False
 
 def check_column(sudoku):
