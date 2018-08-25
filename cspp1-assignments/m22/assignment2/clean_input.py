@@ -2,10 +2,10 @@
 Write a function to clean up a given string by removing the special characters and retain 
 alphabets in both upper and lower case and numbers.
 '''
-
+import re
 def clean_string(string):
-	special = @!$%^&*():";'"'#'<,.>?/
-	return join(s for s in string if s.isalnum())
+	clean = re.sub('\W+','',string)
+	return clean
 
 def main():
     string = input()
