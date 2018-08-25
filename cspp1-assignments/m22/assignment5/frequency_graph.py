@@ -8,6 +8,7 @@ def frequency_graph(dictionary):
 	Frequency_graph function!
 	'''
     for keys in dictionary.items():
+
         KEY.append(keys)
     KEY.sort()
     for i in range(len(KEY)):
