@@ -81,8 +81,8 @@ def check_sudoku(sudoku):
     if check_matrix(sudoku):
         count_ += 1
     if count_ == 2:
-        return True
-    return False
+        return False
+    return True
         
 
 def main():
