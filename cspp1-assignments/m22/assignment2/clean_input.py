@@ -8,7 +8,7 @@ def clean_string(string):
     '''
     clean string Function!
     '''
-    clean = re.sub('\W+', '', string)
+    clean = re.sub('\\W+', '', string)
     return clean
 
 def main():
