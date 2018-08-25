@@ -3,8 +3,10 @@ Write a function to tokenize a given string and return a dictionary with the fre
 each word
 '''
 adict = {}
+import re
 def tokenize(string):
-    string = string.split()
+    string = re.sub(r'[^\w\s]', ' ', string).split()
+    #string = string.split()
     for word in string:
         if word not in adict:
             adict[word] = 1
