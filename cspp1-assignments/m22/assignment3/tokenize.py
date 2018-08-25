@@ -16,7 +16,7 @@ def main():
     ,Main function
     '''
     num = int(input())
-    for i in num:
+    for i in range(num):
         new = tokenize(input())
     print(new)
 if __name__ == '__main__':
