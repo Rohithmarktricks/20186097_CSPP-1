@@ -38,7 +38,8 @@ def check_sudoku(sudoku):
     '''
     if check_row(sudoku):
         if check_column(sudoku):
-        print(False)
+            print(True)
+        else:print(False)
     else:
         print(False)
 
