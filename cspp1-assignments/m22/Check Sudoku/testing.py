@@ -28,7 +28,14 @@ def count_number(sudoku):
         for j1 in i1:
             if i1.count(j1) != 1 and i1.count(j1) >= 1:
                 return False
-    return True            
+    return True
+
+# def final_check(sudoku):
+#     for i in sudoku:
+#         for j in i:
+#             if i.count(j) >= 1:
+#                 return False
+#     return True            
 
 def main():
     '''
@@ -49,9 +56,8 @@ def main():
     # call solution function and print result to console
     if input1 is True:
         print(count_number(actual_sudoku))
-    input2 = count_number(actual_sudoku)
-    # if input2 is True:
-    #     print(final_check(actual_sudoku))
+    #input2 = count_number(actual_sudoku)
+   
 
 if __name__ == '__main__':
     main()
