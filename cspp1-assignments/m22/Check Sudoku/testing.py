@@ -8,7 +8,7 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 
-def check_sudoku(sudoku):
+def check_row(sudoku):
     '''
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
@@ -18,7 +18,8 @@ def check_sudoku(sudoku):
             if j not in "12345678910":
                 return False
     return True
-def count_number(sudoku):
+
+def check_column(sudoku):
     transpose = zip(*sudoku)
     for row in sudoku:
         for element in row:
@@ -35,7 +36,7 @@ def count_number(sudoku):
 def main():
     '''
         main function to read input sudoku from console
-        call check_sudoku function and print the result to console
+        call check_row function and print the result to console
     '''
 
     # initialize empty list
@@ -47,10 +48,10 @@ def main():
         row = input().split(' ')
         sudoku.append(row)
     actual_sudoku = sudoku
-    input1 = check_sudoku(sudoku)
+    input1 = check_row(sudoku)
     # call solution function and print result to console
     if input1 is True:
-        print(count_number(actual_sudoku))
+        print(check_column(actual_sudoku))
 
 if __name__ == '__main__':
     main()
