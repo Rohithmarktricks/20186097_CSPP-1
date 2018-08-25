@@ -4,7 +4,8 @@ alphabets in both upper and lower case and numbers.
 '''
 
 def clean_string(string):
-    pass
+	special = !@$%^&*():";'"'#'<,.>?/
+	return join(s for s in string if s.isalnum())
 
 def main():
     string = input()
