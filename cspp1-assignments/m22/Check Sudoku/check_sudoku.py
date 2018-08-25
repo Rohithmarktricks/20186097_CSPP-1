@@ -80,14 +80,14 @@ def check_column(sudoku):
 #         return False
 #     return False
 
-def check_sudoku(sudoku):
-    '''
-        Your solution goes here. You may add other helper functions as needed.
-        The function has to return True for a valid sudoku grid and false otherwise
-    '''
-    new = check_row(sudoku)
-    if new:
-        return check_column(sudoku)
+# def check_sudoku(sudoku):
+#     '''
+#         Your solution goes here. You may add other helper functions as needed.
+#         The function has to return True for a valid sudoku grid and false otherwise
+#     '''
+#     new = check_row(sudoku)
+#     if new:
+#         return check_column(sudoku)
 
 
 def main():
@@ -105,7 +105,10 @@ def main():
         row = input().split(' ')
         sudoku.append(row)
     # call solution function and print result to console
-    print(check_sudoku(sudoku))
+    #print(check_sudoku(sudoku))
+    comp = check_row(sudoku)
+    if comp:
+        print(check_column(sudoku))
 
 if __name__ == '__main__':
     main()
