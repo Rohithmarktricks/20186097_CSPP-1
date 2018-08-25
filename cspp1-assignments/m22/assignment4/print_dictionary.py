@@ -5,20 +5,21 @@ the key and frequency with a SPACE - SPACE.
 '''
 key = []
 def print_dictionary(dictionary):
-	'''
-	print_dictionary function
-	'''
+    '''
+    print_dictionary function
+    '''
     for keys in dictionary.items():
-    	key.append(keys)
+        key.append(keys)
+        
     key.sort()
     for i in range(len(key)):
-    	print(str(key[i][0])+' - '+str(key[i][1]))
+        print(str(key[i][0])+' - '+str(key[i][1]))
 
 
 def main():
-	'''
-	Main function
-	'''
+    '''
+    Main function
+    '''
     dictionary = eval(input())
     print_dictionary(dictionary)
 
