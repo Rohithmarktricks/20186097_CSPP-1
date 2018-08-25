@@ -1,5 +1,5 @@
 import numpy as np
-a= [[8, 4, 5, 6, 3, 2, 1, 7, 9],
+a= [[8, 4, 5, 6, 3, 2, 1, 2, 9],
 [7, 3, 2, 9, 1, 8, 6, 5, 4],
 [1, 9, 6, 7, 4, 5, 3, 2, 8],
 [6, 8, 3, 5, 7, 4, 9, 1, 2],
@@ -21,4 +21,4 @@ final3 = np.concatenate((t[2],u[2],v[2]))
 print(final)
 print(final2)
 print(final3)
-print(len(final.flatten()) == 9)
+print(len(set(final3)) == 9)

@@ -58,15 +58,15 @@ def check_matrix(sudoku):
     final8 = np.concatenate((g_arr[1], h_arr[1], i_arr[1]))
     final9 = np.concatenate((g_arr[2], h_arr[2], i_arr[2]))
 
-    if len(final.flatten()) == 9:
-        if len(final2.flatten()) == 9:
-            if len(final3.flatten()) == 9:
-                if len(final4.flatten()) == 9:
-                    if len(final5.flatten()) == 9:
-                        if len(final6.flatten()) == 9:
-                            if len(final7.flatten()) == 9:
-                                if len(final8.flatten()) == 9:
-                                    if len(final9.flatten()) == 9:
+    if len(set(final)) == 9:
+        if len(set(final2)) == 9:
+            if len(set(final3)) == 9:
+                if len(set(final4)) == 9:
+                    if len(set(final5)) == 9:
+                        if len(set(final6)) == 9:
+                            if len(set(final7)) == 9:
+                                if len(set(final8)) == 9:
+                                    if len(set(final9)) == 9:
                                         return True
                                     return False
                                 return False
