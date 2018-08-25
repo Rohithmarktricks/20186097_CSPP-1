@@ -72,12 +72,6 @@ def check_matrix(sudoku):
         return False
     return False
 
-
-
-
-
-
-
 def check_sudoku(sudoku):
     '''
         Your solution goes here. You may add other helper functions as needed.
