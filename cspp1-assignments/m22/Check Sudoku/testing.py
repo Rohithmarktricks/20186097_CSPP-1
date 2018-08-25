@@ -21,10 +21,10 @@ def check_row(sudoku):
 
 def check_column(sudoku):
     transpose = zip(*sudoku)
-    # for row in sudoku:
-    #     for element in row:
-    #         if row.count(element) != 1 and row.count(element) >= 1:
-    #             return False
+    for row in sudoku:
+        for element in row:
+            if row.count(element) != 1 and row.count(element) >= 1:
+                return False
     for row1 in transpose:
         for element1 in row1:
             if row1.count(element1) != 1 and row1.count(element1) >= 1:
