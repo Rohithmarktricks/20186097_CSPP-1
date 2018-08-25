@@ -13,7 +13,7 @@ def check_row(sudoku):
             return True
         return False
 def check_column(sudoku):
-    fun2 = zip(*sudoku):
+    fun2 = zip(*sudoku)
     for row in fun2:
         if len(set(row)) == 9:
             return True
