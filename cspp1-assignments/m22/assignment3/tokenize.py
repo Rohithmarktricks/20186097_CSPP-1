@@ -1,18 +1,21 @@
 '''
 Write a function to tokenize a given string and return a dictionary with the frequency of
 each word
+@author : Rohithmarktricks
 '''
-adict = {}
 import re
+ADICT = {}
 def tokenize(string):
+    '''
+    tokenize function!
+    '''
     string = re.sub(r'[^\w\s]', ' ', string).split()
-    #string = string.split()
     for word in string:
-        if word not in adict:
-            adict[word] = 1
+        if word not in ADICT:
+            ADICT[word] = 1
         else:
-            adict[word] += 1
-    return adict
+            ADICT[word] += 1
+    return ADICT
             
 def main():
     '''
@@ -20,6 +23,7 @@ def main():
     '''
     num = int(input())
     for i in range(num):
+        del i
         new = tokenize(input())
     print(new)
 if __name__ == '__main__':
