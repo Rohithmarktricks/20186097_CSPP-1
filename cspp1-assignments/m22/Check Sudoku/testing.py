@@ -20,13 +20,13 @@ def check_sudoku(sudoku):
     return True
 def count_number(sudoku):
     transpose = zip(*sudoku)
-    for i in sudoku:
-        for j in i:
-            if i.count(j) != 1 and i.count(j) >= 1:
+    for row in sudoku:
+        for element in row:
+            if row.count(element) != 1 and row.count(element) >= 1:
                 return False
-    for i1 in transpose:
-        for j1 in i1:
-            if i1.count(j1) != 1 and i1.count(j1) >= 1:
+    for row1 in transpose:
+        for element1 in row1:
+            if row1.count(element1) != 1 and row1.count(element1) >= 1:
                 return False
     return True
 
