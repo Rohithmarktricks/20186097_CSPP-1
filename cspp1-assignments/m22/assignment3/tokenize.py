@@ -5,19 +5,19 @@ each word
 adict = {}
 def tokenize(string):
     for word in string:
-    	if word not in adict:
-    		adict[word] = 1
-		else:
-			adict[word] += 1
-	return adict
+        if word not in adict:
+            adict[word] = 1
+        else:
+            adict[word] += 1
+    return adict
             
 def main():
-	'''
-	,Main function
-	'''
-	num = int(input())
-	for i in num:
-		new = tokenize(input())
-	print(new)
+    '''
+    ,Main function
+    '''
+    num = int(input())
+    for i in num:
+        new = tokenize(input())
+    print(new)
 if __name__ == '__main__':
     main()
