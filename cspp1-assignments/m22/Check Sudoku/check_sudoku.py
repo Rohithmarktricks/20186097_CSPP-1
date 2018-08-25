@@ -75,13 +75,15 @@ def check_sudoku(sudoku):
         The function has to return True for a valid sudoku grid and false otherwise
     '''
     if check_row(sudoku):
-        if check_column(sudoku):
-            if check_matrix(sudoku):
-                return False
-            return True
-        return False
+        check_column(sudoku)
     return False
-
+    if check_column(sudoku):
+        check_matrix
+    return False
+    if check_matrix(sudoku):
+        return False
+    return True
+        
 
 def main():
     '''
