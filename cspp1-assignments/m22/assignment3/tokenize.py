@@ -16,7 +16,7 @@ def tokenize(string):
         else:
             ADICT[word] += 1
     return ADICT
-            
+
 def main():
     '''
     ,Main function
